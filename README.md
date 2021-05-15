@@ -1,2 +1,2 @@
 # orakeshi.github.io
-A guide for Persona 4 Golden (Video Game)
+Orakeshis Github Profile -- Chad
