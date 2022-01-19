@@ -15,7 +15,7 @@
 baseURL = "https://orakeshi.github.io"
 languageCode = "en-gb"
 defaultContentLanguage = "en-gb"
-title = "Hugo tranquilpeak theme"
+title = "Orakeshi"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
 
@@ -23,12 +23,16 @@ paginate = 7
 canonifyurls = true
 
 [permalinks]
-  posts = "/:year/:month/:slug/"
+  posts = "post/:slug/"
 
 [taxonomies]
   tag = "tags"
   category = "categories"
   archive = "archives"
+#   projects = "categories/projects"
+#   blog = "categories/blog"
+#   projects = "projects"
+#   blog = "blog"
 
 # ------
 # Markup
@@ -45,7 +49,7 @@ canonifyurls = true
 # ------
 [author]
   name = "Tommy Webb"
-  bio = "I love coding and learning new technology **COOL**"
+  bio = "I &#x2764; coding and learning new technology"
   job = "Software Developer"
   location = "United Kingdom"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
@@ -69,48 +73,72 @@ canonifyurls = true
   url = "/"
 [[menu.main]]
   weight = 2
-  identifier = "categories"
-  name = "Categories"
+  identifier = "projects"
+  name = "Projects"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>"
-  url = "/categories"
+  url = "/categories/projects"
 [[menu.main]]
   weight = 3
+  identifier = "blog"
+  name = "Blog"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-pen-square\" aria-hidden=\"true\"></i>"
+  url = "/categories/blog"
+[[menu.main]]
+  weight = 4
   identifier = "tags"
   name = "Tags"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-tags\" aria-hidden=\"true\"></i>"
   url = "/tags"
 [[menu.main]]
-  weight = 4
-  identifier = "archives"
-  name = "Archives"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-archive\" aria-hidden=\"true\"></i>"
-  url = "/archives"
-[[menu.main]]
   weight = 5
   identifier = "about"
   name = "About"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-question\" aria-hidden=\"true\"></i>"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-user\" aria-hidden=\"true\"></i>"
   url = "/#about"
-
 [[menu.links]]
-  weight = 1
+  weight = 6
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\" aria-hidden=\"true\"></i>"
   url = "https://github.com/Orakeshi"
 [[menu.links]]
-  weight = 2
-  identifier = "stackoverflow"
-  name = "Stack Overflow"
-  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-stack-overflow\" aria-hidden=\"true\"></i>"
-  url = "https://stackoverflow.com/users/636472/kakawait"
+  weight = 7
+  identifier = "linkedin"
+  name = "Linkedin"
+  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-linkedin\" aria-hidden=\"true\"></i>"
+  url = "https://www.linkedin.com/in/tommy-webb-8749231a0/"
+[[menu.links]]
+  weight = 8
+  identifier = "email"
+  name = "Email Me"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-envelope\" aria-hidden=\"true\"></i>"
+  url = "mailto: tommy@solarflarestudio.co.uk"
+[[menu.links]]
+  weight = 9
+  identifier = "youtube"
+  name = "Youtube"
+  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-youtube\" aria-hidden=\"true\"></i>"
+  url = "https://www.youtube.com/channel/UC_FKPC8y4U2Ep7ubNBAQWjg"
+[[menu.main]]
+  weight = 10
+  identifier = "categories"
+  name = "Categories"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>"
+  url = "/categories"
 
-[[menu.misc]]
-  weight = 1
-  identifier = "rss"
-  name = "RSS"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-rss\" aria-hidden=\"true\"></i>"
-  url = "/index.xml"
+# [[menu.main]]
+#   weight = 2
+#   identifier = "categories"
+#   name = "Categories"
+#   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>"
+#   url = "/categories"
+
+# [[menu.main]]
+#   weight = 4
+#   identifier = "archives"
+#   name = "Archives"
+#   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-archive\" aria-hidden=\"true\"></i>"
+#   url = "/archives"
 
 # -------------
 # Customization
@@ -119,7 +147,7 @@ canonifyurls = true
   # -----------
   # Description
   # -----------
-  description = "Hugo tranquilpeak theme demo"
+  description = "My portfolio"
 
   # ------------------
   # Syntax highlighter
@@ -202,7 +230,7 @@ canonifyurls = true
   autoThumbnailImage = true
 
   # Your favicon path, default is "/favicon.png"
-  #  favicon = "/favicon.png"
+  favicon = "https://i.imgur.com/zHMvsMu.png"
 
   # ------------------
   # External resources
@@ -292,10 +320,10 @@ canonifyurls = true
   # Comment and uncomment to enable or disable sharing options
   # If you wanna add a sharing option, read user documentation :
   # Tranquilpeak configuration > Theme configuration > sharing-options
-  [[params.sharingOptions]]
-    name = "Facebook"
-    icon = "fab fa-facebook-square"
-    url = "https://www.facebook.com/sharer/sharer.php?u=%s"
+#   [[params.sharingOptions]]
+#     name = "Facebook"
+#     icon = "fab fa-facebook-square"
+#     url = "https://www.facebook.com/sharer/sharer.php?u=%s"
 
   [[params.sharingOptions]]
     name = "Twitter"
@@ -303,20 +331,20 @@ canonifyurls = true
     url = "https://twitter.com/intent/tweet?text=%s"
 
 
-#  [[params.sharingOptions]]
-#    name = "Whatsapp"
-#    icon = "fab fa-whatsapp"
-#    url = "https://wa.me/?text=%s"
+ [[params.sharingOptions]]
+   name = "Whatsapp"
+   icon = "fab fa-whatsapp"
+   url = "https://wa.me/?text=%s"
 
   [[params.sharingOptions]]
     name = "Linkedin"
     icon = "fab fa-linkedin"
     url = "https://www.linkedin.com/sharing/share-offsite/?url=%s"
 
-#  [[params.sharingOptions]]
-#    name = "Reddit"
-#    icon = "fab fa-reddit"
-#    url = "https://www.reddit.com/submit?url=%s"
+ [[params.sharingOptions]]
+   name = "Reddit"
+   icon = "fab fa-reddit"
+   url = "https://www.reddit.com/submit?url=%s"
 #
 #  [[params.sharingOptions]]
 #    name = "Pocket"

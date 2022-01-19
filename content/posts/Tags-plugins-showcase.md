@@ -1,6 +1,9 @@
 ---
 title: "Tags plugins showcase"
 date: 2014-10-29
+categories:
+- blog
+- releases
 tags:
 - tag plugins
 - test
