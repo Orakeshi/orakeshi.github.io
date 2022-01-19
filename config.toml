@@ -12,13 +12,13 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseURL = "https://example.org/"
-languageCode = "en-us"
-defaultContentLanguage = "en-us"
+baseURL = "https://orakeshi.github.io"
+languageCode = "en-gb"
+defaultContentLanguage = "en-gb"
 title = "Hugo tranquilpeak theme"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
-# googleAnalytics = "UA-123-45"
+
 paginate = 7
 canonifyurls = true
 
@@ -44,17 +44,17 @@ canonifyurls = true
 # Author
 # ------
 [author]
-  name = "Firstname Lastname"
-  bio = "Super bio with markdown support **COOL**"
-  job = "Your job title"
-  location = "France"
+  name = "Tommy Webb"
+  bio = "I love coding and learning new technology **COOL**"
+  job = "Software Developer"
+  location = "United Kingdom"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "thibaud.lepretre@gmail.com"
+  #gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  picture = "https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4"
   # Your Twitter username without the @. E.g : thibaudlepretre
-  # twitter = "thibaudlepretre"
+  twitter = "SirThomasWebb"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
   # googlePlus = "+ThibaudLepretre"
 
@@ -97,7 +97,7 @@ canonifyurls = true
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\" aria-hidden=\"true\"></i>"
-  url = "https://github.com/kakawait"
+  url = "https://github.com/Orakeshi"
 [[menu.links]]
   weight = 2
   identifier = "stackoverflow"
@@ -185,7 +185,7 @@ canonifyurls = true
   # Current image is on AWS S3 and delivered by AWS CloudFront.
   # Otherwise put your image, for example `cover.jpg` in folder `static/images/`,
   # and use relative url : `images/cover.jpg`
-  coverImage = "images/cover.jpg"
+  coverImage = "https://i.imgur.com/0KAGCvx.png"
 
   # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
   imageGallery = true
