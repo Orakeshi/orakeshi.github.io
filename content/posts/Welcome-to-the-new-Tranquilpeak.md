@@ -2,7 +2,7 @@
 title: "Welcome to Tranquilpeak 0.5.3-BETA"
 date: 2015-06-15
 categories:
-- tranquilpeak
+- projects
 - releases
 tags:
 - hexo theme
