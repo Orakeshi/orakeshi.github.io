@@ -119,12 +119,6 @@ canonifyurls = true
   name = "Youtube"
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-youtube\" aria-hidden=\"true\"></i>"
   url = "https://www.youtube.com/channel/UC_FKPC8y4U2Ep7ubNBAQWjg"
-[[menu.main]]
-  weight = 10
-  identifier = "categories"
-  name = "Categories"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>"
-  url = "/categories"
 
 # [[menu.main]]
 #   weight = 2
