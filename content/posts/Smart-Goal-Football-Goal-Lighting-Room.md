@@ -22,16 +22,16 @@ metaAlignment: center
 {{< toc >}}
 
 # The plan:
-The plan was simple. I had nanoleaves lying around from a previous project (Wishing Tree) and wanted to do something with them. Before starting my software development apprenticeship, I used to enjoy watching football. I would put on several games regardless of the day they were played on. Now, due to myself working during the week and creating personal projects on the weekend, my time is limited and thus I rarely ever get to watch the games.
+The plan was simple. I had nanoleaves lying around from a previous project (Wishing Tree) and wanted to do something with them. Before starting my software development apprenticeship, I used to enjoy watching football. I would put on several games regardless of the day they were played on. Now, due to myself working during the week and creating personal projects on the weekend, my time is limited, and thus I rarely ever get to watch the games.
 
 I thought, instead of taking the simple approach of keeping open a live tracker/listening to the radio, I would take a creative approach of lighting up the nanoleaves based on the team that scores.
 
 {{< image classes="fancybox center clear" src="https://i.imgur.com/g2oZgdE.png" thumbnail="https://i.imgur.com/g2oZgdE.png" group="group:labs-nanoleaf-football" thumbnail-width="70%" thumbnail-height="70%" title="Image of the spare nanoleaves from the wishing tree project" >}}
 
 # Design Process:
-Immediately upon undertaking this project, I knew I needed the football team colours. I was fortunate enough that a website ([teamcolorcodes](https://teamcolorcodes.com/)) already had all the teams in the premier league with there team colours RGB. This saved me a-lot of time. At this point I had to have a way of storing all the colours for the application to use. I went with a json file which contained the team name, along with the three colours that represent the team
+Immediately upon undertaking this project, I knew I needed the football team colours. I was fortunate enough that a website ([teamcolorcodes](https://teamcolorcodes.com/)) already had all the teams in the premier league with their team colours RGB. This saved me a-lot of time. At this point I had to have a way of storing all the colours for the application to use. I went with a json file which contained the team name, along with the three colours that represent the team
 
-{{< image classes="fancybox center clear" src="https://i.imgur.com/ibaTgbj.png" thumbnail="https://i.imgur.com/ibaTgbj.png" group="group:labs-nanoleaf-football" thumbnail-width="70%" thumbnail-height="70%" title="Image showing the teams and there 3 main RGB colours of there badge/kit" >}}
+{{< image classes="fancybox center clear" src="https://i.imgur.com/ibaTgbj.png" thumbnail="https://i.imgur.com/ibaTgbj.png" group="group:labs-nanoleaf-football" thumbnail-width="70%" thumbnail-height="70%" title="Image showing the teams and there 3 main RGB colours of their badge/kit" >}}
 
 After creating the JSON file with the team colours, I decided to draw a simple design sketch on figma showing the 3 frames/stages of the colours that the nanoleaves will look like upon a team scoring. (These colours will change dependent on team colours)
 
@@ -43,23 +43,23 @@ The way that nanoleaves work is via sending requests to the API. The nanoleaf do
     Leaf 1 -> PUT Request
     Request = ('{"write": {"animdata": "1 1 237 233 57"}')
 
-The request above follows a certain format as stated in the nanoleaf documentation. That is to create a write command and send the following attributes. The first "1" is the frame. I would want to send one colour so 1 frame would be needed. The second "1" is the ID of the leaf. This is used to target the specific leaf to send the request too. Finally, the last 3 numbers are the RGB value to send to the leaf. This would work to light up the leaves however its both incredibly inefficient, due to the amount of requests that are needed to light up all the leaves in a sequence. In addition its prone to many issues, including overloading pythons request library.
+The request above follows a certain format as stated in the nanoleaf documentation. That is to create a write command and send the following attributes. The first "1" is the frame. I would want to send one colour so 1 frame would be needed. The second "1" is the ID of the leaf. This is used to target the specific leaf to send the request too. Finally, the last 3 numbers are the RGB value to send to the leaf. This would work to light up the leaves however its both incredibly inefficient, due to the amount of requests that are needed to light up all the leaves in a sequence. In addition, it's prone to many issues, including overloading pythons request library.
 
 # Development:
 Starting development, I had a clear idea in mind of what I was meant to do, as-well as the challenges that would arise. Due to this project being a quick side project, I did not care about following best practices and followed the messy approach of "As long as the code works".
 
 {{< image classes="fancybox center clear" src="https://i.imgur.com/B1OEq3c.gif" thumbnail="https://i.imgur.com/B1OEq3c.gif" group="group:labs-nanoleaf-football" thumbnail-width="70%" thumbnail-height="70%" title="GIF showing a timelapse of me developing the application" >}}
 
-## Packet Nuilder Algorithm
+## Packet Builder Algorithm
 To combat the issue of having to send three requests to each leaf every second to change their colours, I came up with a solution, that I called the packet builder. The solution is to have 1 request that is sent to the leaves. Inside this request will be the total frames, each leaf ID and all the RGB values the leaves will light up with. To the human reading the packet that is sent, it will seem like a large ball of mess containing mass amounts of integers, however to the API this request is massively more efficient than sending each request individually to each leaf 3 times per second.
 
-There are 3 main methods/functions that encompass this packet builder algorithm. Those are getting the layout of the nanoleaves and all of the panels that are on the network. The second is getting the ID of each leaf from the panels recognised on the network. The final is the packet builder itself.
+There are 3 main methods/functions that encompass this packet builder algorithm. Those are getting the layout of the nanoleaves and all the panels that are on the network. The second is getting the ID of each leaf from the panels recognised on the network. The final is the packet builder itself.
 
 ### GetLayout()
 {{< codeblock "main.py" "python" "https://github.com/Orakeshi/Nanoleaf-PremierLeague/blob/main/main.py" "main.py" >}}
 # -*- coding: utf-8 -*-
 """
-This method is repsonsible for accessing the layout of the nanoleaves on the network
+This method is responsible for accessing the layout of the nanoleaves on the network
 """
 def GetLayout():
     global outputFormat
@@ -77,7 +77,7 @@ def GetLayout():
 The {{< hl-text orange >}} GetLayout(){{< /hl-text >}} method is very simple in nature. A {{< hl-text red >}} GET{{< /hl-text >}} request is sent to the Nanoleaf API. The JSON string that is returned is passed into a variable called {{< hl-text blue >}} outputFormat{{< /hl-text >}}. This string will be used later on when getting the ID of each leaf.
 
 ### GetId()
-The {{< hl-text orange >}} GetId(){{< /hl-text >}} method is the next part of the packet builder process. This methods simply iterates through the layout JSON string, which contains all the leaves on the network recognised, and searches for the string {{< hl-text blue >}} panelId{{< /hl-text >}}. If this string is found in the layout request, the text will be formatted and split. From here, that stripped string (Leaf specific ID) will be added to an array names {{< hl-text blue >}} leafId{{< /hl-text >}}. Once the whole string has been iterated over, the {{< hl-text blue >}} leafId{{< /hl-text >}} array is returned. This is vital for the PacketBuilder script.
+The {{< hl-text orange >}} GetId(){{< /hl-text >}} method is the next part of the packet builder process. These methods simply iterates through the layout JSON string, which contains all the leaves on the network recognised, and searches for the string {{< hl-text blue >}} panelId{{< /hl-text >}}. If this string is found in the layout request, the text will be formatted and split. From here, that stripped string (Leaf specific ID) will be added to an array names {{< hl-text blue >}} leafId{{< /hl-text >}}. Once the whole string has been iterated over, the {{< hl-text blue >}} leafId{{< /hl-text >}} array is returned. This is vital for the PacketBuilder script.
 
 {{< codeblock "main.py" "python" "https://github.com/Orakeshi/Nanoleaf-PremierLeague/blob/main/main.py" "main.py" >}}
 # -*- coding: utf-8 -*-
