@@ -1,11 +1,16 @@
 ---
 title: "Smart Goal: Football Goal Lighting Room"
-date: 2021-11-20
+date: "15 Jun 2021"
+showDate: true
+comments: false
+showSocial: true
+showMeta: true
 categories:
   - projects
 tags:
   - python
   - labs 
+  - solarflare-studio
 autoThumbnailImage: false 
 thumbnailImagePosition: "top"
 thumbnailImage: https://i.imgur.com/veFiH5G.jpg
@@ -275,12 +280,13 @@ The code above is the final aspect of the application. It simply checks the func
 {{< image classes="fancybox nocaption fig-33" src="https://i.imgur.com/oNpiolv.png" thumbnail="https://i.imgur.com/oNpiolv.png" group="group:labs-nanoleaf-football" >}}
 {{< image classes="fancybox nocaption fig-33" src="https://i.imgur.com/apyg8AY.png" thumbnail="https://i.imgur.com/apyg8AY.png" group="group:labs-nanoleaf-football" >}}
 {{< image classes="fancybox nocaption fig-33" src="https://i.imgur.com/RlJ06gb.png" thumbnail="https://i.imgur.com/RlJ06gb.png" group="group:labs-nanoleaf-football" >}}
-{{< image classes="fancybox nocaption clear" src="https://i.imgur.com/i06eyDk.gif" thumbnail="https://i.imgur.com/i06eyDk.gif" group="group:labs-nanoleaf-football" title="GIF showing a timelapse of me developing the application" >}}
+{{< image classes="fancybox nocaption clear" src="https://i.imgur.com/i06eyDk.gif" thumbnail="https://i.imgur.com/i06eyDk.gif" group="group:labs-nanoleaf-football" thumbnail-width="100%" title="GIF showing a timelapse of me developing the application" >}}
 
 [//]: # (thumbnail-height="50px" thumbnail-width="50px")
 # Extra Information
-## Programming Language:
-{{< image classes="fancybox clear left fig-20" src="https://i.imgur.com/jBfEt6S.gif" thumbnail="https://i.imgur.com/jBfEt6S.gif" group="group:labs-nanoleaf-football" >}}
+{{< image classes="fancybox left clear fig-20" src="https://i.imgur.com/jBfEt6S.gif" thumbnail="https://i.imgur.com/jBfEt6S.gif" group="group:labs-nanoleaf-football" >}}
+
+[![SFS](https://i.imgur.com/mwAXNot.png)](https://solarflarestudio.co.uk/)
 
 ## Repo/Download Source:
 GitHub: https://github.com/Orakeshi/Nanoleaf-PremierLeague
