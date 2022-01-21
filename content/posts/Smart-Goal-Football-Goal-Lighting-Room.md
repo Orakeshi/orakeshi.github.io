@@ -1,6 +1,6 @@
 ---
-title: "Smart Goal: Football Goal Lighting Room"
-date: "15 Jun 2021"
+title: "Nanoleaf - Goal Reactive Lighting"
+date: "11 Jul 2021"
 showDate: true
 comments: false
 showSocial: true
@@ -18,13 +18,12 @@ coverImage: https://i.imgur.com/g2oZgdE.png
 metaAlignment: center
 ---
 <!--more-->
-# Table Of Contents
 {{< toc >}}
 
 # The plan:
-The plan was simple. I had nanoleaves lying around from a previous project (Wishing Tree) and wanted to do something with them. Before starting my software development apprenticeship, I used to enjoy watching football. I would put on several games regardless of the day they were played on. Now, due to myself working during the week and creating personal projects on the weekend, my time is limited, and thus I rarely ever get to watch the games.
+The plan was simple. I had nanoleaves lying around from a previous project ([Wishing Tree](https://orakeshi.github.io/post/digital-wishing-tree/)) and wanted to do something with them. Before starting my software development apprenticeship, I used to enjoy watching football. I would put on several games regardless of the day they were played on. Now, due to myself working during the week and creating personal projects on the weekend, my time is limited, and thus I rarely ever get to watch the games.
 
-I thought, instead of taking the simple approach of keeping open a live tracker/listening to the radio, I would take a creative approach of lighting up the nanoleaves based on the team that scores.
+I thought, instead of taking the simple approach of keeping open a live tracker/listening to the radio, I would take a creative approach of lighting up the nanoleaves based on the team that scores. I wanted to produce an output quick. I didnt care about how the code war written nor how long it took for the leaves to light up. My goal was to have my nanoleaves light up when a team scores no matter what.
 
 {{< image classes="fancybox center clear" src="https://i.imgur.com/g2oZgdE.png" thumbnail="https://i.imgur.com/g2oZgdE.png" group="group:labs-nanoleaf-football" thumbnail-width="70%" thumbnail-height="70%" title="Image of the spare nanoleaves from the wishing tree project" >}}
 
@@ -38,25 +37,26 @@ After creating the JSON file with the team colours, I decided to draw a simple d
 {{< image classes="fancybox center clear" src="https://i.imgur.com/JnzFtRg.png" thumbnail="https://i.imgur.com/JnzFtRg.png" group="group:labs-nanoleaf-football" thumbnail-width="70%" thumbnail-height="70%" title="Image showing the 3 frames of the lights changing colour when a team scores" >}}
 
 ## The Problem With The Nanoleaf API:
-The way that nanoleaves work is via sending requests to the API. The nanoleaf documentation is severely lacking and quite underwhelming in what the leaves are able to do. That being said, the main way to light up nanoleaves from code is to send a put request to the leaves with the RGB data. This request follows a format along the lines of the following:
+The way that nanoleaves work is via sending requests to the API. The nanoleaf documentation is severely lacking and quite underwhelming in what the leaves are able to do. That being said, the main way to light up nanoleaves from code is to send a {{< hl-text red >}} PUT{{< /hl-text >}} request to the leaves with RGB data. This request follows a format along the lines of the following:
 
-    Leaf 1 -> PUT Request
-    Request = ('{"write": {"animdata": "1 1 237 233 57"}')
+Leaf 1 -> PUT Request = ('{"write": {"animdata": "{{< hl-text orange >}} 1{{< /hl-text >}} {{< hl-text blue >}} 1{{< /hl-text >}} {{< hl-text green >}} 237 233 57{{< /hl-text >}}"}')
 
-The request above follows a certain format as stated in the nanoleaf documentation. That is to create a write command and send the following attributes. The first "1" is the frame. I would want to send one colour so 1 frame would be needed. The second "1" is the ID of the leaf. This is used to target the specific leaf to send the request too. Finally, the last 3 numbers are the RGB value to send to the leaf. This would work to light up the leaves however its both incredibly inefficient, due to the amount of requests that are needed to light up all the leaves in a sequence. In addition, it's prone to many issues, including overloading pythons request library.
+The request above follows a certain format as stated in the nanoleaf documentation. That is, to create a write command and send the following attributes. The first "{{< hl-text orange >}} 1{{< /hl-text >}}" is the frame. I would want to send one colour so {{< hl-text orange >}} 1{{< /hl-text >}} frame would be needed. The second "{{< hl-text blue >}} 1{{< /hl-text >}}" is the ID of the leaf. This is used to target the specific leaf to send the request too. Finally, the last {{< hl-text green >}} 3 numbers{{< /hl-text >}} are the RGB value to send to the leaf. This works if you want to light up the leaves however its incredibly inefficient, due to the amount of requests that are needed to light up all the leaves in a sequence. In addition, it's prone to many issues, including overloading pythons request library.
 
 # Development:
-Starting development, I had a clear idea in mind of what I was meant to do, as-well as the challenges that would arise. Due to this project being a quick side project, I did not care about following best practices and followed the messy approach of "As long as the code works".
+Starting development, I had a clear idea in mind of what I was meant to do, as-well as the challenges that would arise. Due to this project being a quick side project, I {{< hl-text red >}} did not care{{< /hl-text >}} about following best practices and followed the approach of "As long as the code works".
 
 {{< image classes="fancybox center clear" src="https://i.imgur.com/B1OEq3c.gif" thumbnail="https://i.imgur.com/B1OEq3c.gif" group="group:labs-nanoleaf-football" thumbnail-width="70%" thumbnail-height="70%" title="GIF showing a timelapse of me developing the application" >}}
 
 ## Packet Builder Algorithm
-To combat the issue of having to send three requests to each leaf every second to change their colours, I came up with a solution, that I called the packet builder. The solution is to have 1 request that is sent to the leaves. Inside this request will be the total frames, each leaf ID and all the RGB values the leaves will light up with. To the human reading the packet that is sent, it will seem like a large ball of mess containing mass amounts of integers, however to the API this request is massively more efficient than sending each request individually to each leaf 3 times per second.
+To combat the issue of having to send three requests to each leaf every second to change their colours, I came up with a solution, that I called the packet builder. The solution is to have 1 request that is sent to the leaves. Inside this request will be the total frames, each leaf ID and all the RGB values the leaves will light up with.
+
+To the human reading the packet that is sent, it will seem like a large ball of mess containing mass amounts of integers, however to the API this request is massively more efficient than sending each request individually to each leaf 3 times per second.
 
 There are 3 main methods/functions that encompass this packet builder algorithm. Those are getting the layout of the nanoleaves and all the panels that are on the network. The second is getting the ID of each leaf from the panels recognised on the network. The final is the packet builder itself.
 
 ### GetLayout()
-{{< codeblock "main.py" "python" "https://github.com/Orakeshi/Nanoleaf-PremierLeague/blob/main/main.py" "main.py" >}}
+{{< codeblock "main.py" "python" "" "main.py" >}}
 # -*- coding: utf-8 -*-
 """
 This method is responsible for accessing the layout of the nanoleaves on the network
@@ -77,9 +77,10 @@ def GetLayout():
 The {{< hl-text orange >}} GetLayout(){{< /hl-text >}} method is very simple in nature. A {{< hl-text red >}} GET{{< /hl-text >}} request is sent to the Nanoleaf API. The JSON string that is returned is passed into a variable called {{< hl-text blue >}} outputFormat{{< /hl-text >}}. This string will be used later on when getting the ID of each leaf.
 
 ### GetId()
-The {{< hl-text orange >}} GetId(){{< /hl-text >}} method is the next part of the packet builder process. These methods simply iterates through the layout JSON string, which contains all the leaves on the network recognised, and searches for the string {{< hl-text blue >}} panelId{{< /hl-text >}}. If this string is found in the layout request, the text will be formatted and split. From here, that stripped string (Leaf specific ID) will be added to an array names {{< hl-text blue >}} leafId{{< /hl-text >}}. Once the whole string has been iterated over, the {{< hl-text blue >}} leafId{{< /hl-text >}} array is returned. This is vital for the PacketBuilder script.
+The {{< hl-text orange >}} GetId(){{< /hl-text >}} method is the next part of the packet builder process. This method simply iterates through the layout JSON string, which contains all the leaves on the network that were detected, and searches for the string {{< hl-text blue >}} panelId{{< /hl-text >}}. If this string is found in the layout request, the text will be formatted and split.
+From here, that stripped string (Leaf specific ID) will be added to an array named {{< hl-text blue >}} leafId{{< /hl-text >}}. Once the whole string has been iterated over, the {{< hl-text blue >}} leafId{{< /hl-text >}} array is returned. This is vital for the PacketBuilder script.
 
-{{< codeblock "main.py" "python" "https://github.com/Orakeshi/Nanoleaf-PremierLeague/blob/main/main.py" "main.py" >}}
+{{< codeblock "main.py" "python" "" "main.py" >}}
 # -*- coding: utf-8 -*-
 """
 Method is responsible for getting ID from the nanoleaves.
@@ -100,7 +101,7 @@ def GetId(layout):
 ### PacketBuilder()
 The {{< hl-text orange >}} PacketBuilder(){{< /hl-text >}} method, the final part of the packet builder process, is shown below. This method is responsible for actually building the request that will be sent to the nanoleaf API.
 
-{{< codeblock "main.py" "python" "https://github.com/Orakeshi/Nanoleaf-PremierLeague/blob/main/main.py" "main.py" >}}
+{{< codeblock "main.py" "python" "" "main.py" >}}
 # -*- coding: utf-8 -*-
 """
 This method handles building the data to send to the leaves.
@@ -155,7 +156,7 @@ The script does a-lot of things. The first of which is iterating over the {{< hl
 
 Once all leaf Ids have finished being processed, the array of strings has a for-loop iterate over its elements. This is where the request and format of the request is formed. A new string is created. It contains the previously made string as-well as the RBG colours from the texts.json made earlier in the design stage.
 
-{{< codeblock "main.py" "python" "https://github.com/Orakeshi/Nanoleaf-PremierLeague/blob/main/main.py" "main.py" >}}
+{{< codeblock "main.py" "python" "" "main.py" >}}
 # -*- coding: utf-8 -*-
 """
 Method handles reading the teams RGB light data.
@@ -198,9 +199,9 @@ def ReadPixelsInFile():
     return currentTeamColours
 {{< /codeblock >}}
 
-This method above is the function responsible for checking the currents teams the user has chosen to watch and stores their team colours in a dictionary called "{{< hl-text blue >}} currentTeamColours{{< /hl-text >}}". This dictionary has an array of the colours stored in it. The dictionary is returned once the function is finishing running.
+This method above is the function responsible for checking the currents teams the user has chosen to watch and stores their team colours in a dictionary called "{{< hl-text blue >}} currentTeamColours{{< /hl-text >}}". This dictionary has an array of the colours stored in it. The dictionary is returned once the function is finished running.
 
-{{< codeblock "main.py" "python" "https://github.com/Orakeshi/Nanoleaf-PremierLeague/blob/main/main.py" "main.py" >}}
+{{< codeblock "main.py" "python" "" "main.py" >}}
 # Build custom animation command with packet data
 leafColour = ('{"write": {"animData": "' + '{0} {1}'.format(numPanels, str1[:-1]) + '","loop": true,"animType": "custom","palette": [],"version": "2.0","command": "display"}}')
 
@@ -215,11 +216,11 @@ The lines of code above are the last of the {{< hl-text orange >}} PacketBuilder
 The above image is showing the request that is received by the nanoleaves. This is extremely more efficient and is a great solution to the issue described earlier. With this packet builder complete and working, the final part is using the {{< hl-text red >}} beautiful soup{{< /hl-text >}} library to scrape live football data and change the leaves colours based on the team that scored.
 
 ## Getting The Live Football Scores
-For this part of the application I wanted to take the simples route possible. To me, that meant listening for a change of goal on a live scoring webpage and changing the light colours based on that.
+For this part of the application I wanted to take the quickest route possible. To me, that meant listening for a change of goal on a live scoring webpage and changing the light colours based on the information from the webpage.
 
-Once I decided upon a website ([teamcolorcodes](https://teamcolorcodes.com/)), I implemented the final aspects of the code.
+Once I decided upon a website ([sportinglife](https://www.sportinglife.com/)), I implemented the final aspects of the code.
 
-{{< codeblock "main.py" "python" "https://github.com/Orakeshi/Nanoleaf-PremierLeague/blob/main/main.py" "main.py" >}}
+{{< codeblock "main.py" "python" "" "main.py" >}}
 def checkScore():
     global teamOneScore, url
     global teamTwoScore
@@ -253,7 +254,7 @@ def checkScore():
 
 Above is showing the input part of the code. This is where I will enter the URL to the football game. This is then passed to the {{< hl-text red >}} BeautifulSoup{{< /hl-text >}} library. From there I am finding the two classes, in the HTML source code, responsible for displaying the score and the team names. I store both of these elements into variables.
 
-{{< codeblock "main.py" "python" "https://github.com/Orakeshi/Nanoleaf-PremierLeague/blob/main/main.py" "main.py" >}}
+{{< codeblock "main.py" "python" "" "main.py" >}}
 # If Team two has scored -> Get nanoleaf layout
 elif (int(teamTwo) == teamTwoScore):
     checkScore.teamScored = teamsPlaying[1].text
@@ -274,8 +275,8 @@ The code above is the final aspect of the application. It simply checks the func
 {{< image classes="fancybox center clear" src="https://i.imgur.com/kxelHQi.png" thumbnail="https://i.imgur.com/kxelHQi.png" group="group:labs-nanoleaf-football" thumbnail-width="70%" thumbnail-height="70%" title="GIF showing a timelapse of me developing the application" >}}
 
 [//]: # ({% youtube lJIrF4YjHfQ %})
-{{< youtube UXmy66QeqN0 >}}
-[Testing Nanoleaves Lighitng Up On Goal Scored](https://www.youtube.com/watch?v=UXmy66QeqN0)
+{{< youtube Z9_qjpeSMbk >}}
+[Goal Reactive Lighting ManUtdGoal](https://www.youtube.com/watch?v=Z9_qjpeSMbk)
 
 {{< image classes="fancybox nocaption fig-33" src="https://i.imgur.com/oNpiolv.png" thumbnail="https://i.imgur.com/oNpiolv.png" group="group:labs-nanoleaf-football" >}}
 {{< image classes="fancybox nocaption fig-33" src="https://i.imgur.com/apyg8AY.png" thumbnail="https://i.imgur.com/apyg8AY.png" group="group:labs-nanoleaf-football" >}}
@@ -284,13 +285,21 @@ The code above is the final aspect of the application. It simply checks the func
 
 [//]: # (thumbnail-height="50px" thumbnail-width="50px")
 # Extra Information
-{{< image classes="fancybox left clear fig-20" src="https://i.imgur.com/jBfEt6S.gif" thumbnail="https://i.imgur.com/jBfEt6S.gif" group="group:labs-nanoleaf-football" >}}
+{{< image classes="fancybox nocaption fig-25" src="https://i.imgur.com/apl8UH2t.png" thumbnail="https://i.imgur.com/apl8UH2t.png" group="group:labs-nanoleaf-football" >}}
+{{< image classes="fancybox nocaption clear fig-25" src="https://i.imgur.com/jBfEt6S.gif" thumbnail="https://i.imgur.com/jBfEt6S.gif" group="group:labs-nanoleaf-football" >}}
+[Solarflare Studio](https://solarflarestudio.co.uk/)
 
-[![SFS](https://i.imgur.com/mwAXNot.png)](https://solarflarestudio.co.uk/)
+[//]: # ([![SFS]&#40;https://i.imgur.com/apl8UH2t.png&#41;]&#40;https://solarflarestudio.co.uk/&#41;)
 
-## Repo/Download Source:
-GitHub: https://github.com/Orakeshi/Nanoleaf-PremierLeague
+[//]: # ()
+[//]: # ({{< image classes="fancybox left fig-20" src="https://i.imgur.com/jBfEt6S.gif" thumbnail="https://i.imgur.com/jBfEt6S.gif" group="group:labs-nanoleaf-football" >}})
 
-Download: https://github.com/Orakeshi/Nanoleaf-PremierLeague/archive/refs/heads/main.zip
+
+[//]: # (## Repo/Download Source:)
+
+[//]: # (GitHub: https://github.com/Orakeshi/Nanoleaf-PremierLeague)
+
+[//]: # ()
+[//]: # (Download: https://github.com/Orakeshi/Nanoleaf-PremierLeague/archive/refs/heads/main.zip)
 
 
