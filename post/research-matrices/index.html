@@ -1,0 +1,678 @@
+<!doctype html><html lang=en-us>
+<head>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Research - Matrices","image":"https://i.imgur.com/psQany9.png","datePublished":"2022-01-20T00:00:00Z","dateModified":"2022-01-20T00:00:00Z","author":{"@type":"Person","name":"Tommy Webb","image":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/orakeshi.github.io\/post\/research-matrices\/"},"publisher":{"@type":"Organization","name":"Orakeshi","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"}},"description":"On my journey to learn and become a better developer, I find myself researching matrices. Having never been exposed to matrices I will be approaching this learning as a complete beginner on the topic.\nI will hopefully by the end of this blog have a better understanding about: What they are?, How are they used?, Basic operations and more!\n Image of matrix transformations on a 3d axis  ","keywords":[]}</script>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.92.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name=author content="Tommy Webb">
+<meta name=keywords content>
+<meta name=description content="On my journey to learn and become a better developer, I find myself researching matrices. Having never been exposed to matrices I will be approaching this learning as a complete beginner on the topic.
+I will hopefully by the end of this blog have a better understanding about: What they are?, How are they used?, Basic operations and more!
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    Image of matrix transformations on a 3d axis
+  
+
+
+  ">
+<meta property="og:description" content="On my journey to learn and become a better developer, I find myself researching matrices. Having never been exposed to matrices I will be approaching this learning as a complete beginner on the topic.
+I will hopefully by the end of this blog have a better understanding about: What they are?, How are they used?, Basic operations and more!
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    Image of matrix transformations on a 3d axis
+  
+
+
+  ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Research - Matrices">
+<meta name=twitter:title content="Research - Matrices">
+<meta property="og:url" content="https://orakeshi.github.io/post/research-matrices/">
+<meta property="twitter:url" content="https://orakeshi.github.io/post/research-matrices/">
+<meta property="og:site_name" content="Orakeshi">
+<meta property="og:description" content="On my journey to learn and become a better developer, I find myself researching matrices. Having never been exposed to matrices I will be approaching this learning as a complete beginner on the topic.
+I will hopefully by the end of this blog have a better understanding about: What they are?, How are they used?, Basic operations and more!
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    Image of matrix transformations on a 3d axis
+  
+
+
+  ">
+<meta name=twitter:description content="On my journey to learn and become a better developer, I find myself researching matrices. Having never been exposed to matrices I will be approaching this learning as a complete beginner on the topic.
+I will hopefully by the end of this blog have a better understanding about: What they are?, How are they used?, Basic operations and more!
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    Image of matrix transformations on a 3d axis
+  
+
+
+  ">
+<meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2022-01-20T00:00:00">
+<meta property="article:modified_time" content="2022-01-20T00:00:00">
+<meta property="article:section" content="blog">
+<meta property="article:tag" content="algorithms">
+<meta property="article:tag" content="maths">
+<meta property="article:tag" content="personal">
+<meta name=twitter:card content="summary">
+<meta name=twitter:site content="@SirThomasWebb">
+<meta name=twitter:creator content="@SirThomasWebb">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4">
+<meta property="twitter:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4">
+<meta property="og:image" content="https://i.imgur.com/psQany9.png">
+<meta property="twitter:image" content="https://i.imgur.com/psQany9.png">
+<title>Research - Matrices</title>
+<link rel=icon href=https://i.imgur.com/zHMvsMu.png>
+<link rel=canonical href=https://orakeshi.github.io/post/research-matrices/>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous referrerpolicy=no-referrer>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin=anonymous referrerpolicy=no-referrer>
+<link rel=stylesheet href=https://orakeshi.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css>
+</head>
+<body>
+<div id=blog>
+<header id=header data-behavior=4>
+<i id=btn-open-sidebar class="fa fa-lg fa-bars"></i>
+<div class=header-title>
+<a class=header-title-link href=https://orakeshi.github.io/ aria-label="Go to homepage">Orakeshi</a>
+</div>
+<a class=header-right-picture href=https://orakeshi.github.io/#about aria-label="Open the link: /#about">
+<img class=header-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture">
+</a>
+</header>
+<nav id=sidebar data-behavior=4>
+<div class=sidebar-container>
+<div class=sidebar-profile>
+<a href=https://orakeshi.github.io/#about aria-label="Read more about the author">
+<img class=sidebar-profile-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture">
+</a>
+<h4 class=sidebar-profile-name>Tommy Webb</h4>
+<h5 class=sidebar-profile-bio>I ❤ coding and learning new technology</h5>
+</div>
+<ul class=sidebar-buttons>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://orakeshi.github.io/ title=Home>
+<i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden=true></i>
+<span class=sidebar-button-desc>Home</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://orakeshi.github.io/categories/projects title=Projects>
+<i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden=true></i>
+<span class=sidebar-button-desc>Projects</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://orakeshi.github.io/categories/blog title=Blog>
+<i class="sidebar-button-icon fas fa-lg fa-pen-square" aria-hidden=true></i>
+<span class=sidebar-button-desc>Blog</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://orakeshi.github.io/tags title=Tags>
+<i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden=true></i>
+<span class=sidebar-button-desc>Tags</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://orakeshi.github.io/#about title=About>
+<i class="sidebar-button-icon fas fa-lg fa-user" aria-hidden=true></i>
+<span class=sidebar-button-desc>About</span>
+</a>
+</li>
+</ul>
+<ul class=sidebar-buttons>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://github.com/Orakeshi target=_blank rel=noopener title=GitHub>
+<i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden=true></i>
+<span class=sidebar-button-desc>GitHub</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://www.linkedin.com/in/tommy-webb-8749231a0/ target=_blank rel=noopener title=Linkedin>
+<i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden=true></i>
+<span class=sidebar-button-desc>Linkedin</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=mailto:%20tommy@solarflarestudio.co.uk target=_blank rel=noopener title="Email Me">
+<i class="sidebar-button-icon fa fa-lg fa-envelope" aria-hidden=true></i>
+<span class=sidebar-button-desc>Email Me</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://www.youtube.com/channel/UC_FKPC8y4U2Ep7ubNBAQWjg target=_blank rel=noopener title=Youtube>
+<i class="sidebar-button-icon fab fa-lg fa-youtube" aria-hidden=true></i>
+<span class=sidebar-button-desc>Youtube</span>
+</a>
+</li>
+</ul>
+<ul class=sidebar-buttons>
+</ul>
+</div>
+</nav>
+<div id=main data-behavior=4 class=hasCoverMetaIn>
+<article class=post id=top>
+<div class="post-header main-content-wrap text-center">
+<h1 class=post-title>
+Research - Matrices
+</h1>
+<div class="postShorten-meta post-meta">
+<time datetime=2022-01-20T00:00:00Z>
+January 20, 2022
+</time>
+<span>in</span>
+<a class=category-link href=https://orakeshi.github.io/categories/blog>blog</a>
+</div>
+</div>
+<div class="post-content markdown">
+<div class=main-content-wrap>
+<p>On my journey to learn and become a better developer, I find myself researching matrices. Having never been exposed to matrices I will be approaching this learning as a complete beginner on the topic.</p>
+<p>I will hopefully by the end of this blog have a better understanding about: What they are?, How are they used?, Basic operations and more!</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/psQany9.png title="Image of matrix transformations on a 3d axis" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/psQany9.png style=width:70%;height:70% alt="Image of matrix transformations on a 3d axis">
+</a>
+<span class=caption>Image of matrix transformations on a 3d axis</span>
+</div>
+<div style=clear:both></div>
+<h1 id=table-of-contents>Table of Contents</h1>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#reason-for-researching>Reason For Researching:</a></li>
+<li><a href=#research-findings--development>Research, Findings & Development:</a>
+<ul>
+<li><a href=#what-are-matrices>What Are Matrices:</a></li>
+<li><a href=#matrix-uses>Matrix Uses:</a></li>
+<li><a href=#matrix-operations>Matrix Operations:</a>
+<ul>
+<li><a href=#matrix-breakdown>Matrix Breakdown:</a></li>
+<li><a href=#addition>Addition:</a></li>
+<li><a href=#subtraction>Subtraction:</a></li>
+<li><a href=#multiplication>Multiplication:</a></li>
+<li><a href=#scalars>Scalars</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=#heading></a></li>
+</ul>
+</nav>
+<h1 id=reason-for-researching>Reason For Researching:</h1>
+<p>My reasons for researching matrices is due to several points. Other than the obvious points of &ldquo;Wanting to be a better developer&rdquo; or &ldquo;Expand my knowledge&rdquo;; My real answer is due to their large role being played on my daily life whilst I am blind to what they are.</p>
+<p>What I mean by this is that I mainly spend my working days developing using <a href=https://unity.com/>Unity3D</a>. Within Unity, it is common place for myself to affect an object in some way. Whether I am changing an objects transform via rotation/position I am using Vectors or Quaternions as part of the transform class.</p>
+<p>However, several functions within unity use Matrices (Matrix4X4) such as Transform, Camera, Material and more. With this I want to develop m understanding of them</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/EiQOtzW.png title="Unity matrix example" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/EiQOtzW.png style=width:70%;height:70% alt="Unity matrix example">
+</a>
+<span class=caption>Unity matrix example</span>
+</div>
+<div style=clear:both></div>
+<h1 id=research-findings--development>Research, Findings & Development:</h1>
+<h2 id=what-are-matrices>What Are Matrices:</h2>
+<p>Put simply: A Matrix is an array of numbers. They are widely used throughout various sectors & environments. In geometry, matrices are used for representing geometric transformations such as rotations, positions etc.</p>
+<p>Matrices are a convenient and compact way to represent large sets of numbers.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/qTP6KfB.png title="Image showing 2x4 matrix" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/qTP6KfB.png alt="Image showing 2x4 matrix">
+</a>
+<span class=caption>Image showing 2x4 matrix</span>
+</div>
+<div style=clear:both></div>
+<h2 id=matrix-uses>Matrix Uses:</h2>
+<p>Matrices, as mentioned above, are widely used. One such example is in 3D computer graphics. 4x4 transformation matrices are common place. These n+1 dimensional transformation matrices can be called affine transformation matrices, projective transformation matrices or non-linear transformation matrices (dependent on application)</p>
+<p>The size of a matrix is defined by the number of rows and columns it contains. There is no limit to the numbers of rows and columns a matrix (in the usual sense) can have.</p>
+<h2 id=matrix-operations>Matrix Operations:</h2>
+<h3 id=matrix-breakdown>Matrix Breakdown:</h3>
+<p>Before I dive into calculating certain operations of a given matrix, first I must break down and understand a matrix. By nature, they are very simple to understand.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/ThGlnJU.png title="Image showing breakdown of a 2x3 matrix" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/ThGlnJU.png style=width:30%;height:30% alt="Image showing breakdown of a 2x3 matrix">
+</a>
+<span class=caption>Image showing breakdown of a 2x3 matrix</span>
+</div>
+<div style=clear:both></div>
+<p>As seen from the matrix above, they are very simple to understand. Matrices are written with row first, column second. This means the dimensions of the matrix above are 2x3</p>
+<p>The bottom line of <code>A23</code> means in matrix of A find the entry at 23. After going two rows along and 3 columns down the answer is 5.</p>
+<p>Below are some more examples of matrix breakdowns. I have written the dimensions for all the following matrices:
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/By28m6x.png title="Image showing breakdown of a multitude of matrices" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/By28m6x.png style=width:30%;height:30% alt="Image showing breakdown of a multitude of matrices">
+</a>
+<span class=caption>Image showing breakdown of a multitude of matrices</span>
+</div>
+<div style=clear:both></div>
+</p>
+<h3 id=addition>Addition:</h3>
+<p>Now I understand the basic structure of a matrix I can move onto its operations. With addition, It&rsquo;s vital to point out that the TWO MATRICES MUST be the same size. The rows and columns must match in size else they cannot be added together.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/F56lXd2.png title="Image showing addition of two matrices" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/F56lXd2.png style=width:40%;height:40% alt="Image showing addition of two matrices">
+</a>
+<span class=caption>Image showing addition of two matrices</span>
+</div>
+<div style=clear:both></div>
+<p>To start adding you must first add the numbers at there matching position. Following the example above you would do 3+6 & 7+2 etc. After adding each value, the output will be the sum of both matrices.</p>
+<h3 id=subtraction>Subtraction:</h3>
+<p>To subtract matrices, we can simply subtract each value at the corresponding location. It&rsquo;s the exact same process as adding, except we are subtracting the values</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/7A9PJ0M.png title="Image showing subtraction of two matrices" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/7A9PJ0M.png style=width:40%;height:40% alt="Image showing subtraction of two matrices">
+</a>
+<span class=caption>Image showing subtraction of two matrices</span>
+</div>
+<div style=clear:both></div>
+<p>We have to subtract each value at the matching location. Using the example above <code>A11</code>-<code>B11</code> is equivalent to 3-6. This will be position <code>11</code> of the subtracted matrix output.</p>
+<h3 id=multiplication>Multiplication:</h3>
+<p>Multiplying two matrices together requires the following condition to bear true:</p>
+<p><strong>Columns in first matrix HAVE to be the SAME value as rows in second matrix</strong></p>
+<p>Expanding on this. If we explore the next example it will be made easier to understand</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/HOJNku8.png title="Image showing A and B matrices dimensions" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/HOJNku8.png style=width:40%;height:40% alt="Image showing A and B matrices dimensions">
+</a>
+<span class=caption>Image showing A and B matrices dimensions</span>
+</div>
+<div style=clear:both></div>
+<p>As shown above the columns of matrix A are the same as the rows on matrix B. If this condition does not hold true, then the matrices CANNOT be multiplied together.</p>
+<p>the other two values (A row and B column) provide helpful information. They inform us that the output of the multiplication will be a matrix with 1 row and two columns.</p>
+<p>To multiply two matrices we have to start by multiplying the first value at A11 with the vale at B11. We then multiply A12 bt B21. we repeat this until we have multiplied all the values in matrix A with every value in Matrix B.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/gIC7iJy.png title="Image showing A and B matrices dimensions" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/gIC7iJy.png style=width:40%;height:40% alt="Image showing A and B matrices dimensions">
+</a>
+<span class=caption>Image showing A and B matrices dimensions</span>
+</div>
+<div style=clear:both></div>
+<p>As seen from the example above the product of AxB is 60 44</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/VweNN86.png title="Image showing product of A and B" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/VweNN86.png style=width:40%;height:40% alt="Image showing product of A and B">
+</a>
+<span class=caption>Image showing product of A and B</span>
+</div>
+<div style=clear:both></div>
+<p>Referencing my earlier point of &ldquo;If this condition does not hold true than the matrices CANNOT be multiplied together.&rdquo; we can see this is the case when we try to do BxA. As B has 2 columns and A has 1 row, they do not match and thus the multiplication cannot take place.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/XfgKDZW.png title="Image showing AxB works and BxA doesnt" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/XfgKDZW.png style=width:20%;height:20% alt="Image showing AxB works and BxA doesnt">
+</a>
+<span class=caption>Image showing AxB works and BxA doesnt</span>
+</div>
+<div style=clear:both></div>
+<h3 id=scalars>Scalars</h3>
+<h4 id=multiplying-by-scalars>Multiplying By Scalars</h4>
+<p>Scalar multiplication is also very simple. You take a regular number and multiply it on every entry on the matrix.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/HuIH79u.png title="Image showing matrix being multiplies by a scalar" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/HuIH79u.png style=width:40%;height:40% alt="Image showing matrix being multiplies by a scalar">
+</a>
+<span class=caption>Image showing matrix being multiplies by a scalar</span>
+</div>
+<div style=clear:both></div>
+<p>As seen from above the matrix <code>A</code> has each value multiplies by 4. The output <code>4A</code> is shown above.</p>
+<h4 id=addition-with-scalars>Addition With Scalars</h4>
+<p>Scalar multiplication is also very simple. You take a regular number and multiply it on every entry on the matrix.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/HuIH79u.png title="Image showing matrix being multiplies by a scalar" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/HuIH79u.png style=width:40%;height:40% alt="Image showing matrix being multiplies by a scalar">
+</a>
+<span class=caption>Image showing matrix being multiplies by a scalar</span>
+</div>
+<div style=clear:both></div>
+<p>As seen from above the matrix <code>A</code> has each value multiplies by 4. The output <code>4A</code> is shown above.</p>
+<h4 id=subtraction-with-scalars>Subtraction With Scalars</h4>
+<p>Scalar multiplication is also very simple. You take a regular number and multiply it on every entry on the matrix.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/HuIH79u.png title="Image showing matrix being multiplies by a scalar" data-fancybox=group:personal-matrices-research>
+<img class=fig-img src=https://i.imgur.com/HuIH79u.png style=width:40%;height:40% alt="Image showing matrix being multiplies by a scalar">
+</a>
+<span class=caption>Image showing matrix being multiplies by a scalar</span>
+</div>
+<div style=clear:both></div>
+<p>As seen from above the matrix <code>A</code> has each value multiplies by 4. The output <code>4A</code> is shown above.</p>
+<h1 id=heading></h1>
+</div>
+</div>
+<div id=post-footer class="post-footer main-content-wrap">
+<div class=post-footer-tags>
+<span class="text-color-light text-small">TAGGED IN</span><br>
+<a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/algorithms/>algorithms</a>
+<a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/maths/>maths</a>
+<a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/personal/>personal</a>
+</div>
+<div class=post-actions-wrap>
+<nav>
+<ul class="post-actions post-action-nav">
+<li class=post-action>
+<a class="post-action-btn btn btn--disabled">
+<i class="fa fa-angle-left"></i>
+<span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/smart-goal-football-goal-lighting-room/ data-tooltip="Smart Goal: Football Goal Lighting Room" aria-label="PREVIOUS: Smart Goal: Football Goal Lighting Room">
+<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+<i class="fa fa-angle-right"></i>
+</a>
+</li>
+</ul>
+</nav>
+<ul class="post-actions post-action-share">
+<li class="post-action hide-lg hide-md hide-sm">
+<a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post">
+<i class="fa fa-share-alt" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://orakeshi.github.io/post/research-matrices/" title="Share on Twitter" aria-label="Share on Twitter">
+<i class="fab fa-twitter" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://wa.me/?text=https://orakeshi.github.io/post/research-matrices/" title="Share on Whatsapp" aria-label="Share on Whatsapp">
+<i class="fab fa-whatsapp" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://orakeshi.github.io/post/research-matrices/" title="Share on Linkedin" aria-label="Share on Linkedin">
+<i class="fab fa-linkedin" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://www.reddit.com/submit?url=https://orakeshi.github.io/post/research-matrices/" title="Share on Reddit" aria-label="Share on Reddit">
+<i class="fab fa-reddit" aria-hidden=true></i>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default" href=#disqus_thread aria-label="Leave a comment">
+<i class="far fa-comment"></i>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default" href=#top aria-label="Back to top">
+<i class="fa fa-arrow-up" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div>
+<div id=disqus_thread>
+<noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+</div>
+<script type=text/javascript>var disqus_config=function(){this.page.url='https://orakeshi.github.io/post/research-matrices/',this.page.identifier='/post/research-matrices/'};(function(){var a,b;if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}a=document.createElement('script'),a.type='text/javascript',a.async=!0,b='hugo-tranquilpeak-theme',a.src='//'+b+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)})()</script>
+</div>
+</article>
+<footer id=footer class=main-content-wrap>
+<span class=copyrights>
+&copy; 2022 Tommy Webb. All Rights Reserved
+</span>
+</footer>
+</div>
+<div id=bottom-bar class=post-bottom-bar data-behavior=4>
+<div class=post-actions-wrap>
+<nav>
+<ul class="post-actions post-action-nav">
+<li class=post-action>
+<a class="post-action-btn btn btn--disabled">
+<i class="fa fa-angle-left"></i>
+<span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/smart-goal-football-goal-lighting-room/ data-tooltip="Smart Goal: Football Goal Lighting Room" aria-label="PREVIOUS: Smart Goal: Football Goal Lighting Room">
+<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+<i class="fa fa-angle-right"></i>
+</a>
+</li>
+</ul>
+</nav>
+<ul class="post-actions post-action-share">
+<li class="post-action hide-lg hide-md hide-sm">
+<a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post">
+<i class="fa fa-share-alt" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://orakeshi.github.io/post/research-matrices/" title="Share on Twitter" aria-label="Share on Twitter">
+<i class="fab fa-twitter" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://wa.me/?text=https://orakeshi.github.io/post/research-matrices/" title="Share on Whatsapp" aria-label="Share on Whatsapp">
+<i class="fab fa-whatsapp" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://orakeshi.github.io/post/research-matrices/" title="Share on Linkedin" aria-label="Share on Linkedin">
+<i class="fab fa-linkedin" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://www.reddit.com/submit?url=https://orakeshi.github.io/post/research-matrices/" title="Share on Reddit" aria-label="Share on Reddit">
+<i class="fab fa-reddit" aria-hidden=true></i>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default" href=#disqus_thread aria-label="Leave a comment">
+<i class="far fa-comment"></i>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default" href=#top aria-label="Back to top">
+<i class="fa fa-arrow-up" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div id=share-options-bar class=share-options-bar data-behavior=4>
+<i id=btn-close-shareoptions class="fa fa-times"></i>
+<ul class=share-options>
+<li class=share-option>
+<a class=share-option-btn target=new href="https://twitter.com/intent/tweet?text=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fresearch-matrices%2F" aria-label="Share on Twitter">
+<i class="fab fa-twitter" aria-hidden=true></i><span>Share on Twitter</span>
+</a>
+</li>
+<li class=share-option>
+<a class=share-option-btn target=new href="https://wa.me/?text=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fresearch-matrices%2F" aria-label="Share on Whatsapp">
+<i class="fab fa-whatsapp" aria-hidden=true></i><span>Share on Whatsapp</span>
+</a>
+</li>
+<li class=share-option>
+<a class=share-option-btn target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fresearch-matrices%2F" aria-label="Share on Linkedin">
+<i class="fab fa-linkedin" aria-hidden=true></i><span>Share on Linkedin</span>
+</a>
+</li>
+<li class=share-option>
+<a class=share-option-btn target=new href="https://www.reddit.com/submit?url=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fresearch-matrices%2F" aria-label="Share on Reddit">
+<i class="fab fa-reddit" aria-hidden=true></i><span>Share on Reddit</span>
+</a>
+</li>
+</ul>
+</div>
+<div id=share-options-mask class=share-options-mask></div>
+</div>
+<div id=about>
+<div id=about-card>
+<div id=about-btn-close>
+<i class="fa fa-times"></i>
+</div>
+<img id=about-card-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture">
+<h4 id=about-card-name>Tommy Webb</h4>
+<div id=about-card-bio>I ❤ coding and learning new technology</div>
+<div id=about-card-job>
+<i class="fa fa-briefcase"></i>
+<br>
+Software Developer
+</div>
+<div id=about-card-location>
+<i class="fa fa-map-marker-alt"></i>
+<br>
+United Kingdom
+</div>
+</div>
+</div>
+<div id=cover style=background-image:url(https://i.imgur.com/uQegQYL.png)></div>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script src=https://orakeshi.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js></script>
+<script>$(document).ready(function(){hljs.configure({classPrefix:'',useBR:!1}),$('pre.code-highlight > code, pre > code').each(function(b,a){$(this).hasClass('codeblock')||$(this).addClass('codeblock'),hljs.highlightBlock(a)})})</script>
+</body>
+</html>
