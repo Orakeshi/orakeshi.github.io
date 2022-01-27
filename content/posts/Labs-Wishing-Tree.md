@@ -21,7 +21,8 @@ autoThumbnailImage: false
 thumbnailImagePosition: "top"
 thumbnailImage: https://i.imgur.com/hj0wjWd.jpg
 coverImage: https://i.imgur.com/NCDPyGf.jpg
-metaAlignment: center
+metaAlignment: center 
+syntaxHighlighter: highlight.js
 ---
 <!--more-->
 {{< toc >}}
