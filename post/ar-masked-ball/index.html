@@ -149,26 +149,225 @@ hasCoverMetaIn">
 <nav id=TableOfContents>
 <ul>
 <li><a href=#project-information>Project Information</a></li>
-<li><a href=#development>Development:</a></li>
-<li><a href=#challenges--solutions>Challenges & Solutions:</a></li>
+<li><a href=#development>Development:</a>
+<ul>
+<li><a href=#tiltbrush-workflow>Tiltbrush Workflow</a></li>
+<li><a href=#translating-masks-over-network>Translating Masks Over Network</a></li>
+</ul>
+</li>
+<li><a href=#challenges--solutions>Challenges & Solutions:</a>
+<ul>
+<li><a href=#syncing-pcfs>Syncing PCFs</a>
+<ul>
+<li><a href=#object-marker-tracking>Object Marker Tracking</a></li>
+<li><a href=#cloud-anchor-fix>Cloud Anchor Fix</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href=#showcase>Showcase:</a></li>
 <li><a href=#extra-information>Extra Information</a></li>
 </ul>
 </nav>
 <h1 id=project-information>Project Information</h1>
+<p>The masked ball project was an in-house labs project in accordance with artist <a href=https://www.instagram.com/headofhouse_designs/>Charlotte Dillon</a>. Myself and Priya (Intern from Goldsmiths university developed the AR application).</p>
+<p>The project/application was to create an AR application for the magic leap to show off <a href=https://www.instagram.com/headofhouse_designs/>Charlotte&rsquo;s</a> masks that she had designed. We were creating a proof of concept for a multi networked masked ball event. The POC application was to showcase two magic leaps syncing content being able to see each other over a network.</p>
+<p>We wanted to be able to have a user select a mask from a number of options and have that mask track to their head. The other user wearing a magic leap device would then be able to look at the other person in the space with a mask over their head. In description this may sound simple, in practice there were many challenges, and it was a fun & difficult project.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/0uLtQsf.gif title="GIF showing the application working" data-fancybox=group:labs-maskedball>
+<img class=fig-img src=https://i.imgur.com/0uLtQsf.gif style=width:70%;height:70% alt="GIF showing the application working">
+</a>
+<span class=caption>GIF showing the application working</span>
+</div>
+<div style=clear:both></div>
 <h1 id=development>Development:</h1>
+<p>The development for this project was contained to unity & magic leap dev tools. Using C# in accordance to unity we were able to build the app for magic leap.</p>
+<h2 id=tiltbrush-workflow>Tiltbrush Workflow</h2>
+<p><a href=https://www.instagram.com/headofhouse_designs/>Charlotte</a> was using an oculus quest with tiltbrush in order to create the masks for unity. With this, we need a way to get <a href=https://www.instagram.com/headofhouse_designs/>Charlotte&rsquo;s</a> masks into unity.
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/eNghbTV.gif title="GIF showing Charlotte creating a mask in tiltbrush" data-fancybox=group:labs-maskedball>
+<img class=fig-img src=https://i.imgur.com/eNghbTV.gif style=width:70%;height:70% alt="GIF showing Charlotte creating a mask in tiltbrush">
+</a>
+<span class=caption>GIF showing Charlotte creating a mask in tiltbrush</span>
+</div>
+<div style=clear:both></div>
+</p>
+<p>To achieve this, Priya found a unity plugin on GitHub that could convert tilt files from tiltbrush into fully textured models within unity. Plugin <a href=https://github.com/googlevr/tilt-brush-toolkit>HERE</a></p>
+<p>The image below shows the mask in unity with the plugin enabled, working as intended (With all colours, textures etc)
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/Eg3ZFC2.png title="Image showing the mask in the unity scene" data-fancybox=group:labs-maskedball>
+<img class=fig-img src=https://i.imgur.com/Eg3ZFC2.png style=width:70%;height:70% alt="Image showing the mask in the unity scene">
+</a>
+<span class=caption>Image showing the mask in the unity scene</span>
+</div>
+<div style=clear:both></div>
+</p>
+<h2 id=translating-masks-over-network>Translating Masks Over Network</h2>
+<p>We needed a way to have the masks translate and follow the magic leap device over the network. It wasn&rsquo;t as simple as updating the masks transform on each frame. We needed to send its transform to the other magic leap device.
+<figure class="highlight csharp language-csharp">
+<figcaption>
+<span>MasksSpawning.cs</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br><span class=line>28</span><br><span class=line>29</span><br><span class=line>30</span><br><span class=line>31</span><br><span class=line>32</span><br><span class=line>33</span><br><span class=line>34</span><br><span class=line>35</span><br><span class=line>36</span><br><span class=line>37</span><br><span class=line>38</span><br><span class=line>39</span><br><span class=line>40</span><br><span class=line>41</span><br><span class=line>42</span><br><span class=line>43</span><br><span class=line>44</span><br><span class=line>45</span><br><span class=line>46</span><br><span class=line>47</span><br><span class=line>48</span><br><span class=line>49</span><br><span class=line>50</span><br><span class=line>51</span><br><span class=line>52</span><br><span class=line>53</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-csharp csharp"><code class=csharp>namespace Solarflare.MaskedBall.Masks
+{
+    public class MasksSpawning : MonoBehaviour, ISelectable
+    {
+        public List&lt;GameObject&gt; maskTransforms = new List&lt;GameObject&gt;();
+
+        private List&lt;TransmissionObject&gt; _maskTransmissionGroup = new List&lt;TransmissionObject&gt;();
+        private TransmissionObject _maskTransmissionObject;
+
+        private Transform _mainCamera;
+
+        private void Start()
+        {
+            _mainCamera = GameObject.Find(&#34;Main Camera&#34;).GetComponent&lt;Transform&gt;(); //Getting main camera component
+            int maskName = Random.Range(0, maskTransforms.Count);
+            InstantiateItem(maskTransforms[maskName].name);
+        }
+
+        public void InstantiateItem(string maskName)
+        {
+            if (_maskTransmissionGroup.Count != 0)
+            {
+                GameObject[] masks = GameObject.FindGameObjectsWithTag(&#34;Mask&#34;);
+                foreach(GameObject mask in masks)
+                {
+                    TransmissionObject maskTrans = mask.GetComponent&lt;TransmissionObject&gt;();
+                    maskTrans.Despawn();
+                }
+                _maskTransmissionGroup.Clear();
+            }
+
+            Vector3 tempScale = new Vector3(1, 1, 1); //Temporary scale of Cube
+            for (int i = 0; i &lt; maskTransforms.Count; i&#43;&#43;)
+            {
+                if (maskTransforms[i].name == maskName)
+                {
+                    tempScale = maskTransforms[i].transform.localScale;
+                }
+
+            }
+            _maskTransmissionObject = Transmission.Spawn(maskName, _mainCamera.transform.position, this.transform.rotation, tempScale); //Instantiate Mask to be shown across LAN
+            _maskTransmissionObject.name = maskName;
+            _maskTransmissionGroup.Add(_maskTransmissionObject);
+            SetMaskPosition();
+        }
+
+        private void SetMaskPosition()
+        {
+            _maskTransmissionObject.motionSource = _mainCamera.transform; //Put Cube on ML main camera and check if synced over LAN
+            _maskTransmissionObject.transform.position = _mainCamera.position; // Set transmission Object to same transform as mainCamera on every frame
+        }
+    }
+}</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+</p>
+<p>The above code handles everything we need. It instantiates the mask when the user clicks the mask UI button. This will then instantiate a GameObject with the TransmissionObject script from magic leap. When the script is attached to a gameobject, that object will update the network with its transform. The other magic leap can then know where it is via PCFs (Persistent coordinate frames)</p>
 <h1 id=challenges--solutions>Challenges & Solutions:</h1>
+<p>There were 2 main challenges when working on this project. They were the following:</p>
+<ul>
+<li>Working with MagicLeap device</li>
+<li>Syncing PCFs</li>
+</ul>
+<p>The first challenge (&ldquo;Working with MagicLeap device&rdquo;) couldn&rsquo;t be solved so easily. The documentation is lacking and the device has so many issues. All I could do was accept this was the case and just move on with development.</p>
+<p>As for the second issue this effected the quality of the application and had to be resolved.</p>
+<h2 id=syncing-pcfs>Syncing PCFs</h2>
+<p>The issue was syncing PCFs (Persistent coordinate frames). Magic leaps can show objects over the network due to PCFs. The device is constantly scanning its environment. It will then store this mapped data to know where objects are relative to one another. The issue I was having is that the magic leap devices couldn&rsquo;t see each other&rsquo;s masks. This was because the PCFs were not syncing properly.</p>
+<h3 id=object-marker-tracking>Object Marker Tracking</h3>
+<p>I attempted to resolve this issue via having the headsets start syncing from a shared point. This was the Object Marker Tracking approach. Have both headsets start there PCFs from a shared marker. MagicLeap had a code sample to implement this into code which looks like the following:
+<figure class="highlight csharp language-csharp">
+<figcaption>
+<span>ImageTrackingSystem.cs</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br><span class=line>28</span><br><span class=line>29</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-csharp csharp"><code class=csharp>public void StartImageTracking()
+    {
+        // Only start Image Tracking if privilege wasn&#39;t denied
+        if (CurrentStatus != ImageTrackingStatus.PrivilegeDenied)
+        {
+            // Is not already started, and failed to start correctly, this is likely due to the camera already being in use:
+            if (!MLImageTracker.IsStarted &amp;&amp; !MLImageTracker.Start().IsOk)
+            {
+                Debug.LogError(&#34;Image Tracker Could Not Start&#34;);
+                UpdateImageTrackingStatus(ImageTrackingStatus.CameraUnavailable);
+                return;
+            }
+
+            // MLImageTracker would have been started by previous If statement at this point, so enable it. 
+            if (MLImageTracker.Enable().IsOk)
+            {
+                // Add the target image to the tracker and set the callback
+                _imageTarget = MLImageTracker.AddTarget(TargetInfo.Name, TargetInfo.Image,
+                TargetInfo.LongerDimension, HandleImageTracked);
+                UpdateImageTrackingStatus(ImageTrackingStatus.ImageTrackingActive);
+            }
+            else
+            {
+                Debug.LogError(&#34;Image Tracker Could Not Start&#34;);
+                UpdateImageTrackingStatus(ImageTrackingStatus.CameraUnavailable);
+                return;
+            }
+        }
+    }</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+This image tracking test didn&rsquo;t work. There were a mass amount of errors that we didn&rsquo;t have time to look into. We decided to scrap this approach.</p>
+<h3 id=cloud-anchor-fix>Cloud Anchor Fix</h3>
+<p>After a mass amount of time researching I finally found a solution. It is a flaky fix that doesn&rsquo;t always work, but it works enough for us to capture media for our proof of concept.</p>
+<p>This is not a code solution, but much rather a device fix. I realised that the second magic leap device didn&rsquo;t have its PCFs syncing over the cloud. Instead, it was kept on local. Enabling this setting & then having the user stand still whilst opening the app meant they shared the same PCF data and could visibly see each others masks.</p>
 <h1 id=showcase>Showcase:</h1>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/U6uxoHR1dWE style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+<p>Application:
+<div class="figure right fig-75">
+<a class=fancybox href=https://i.imgur.com/aMzbljy.gif data-fancybox=group:labs-maskedball>
+<img class=fig-img src=https://i.imgur.com/aMzbljy.gif>
+</a>
+</div>
+<div class="figure right fig-25">
+<a class=fancybox href=https://i.imgur.com/Oqnfduw.png?2 data-fancybox=group:labs-maskedball>
+<img class=fig-img src=https://i.imgur.com/Oqnfduw.png?2>
+</a>
+</div>
+<div class="figure right fig-25">
+<a class=fancybox href=https://i.imgur.com/lgRl37N.png data-fancybox=group:labs-maskedball>
+<img class=fig-img src=https://i.imgur.com/lgRl37N.png>
+</a>
+</div>
+<div class="figure right fig-25">
+<a class=fancybox href=https://i.imgur.com/TzG0jjZ.png?1 data-fancybox=group:labs-maskedball>
+<img class=fig-img src=https://i.imgur.com/TzG0jjZ.png?1>
+</a>
+</div>
+<div style=clear:both></div>
+</p>
 <h1 id=extra-information>Extra Information</h1>
 <p>
 <div class="figure nocaption fig-25">
-<a class=fancybox href=https://i.imgur.com/apl8UH2t.png data-fancybox=group:labs-nanoleaf-football>
+<a class=fancybox href=https://i.imgur.com/apl8UH2t.png data-fancybox=group:labs-maskedball>
 <img class=fig-img src=https://i.imgur.com/apl8UH2t.png>
-</a>
-</div>
-<div class="figure nocaption fig-25">
-<a class=fancybox href=https://i.imgur.com/jBfEt6S.gif data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/jBfEt6S.gif>
 </a>
 </div>
 <div style=clear:both></div>
