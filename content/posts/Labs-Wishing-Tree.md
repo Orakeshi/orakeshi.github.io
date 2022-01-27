@@ -27,7 +27,7 @@ metaAlignment: center
 {{< toc >}}
 
 # Project Information
-This project, titled "The Digital Wishing Tree" was the first project I worked on in my software development career. This saw the in house team at solarflare create an interactive digital wishing tree using a combination of technologies.
+This project, titled {{< hl-text red >}} "The Digital Wishing Tree"{{< /hl-text >}} was the first project I worked on in my software development career. This saw the in house team at solarflare create an interactive digital wishing tree using a combination of technologies.
 
 Solarflare Studio (Company I work for) have a labs of sorts. This is where the internal team will get together and discuss ideas of projects they can create with in house resources. These projects are often fun, crazy and show off the technology available to solarflare.
 
@@ -56,7 +56,7 @@ As seen from the image above the tree went through many iterations. Working clos
 Above, is the final design we decided upon. We planned to integrate more colours, but the tree shape and size was the conclusion.
 
 # Development:
-Development of this project saw a multitude of languages, tools, tech etc used. I had to learn how to solder to connect the nanoleaves together using custom-made extensions cables. In addition to this, I had to pickup web technologies such as basic HTML, CSS, JS and PHP. These were needed in order to set up a local MySQL database to store the wishes.
+Development of this project saw a multitude of languages, tools, tech etc used. I had to learn how to {{< hl-text blue >}} solder{{< /hl-text >}} to connect the nanoleaves together using custom-made extensions cables. In addition to this, I had to pickup {{< hl-text blue >}} web technologies{{< /hl-text >}} such as basic HTML, CSS, JS and PHP. These were needed in order to set up a local MySQL database to store the wishes.
 
 ## Webpage & PHP
 {{< codeblock "connect.php" "php" "" "connect.php" >}}
@@ -107,7 +107,7 @@ $dbname = 'wishingtree';
     echo json_encode($dbdata);
 {{< /codeblock >}}
 
-Above are the two PHP scripts I used in the application. These were used to retrieve the wishes from the database and also write the wish to the database.
+Above are the two {{< hl-text red >}} PHP{{< /hl-text >}} scripts I used in the application. These were used to retrieve the wishes from the database and also write the wish to the database.
 
 {{< codeblock "index.html" "html" "" "index.html" >}}
 <article>
@@ -140,7 +140,7 @@ The application was split into many modules some main ones being:
 & alot more ^
 
 ### Wish Pathing
-For the wish pathing I decided to use Bézier curves. After watching tutorials on how to set these up in unity, I was able to integrate them into the scene with ease. Once a wish was received in the scene, I wanted it to spawn at various pre-defined locations. From these locations I wanted the wish to follow a wind blowing animation along this path.
+For the wish pathing I decided to use {{< hl-text blue >}} Bézier curves{{< /hl-text >}}. After watching tutorials on how to set these up in unity, I was able to integrate them into the scene with ease. Once a wish was received in the scene, I wanted it to spawn at various pre-defined locations. From these locations I wanted the wish to follow a wind blowing animation along this path.
 
 To do this I started by creating the various wish paths to each leaf I wanted the wish to land on.
 
@@ -166,7 +166,7 @@ Nanoleaves connect to the network via a controller. We discovered that every nan
 
     00:55:da:xx:xx:xx
 
-This was perfect because it meant that every mac address contains the string "00:55:da". With this we could scan the network that the device is connected to and look for any mac addresses that contain the string.
+This was perfect because it meant that every mac address contains the string {{< hl-text red >}} "00:55:da"{{< /hl-text >}}. With this we could scan the network that the device is connected to and look for any mac addresses that contain the string.
 
 {{< codeblock "CmdHandler.cs" "csharp" "" "CmdHandler.cs" >}}
 /// <summary>
@@ -248,7 +248,7 @@ private void GetControllerInfo()
 With the code above we could recognise and control any nanoleaf controller on any network that the device was connected to.
 
 ## Customizing Leaf Colours
-Another particularly challenging aspect of the application was having a way for us to light the nanoleaves to any colours we wanted. As we wanted to create bespoke and diverse tree animations we wanted the nanoleaves to match in colour. The issue is that for th nanoleaves the only way to change there colours is to predefine the colours in a list and send them to the nanoleaf API.
+Another particularly challenging aspect of the application was having a way for us to light the nanoleaves to any colours we wanted. As we wanted to create bespoke and diverse tree animations we wanted the nanoleaves to match in colour. The issue is that for the nanoleaves the only way to change there colours is to predefine the colours in a list and send them to the nanoleaf API.
 
 This was a conflict of interest with how we wanted the application to perform. In no way did we want to manually write multiple animations for the leaves. My solution was an algorithm I created called "Nanoleaf Scraper"
 
@@ -346,7 +346,7 @@ public void ResetPixels()
 }
 {{< /codeblock >}}
 
-The above script is responsible for doing exactly what I want. The videos are passed to the scrip. From there the leaves locations are fetched in pixels. I am then converting each frame of the video to a texture, grabbing the pixel and string that in a file. Once all videos are complete I can point the leaves to read all the pixels in the files that are output and sync them with the tree gradient.
+The above script is responsible for doing exactly what I want. The videos are passed to the script. From there the leaves locations are fetched in pixels. I am then converting each frame of the video to a texture, grabbing the pixel and string that in a file. Once all videos are complete I can point the leaves to read all the pixels in the files that are output and sync them with the tree gradient.
 
 This meant I had now completed scraping the pixel data and displaying the leaves as the correct colours.
 
