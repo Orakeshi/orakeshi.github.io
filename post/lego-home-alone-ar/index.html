@@ -1,6 +1,6 @@
 <!doctype html><html lang=en-us>
 <head>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Lego - Home Alone AR","image":"https://i.imgur.com/jnkWQwF.png","datePublished":"2021-11-01T00:00:00Z","dateModified":"2021-11-01T00:00:00Z","author":{"@type":"Person","name":"Tommy Webb","image":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/orakeshi.github.io\/post\/lego-home-alone-ar\/"},"publisher":{"@type":"Organization","name":"Orakeshi","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"}},"description":"","keywords":[]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Lego - Home Alone AR","image":"https://i.imgur.com/26hEqfS.jpg","datePublished":"2021-11-01T00:00:00Z","dateModified":"2021-11-01T00:00:00Z","author":{"@type":"Person","name":"Tommy Webb","image":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/orakeshi.github.io\/post\/lego-home-alone-ar\/"},"publisher":{"@type":"Organization","name":"Orakeshi","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"}},"description":"","keywords":[]}</script>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
@@ -36,8 +36,8 @@
 <meta name=twitter:creator content="@SirThomasWebb">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4">
 <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4">
-<meta property="og:image" content="https://i.imgur.com/jnkWQwF.png">
-<meta property="twitter:image" content="https://i.imgur.com/jnkWQwF.png">
+<meta property="og:image" content="https://i.imgur.com/26hEqfS.jpg">
+<meta property="twitter:image" content="https://i.imgur.com/26hEqfS.jpg">
 <meta property="og:image" content="https://i.imgur.com/ZhrrlDs.jpg">
 <meta property="twitter:image" content="https://i.imgur.com/ZhrrlDs.jpg">
 <title>Lego - Home Alone AR</title>
@@ -130,7 +130,7 @@
 </div>
 </nav>
 <div class="post-header-cover
-text-center" style=background-image:url(https://i.imgur.com/jnkWQwF.png) data-behavior=4>
+text-center" style=background-image:url(https://i.imgur.com/26hEqfS.jpg) data-behavior=4>
 <div class="post-header main-content-wrap text-center">
 <h1 class=post-title>
 Lego - Home Alone AR
@@ -153,18 +153,545 @@ hasCoverMetaIn">
 <nav id=TableOfContents>
 <ul>
 <li><a href=#project-information>Project Information</a></li>
-<li><a href=#design>Design:</a></li>
-<li><a href=#development>Development:</a></li>
-<li><a href=#challenges--solutions>Challenges & Solutions:</a></li>
-<li><a href=#showcase>Showcase:</a></li>
+<li><a href=#development>Development:</a>
+<ul>
+<li><a href=#ar-game>AR Game</a></li>
+<li><a href=#selfie-experience>Selfie Experience</a></li>
+<li><a href=#prize-draw>Prize Draw</a></li>
+<li><a href=#microsite>Microsite</a>
+<ul>
+<li><a href=#desktop-view>Desktop View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=#showcase>Showcase:</a>
+<ul>
+<li><a href=#desktop-site>Desktop Site</a></li>
+<li><a href=#mobile-site>Mobile Site</a></li>
+<li><a href=#complete-showcase>Complete Showcase</a></li>
+</ul>
+</li>
 <li><a href=#extra-information>Extra Information</a></li>
 </ul>
 </nav>
 <h1 id=project-information>Project Information</h1>
-<h1 id=design>Design:</h1>
+<p>This was my first client facing project in my career. I was tasked with developing the entire front end for the micro site as well as the AR games. In combination with the lead developer at SFS we pair programmed the entire experience.</p>
+<p>The lego Home Alone experience was a project that lego wanted to be delivered with a 1-month deadline. It was tight with long hours worked but the end result was amazing.</p>
+<p>The concept was the following. The micro site would be broken in to 4 parts. These parts are listed below:</p>
+<ul>
+<li>Find Kevin Statue WebAR Game</li>
+<li>Selfie With Kevin Experience</li>
+<li>Selfie Viewer/Share</li>
+<li>Micro site Itself</li>
+</ul>
+<p>Another part was the competition aspect, however I wont showcase this as I was not involved with its development.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/thYwfVq.gif title="GIF showing lego AR game" data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/thYwfVq.gif style=width:40%;height:40% alt="GIF showing lego AR game">
+</a>
+<span class=caption>GIF showing lego AR game</span>
+</div>
+<div style=clear:both></div>
 <h1 id=development>Development:</h1>
-<h1 id=challenges--solutions>Challenges & Solutions:</h1>
+<p>As mentioned above, the development on this project was completed by myself and the lead developer. We of course has help from the creatives, project managers, integrated designers etc, however in regard to code alone it was done by the lead developer and I.</p>
+<p>The lead dev handled the backend, deployment and keeping the project running on time for the 1 month deadline. As a result I will only write about the stuff I developed below.</p>
+<h2 id=ar-game>AR Game</h2>
+<p>The first part of the experience I developed was the AR game. This was created in accordance with <a href=https://www.8thwall.com/>8thwall</a>. 8thwall have an amazing WebAR library that makes developing experiences as simple as possible.</p>
+<p>I started by getting conceptually thinking about everything that makes up the experience. That being, movement, collection mechanics, end video etc. With this in mind I started implementing the movement of Kevin from home alone)</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/QnUSPkH.png title="Image showing the joystick movement mechanic" data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/QnUSPkH.png style=width:40%;height:40% alt="Image showing the joystick movement mechanic">
+</a>
+<span class=caption>Image showing the joystick movement mechanic</span>
+</div>
+<div style=clear:both></div>
+<p>As seen from the image above, I was able to successfully implement the movement mechanic. This was a simple process due to the 8th wall playground having joystick movement showcases already implemented.</p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>move-character.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br><span class=line>28</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>const offsetX = rawOffsetX / maxRawDistance
+const offsetY = rawOffsetY / maxRawDistance
+
+const forward = -Math.min(Math.max(-1, offsetY), 1)
+const side = -Math.min(Math.max(-1, offsetX), 1)
+
+const moveZ = -forward * 0.4
+const moveX = -side * 0.4
+
+// get y rot of camera
+const camY = this.camera.object3D.rotation.y
+
+let joystickRot = Math.atan2(forward, side)
+
+joystickRot -= camY
+
+const speed = 0.001995 //0.011025
+
+this.el.object3D.position.z -= speed * Math.sin(joystickRot) * timeDelta
+this.el.object3D.position.x -= speed * Math.cos(joystickRot) * timeDelta
+
+this.el.object3D.rotation.y = -joystickRot - Math.PI / 2
+
+this.el.setAttribute(&#39;animation-mixer&#39;, {
+clip: &#39;Run&#39;,
+loop: &#39;repeat&#39;,
+crossFadeDuration: 0.4,
+})</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p>This is a part of the script that allows the character to move with the walking animation that hte lead artist at solarflare created. Having GLBs with animations baked into the models allows us to simply access them and ply them as we pleased.</p>
+<p>The result of the joystick code above is as follows:
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/71Wafu2.gif title="GIF showing the character movement with the joystick" data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/71Wafu2.gif style=width:40%;height:40% alt="GIF showing the character movement with the joystick">
+</a>
+<span class=caption>GIF showing the character movement with the joystick</span>
+</div>
+<div style=clear:both></div>
+</p>
+<p>The next part of the AR game was collecting objects. We wanted to have the objects picked up and displayed on the UI at the bottom so the user could visually see how many items left they have to collect.</p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>object-handler.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>// When called, instantiate collectable item with box collider
+window.spawnItem = function (){
+setTimeout(()=&gt; {
+const collectable = document.getElementById(items[currentCollectableItem]&#43;&#34;-item&#34;) // Get Item objects
+const collider = document.getElementById(items[currentCollectableItem]&#43;&#34;-collider&#34;) // Get Item Colliders
+
+// Create random coordinates relative to the character spawn point
+let currentCord = coords[currentCollectableItem];
+
+collectable.object3D.position.set(currentCord.x, 0, currentCord.z)
+collider.object3D.position.set(currentCord.x, 0, currentCord.z)
+
+collectable.setAttribute(&#39;animation-mixer&#39;, {
+  clip: &#39;Idle&#39;,
+})
+
+// Make all the collectables visible
+collectable.setAttribute(&#39;visible&#39;, true)
+collider.setAttribute(&#39;visible&#39;, true)
+}, 100)
+
+}
+
+spawnItem();</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p>The code above is responsible for instantiating the object for kevin to collect. As they spawn sequentially one at a time, this method is called after Kevins collider has collided and collected an existing object in the scene.</p>
+<p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>collected-item.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>// Display UI card for collected item
+function displayUI(itemName) {
+    const message = document.getElementById(itemName &#43; &#34;-message&#34;)
+    message.style.display = &#39;block&#39;;
+    entity.setAttribute(&#39;character-move&#39;, &#39;&#39;)
+    currentCollectableItem&#43;&#43;;
+    window.spawnItem();
+
+    // Remove card etc after 3 seconds
+    setTimeout(() =&gt; {
+
+        // If the item is aftershave -&gt; Display iconic Kevin face
+        if (itemName === &#34;aftershave&#34;) {
+            let kevin = entity.getObject3D(&#39;mesh&#39;).getObjectByName(&#34;LegoKevin&#34;)
+            let texture = THREE.ImageUtils.loadTexture(smileSrc)
+            texture.flipY = false
+            kevin.material.map = texture
+        }
+        groupNotCollected[currentItem].setAttribute(&#39;src&#39;, &#34;./assets/ui/&#34; &#43; itemName &#43; &#34;-on-CollectItem.png&#34;);
+        currentItem&#43;&#43;;
+        message.style.display = &#39;none&#39;;
+        if (totalCollected === totalCollectables) {
+            checkCollected();
+        }
+    }, 1500)
+}</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+This module of the code above is responsible for showing the correct UI card and updating the bottom panels ui of the item collected. With this code in place the collection mechanic is now complete.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/rgkuU8e.gif title="GIF showing the collection mechanic" data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/rgkuU8e.gif style=width:40%;height:40% alt="GIF showing the collection mechanic">
+</a>
+<span class=caption>GIF showing the collection mechanic</span>
+</div>
+<div style=clear:both></div>
+<p>The final aspect left of the game was to implement the door, allow the suer to walk through it and have a video play & end the game</p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>end-game.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>door.addEventListener(&#34;hitstart&#34;, function(event) {
+    const character = document.getElementById(&#34;character&#34;);
+    character.removeAttribute(&#39;character-move&#39;);
+    analytics.sendEvent(analytics.events.arGame.category, analytics.events.arGame.finishedGame);
+
+    videoContainer.style.display = &#34;block&#34;;
+    video.play();
+    
+    video.addEventListener(&#39;ended&#39;, () =&gt; {
+        body.style.opacity = &#34;0&#34;;
+        window.location.href=&#39;./transition.html&#39;;
+    })
+})</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p>That is now everything finished in regard to the AR game.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/3HNROaM.gif title="GIF showcasing door spawn and end video" data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/3HNROaM.gif style=width:40%;height:40% alt="GIF showcasing door spawn and end video">
+</a>
+<span class=caption>GIF showcasing door spawn and end video</span>
+</div>
+<div style=clear:both></div>
+<h2 id=selfie-experience>Selfie Experience</h2>
+<p>The selfie experience was a lot simpler than the AR game. Not as much was required to complete the development. The only challenging aspect was using the HTML2Cavnas library to allow me to screenshot the body tag whilst hiding specific elements.</p>
+<p>There was only 2 main aspects of the selfie experience. They are recognising face gestures and playing an animation. These are both combined into 1 action, so I completed the development together.</p>
+<p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>face-events.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>AFRAME.registerComponent(&#39;face-events&#39;, {
+    schema: {
+    mouthOpen: {type: &#39;number&#39;, default: 0},
+    faceFound: {type: &#39;bool&#39;, default: false},
+    },
+
+    init() {
+        const scene = this.el.sceneEl;
+
+        // Create attributes required for face mesh detection
+        this.lower = document.createElement(&#39;xrextras-face-attachment&#39;)
+        this.lower.setAttribute(&#39;alignToSurface&#39;, &#39;true&#39;)
+        this.lower.setAttribute(&#39;point&#39;, &#39;lowerLip&#39;)
+        this.el.appendChild(this.lower)
+
+        const show = ({detail}) =&gt; {
+            this.data.faceFound = true
+        }
+        const hide = ({detail}) =&gt; {
+            this.data.faceFound = false
+        }
+        // Dispatch various functions when events occur
+        scene.addEventListener(&#39;xrfacefound&#39;, show)
+        scene.addEventListener(&#39;xrfaceupdated&#39;, show)
+        scene.addEventListener(&#39;xrfacelost&#39;, hide)</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+This code above is repsonsible for registering the component and creating a scheme for when the mouth is open/closed.</p>
+<p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>face-events.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>setInterval(() =&gt; {
+    // normalize lower lip distance
+    const blendAmt = function (value, min, max) {
+        return (value - min) / (max - min)
+        }
+        this.data.mouthOpen = blendAmt(this.lower.object3D.position.y, -0.5, -0.7)
+
+        let mouth = this.data.mouthOpen;
+        let face = this.data.faceFound;
+
+        if (face === true) {
+            // Mouth is open
+            if(mouth &gt; 0.9) {
+                mouthOpenNow = true
+                AnimateNow();
+            }
+            // Mouth is closed
+            else{
+                mouthOpenNow = false
+                AnimateNow();
+            }
+
+        } else {
+            // Not tracking the users face
+            StopAnimation()
+        }
+    }, 85)</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+The final aspect is the code above. This handles playing the Kevin sequence animation when the persons mouth opens. This works by taking a set of still PNG images and cycling up & down through them to give the impression kevin is moving/animating.</p>
+<p>
+<div class="figure center fig-50">
+<a class=fancybox href=https://i.imgur.com/8EIHQyN.png data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/8EIHQyN.png>
+</a>
+</div>
+<div class="figure center fig-50">
+<a class=fancybox href=https://i.imgur.com/UML6VYv.gif data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/UML6VYv.gif>
+</a>
+</div>
+<div style=clear:both></div>
+</p>
+<h2 id=prize-draw>Prize Draw</h2>
+<p>The next part of the experience I worked on was the Prize Draw page. This was the simplest of everything I worked on. All I had to do was develop the front end design & take te input from the text fields + post them to our strapi backend.</p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>prizeDraw.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br><span class=line>28</span><br><span class=line>29</span><br><span class=line>30</span><br><span class=line>31</span><br><span class=line>32</span><br><span class=line>33</span><br><span class=line>34</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>// If t&amp;c check box left empty
+if(!tcCheck.checked){
+    console.log(&#34;Error: T&amp;C must be checked&#34;)
+    //errorText.innerHTML=&#34;T&amp;Cs box must be checked&#34;;
+    tcText.style.border = &#34;red 2px solid&#34;;
+}
+/* If form passes validation try and send data to backend */
+else{
+    let email = document.getElementById(&#34;email&#34;).value;
+    let fullName = document.getElementById(&#34;fullname&#34;).value;
+    let age = document.getElementById(&#34;age&#34;).value;
+    let phone = document.getElementById(&#34;phone&#34;).value;
+    let address = document.getElementById(&#34;address&#34;).value;
+
+    console.log(email)
+    try {
+        const entryDataId = await prizeDrawEntry.savePrizeDrawEntry({
+            email: email,
+            fullName: fullName,
+            age: age,
+            phone: phone,
+            address: address,
+        });
+        console.log(&#34;Entry sent with id &#34; &#43; entryDataId &#43; &#34;.&#34;);
+        analytics.sendEvent(analytics.events.prizeDraw.category, analytics.events.prizeDraw.joinedPrizeDraw);
+    }
+    catch (error) {
+        errorText.innerHTML=&#34;ERROR: Please try again later!&#34;;
+        console.log(&#34;ERROR: &#34; &#43; error)
+    }
+    /* Display Thank you page */
+    form.style.display=&#34;none&#34;;
+    thanksWindow.style.display=&#34;block&#34;;
+}</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p>This code above is responsible for doing exactly that.</p>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/g2SmzVJOoJY style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+<h2 id=microsite>Microsite</h2>
+<p>The last aspect of the experience to be developed is the overall micro site (that being animations, design, buttons, socials etc)</p>
+<h3 id=desktop-view>Desktop View</h3>
+<p>One part of the experiecne that has been defined in the requirements is that the destop version of the site should be different to the mobile/tablet view.</p>
+<p>Any desktop user should not be able to click on the AR or selfie experience. Additionally, they should only be able to access the prize draw and scan the QR code to open the complete experience on mobile.</p>
+<p>To achieve this I simply used javaScript to check the nav user agent to see what device they were on.</p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>detectDevice.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>/**
+* Function that checks the userAgent data to see if the user is on a desktop computer
+* If the user is on a desktop they should not be able to access parts of the site
+* @returns {string}
+*/
+  export function detectDevice() {
+     let isIOS = /iPad|iPhone|iPod/.test(navigator.platform) ||
+         (navigator.platform === &#39;MacIntel&#39; &amp;&amp; navigator.maxTouchPoints &gt; 1)
+
+     const ua = navigator.userAgent;
+
+  if(isIOS){
+     return &#34;tablet&#34;;
+  }
+
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+     return &#34;tablet&#34;;
+  }
+  else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+     return &#34;mobile&#34;;
+  }
+     return &#34;desktop&#34;;
+  };</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p>The above code now detects the device. From there I have conditionals in place to display the desktop or mobile view dependent on the value returned from this function.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/nPDFACM.png title="Image showcasing mobile view of site" data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/nPDFACM.png style=width:40%;height:40% alt="Image showcasing mobile view of site">
+</a>
+<span class=caption>Image showcasing mobile view of site</span>
+</div>
+<div style=clear:both></div>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/hDiwsem.png title="Image showing desktop view of site" data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/hDiwsem.png style=width:100%;height:100% alt="Image showing desktop view of site">
+</a>
+<span class=caption>Image showing desktop view of site</span>
+</div>
+<div style=clear:both></div>
 <h1 id=showcase>Showcase:</h1>
+<h2 id=desktop-site>Desktop Site</h2>
+<p>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/0f15tGyc-UA style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+<div class="figure fig-33">
+<a class=fancybox href=https://i.imgur.com/v1PrP15.png data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/v1PrP15.png>
+</a>
+</div>
+<div class="figure fig-33">
+<a class=fancybox href=https://i.imgur.com/M4PXjNc.png data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/M4PXjNc.png>
+</a>
+</div>
+<div class="figure fig-33">
+<a class=fancybox href=https://i.imgur.com/tF5x5cE.png data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/tF5x5cE.png>
+</a>
+</div>
+<div style=clear:both></div>
+</p>
+<h2 id=mobile-site>Mobile Site</h2>
+<p>
+<div class="figure center fig-50">
+<a class=fancybox href=https://i.imgur.com/a4plmaw.png?1 data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/a4plmaw.png?1>
+</a>
+</div>
+<div class="figure center fig-50">
+<a class=fancybox href=https://i.imgur.com/wh9qc7z.png?1 data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/wh9qc7z.png?1>
+</a>
+</div>
+<div style=clear:both></div>
+<div class="figure fig-33">
+<a class=fancybox href=https://i.imgur.com/14EdGvR.png?1 data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/14EdGvR.png?1>
+</a>
+</div>
+<div class="figure fig-33">
+<a class=fancybox href=https://i.imgur.com/h8WIuEX.png?1 data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/h8WIuEX.png?1>
+</a>
+</div>
+<div class="figure fig-33">
+<a class=fancybox href=https://i.imgur.com/bOEAtXm.png?1 data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/bOEAtXm.png?1>
+</a>
+</div>
+<div style=clear:both></div>
+</p>
+<h2 id=complete-showcase>Complete Showcase</h2>
+<p>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/FUaHVIvapkY style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+<div class="figure center fig-75">
+<a class=fancybox href=https://i.imgur.com/Hz6LUvO.gif data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/Hz6LUvO.gif>
+</a>
+</div>
+<div class="figure center fig-25">
+<a class=fancybox href=https://i.imgur.com/DOWui0O.gif data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/DOWui0O.gif>
+</a>
+</div>
+<div class="figure center fig-25">
+<a class=fancybox href=https://i.imgur.com/vXH5DZe.png data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/vXH5DZe.png>
+</a>
+</div>
+<div class="figure center fig-25">
+<a class=fancybox href=https://i.imgur.com/OfcvFK1.jpg data-fancybox=group:legohomealone>
+<img class=fig-img src=https://i.imgur.com/OfcvFK1.jpg>
+</a>
+</div>
+<div style=clear:both></div>
+</p>
 <h1 id=extra-information>Extra Information</h1>
 <p>
 <div class="figure nocaption fig-25">
