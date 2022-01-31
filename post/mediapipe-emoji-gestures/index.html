@@ -149,16 +149,281 @@ hasCoverMetaIn">
 <nav id=TableOfContents>
 <ul>
 <li><a href=#project-information>Project Information</a></li>
-<li><a href=#development>Development:</a></li>
-<li><a href=#challenges--solutions>Challenges & Solutions:</a></li>
+<li><a href=#development>Development:</a>
+<ul>
+<li><a href=#setup-mediapipe>Setup MediaPipe</a></li>
+<li><a href=#emoji-gestures>Emoji Gestures</a></li>
+<li><a href=#emoji-animation>Emoji Animation</a></li>
+</ul>
+</li>
 <li><a href=#showcase>Showcase:</a></li>
 <li><a href=#extra-information>Extra Information</a></li>
 </ul>
 </nav>
 <h1 id=project-information>Project Information</h1>
+<p>This labs project, much like the nanoleaf football project, was to be a fast project with a quick delivery. Due to this, I had to sacrifice code quality for quick output.</p>
+<p>The project was to use Googles AI (MediaPipe) to use hand tracking and produce an exciting output. In the end we developed a hand gesture recognition that displayed te emoji the use ris signing to their webcam.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/rjogsWb.gif title="GIF showing complete emoji experience" data-fancybox=group:labs-emojigesture>
+<img class=fig-img src=https://i.imgur.com/rjogsWb.gif style=width:70%;height:70% alt="GIF showing complete emoji experience">
+</a>
+<span class=caption>GIF showing complete emoji experience</span>
+</div>
+<div style=clear:both></div>
+<p>The gif above showcases the complete emoji experience.</p>
 <h1 id=development>Development:</h1>
-<h1 id=challenges--solutions>Challenges & Solutions:</h1>
+<p>The project went through several creative changes. At one point we were planning to develop a system with the webcam to translate 3d rendered objects on the canvas. that being said the emoji idea was more entertaining and liked among the team.</p>
+<p>This project was pretty much solo developed by myself, with the help of the integrated designer to create the emoji assets. This labs project had a very quick delivery.</p>
+<p>The end plan was to produce a video showcasing the emoji system being used by multiple members of the team. We then want to comp the footage onto a video call to make it appear as if this is a featuer of gogle meet. This video will then be shared on social platforms as a thought-provoking piece for people to discuss and take inspiration from.</p>
+<h2 id=setup-mediapipe>Setup MediaPipe</h2>
+<p>Using MediaPipes documentation I can easily set up MediaPipe hand detection in JavaScript. To start with I implemented the sample code from the docs. From their I experimented and gradually expanded the code to fit hte needs of what we want to develop for the labs project.</p>
+<p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>index.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>const hands = new Hands({locateFile: (file) =&gt; {
+    return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
+}});
+
+hands.setOptions({
+    selfieMode:true,
+    maxNumHands: 1,
+    modelComplexity: 1,
+    minDetectionConfidence: 0.5,
+    minTrackingConfidence: 0.5,
+    useCpuInference: false,
+});
+hands.onResults(onResults);
+
+const camera = new Camera(videoElement, {
+    onFrame: async () =&gt; {
+        await hands.send({image: videoElement});
+    },
+    width: 1280,
+    height: 720
+});
+camera.start();</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+This code above is responsible for setting the hand landmarkers on the video container.</p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>index.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>/***
+* Received the hand landmarks
+* @param results
+  */
+  function onResults(results) {
+  width=results.image.width;
+  height=results.image.height;
+
+  if(width!=canvasElement.width){
+  canvasElement.width=width;
+  canvasElement.height=height;
+  }
+
+  canvasCtx.save();
+  canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+  canvasCtx.drawImage(results.image, 0, 0, width, height);
+
+  if (results.multiHandLandmarks) {
+  for (const landmarks of results.multiHandLandmarks) {
+  drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, {color: &#39;#00FF00&#39;, lineWidth: 2});
+
+       drawLandmarks(canvasCtx, landmarks, {color: &#39;#FF0000&#39;, lineWidth: 1, radius: 2});
+       // Gets the index and thumb points
+       calcLandmarks = landmarks</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p>The code above handles drawing the landmarkers to the canvas. Additionally, they are drawn every frame(second) so they follow the users hand exactly as its moved around the window.</p>
+<p>With this implemented the base code for hand tracking from MediaPipe is complete and integrated.</p>
+<h2 id=emoji-gestures>Emoji Gestures</h2>
+<p>When it comes to recognising gestures I took the simplest approach I could think of. This was to measure the distance between multiple given landmarks on the hand. I could then have conditionals in place to judge when certain fingers are closing etc and working out the hand gesture from that.</p>
+<p>An example is seen below:
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>index.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>/***
+* Function responsible for -
+* Defining various hand points
+* Returning string value of the hand emoji user is showing
+* @param landmarks
+* @returns {string|null}
+  */
+function detectHandGesture(landmarks){
+  // Creating multiple positional VARS to create hand gestures
+
+  // Fingers distance from base of palm
+  let middleFingerToPalm = calculateDistanceToBasePalm(landmarks[12]);
+  let ringFingerToPalm = calculateDistanceToBasePalm(landmarks[16]);
+  let indexFingerToPalm = calculateDistanceToBasePalm(landmarks[8]);
+  let pinkyFingerToPalm = calculateDistanceToBasePalm(landmarks[20]);
+  let thumbToPalm = calculateDistanceToBasePalm(landmarks[4])
+
+  // Rock Sign
+  if (middleFingerToPalm &lt;=200 &amp;&amp; ringFingerToPalm &lt;= 200 &amp;&amp; pinkyFingerToPalm &gt;= 200 &amp;&amp; indexFingerToPalm &gt;=200){
+  return &#34;Rock&#34;
+  }
+}</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+</p>
+<p>the code above is working out the distance from each finger to the palm of the hand. When the distance is less than or greater than 200 i can detect if the fingers are closed or open. From here I can tell when the user puts their hand in a rock n roll type gesture.</p>
+<p>I then return the emoji being signed. This return statement is fed to a relative path to fetch and display the current emoji.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/LTiWnXk.png title="Image showing hand gesture being recognised" data-fancybox=group:labs-emojigesture>
+<img class=fig-img src=https://i.imgur.com/LTiWnXk.png style=width:70%;height:70% alt="Image showing hand gesture being recognised">
+</a>
+<span class=caption>Image showing hand gesture being recognised</span>
+</div>
+<div style=clear:both></div>
+<h2 id=emoji-animation>Emoji Animation</h2>
+<p>In regard to the emoji animation, this was fairly simple. I am using an external script that instantiates and places the emoji off-screen relative to the users hand location.</p>
+<p>This means that as the user moves their hand the emojis instantiate in that updates location. I then play an animation I created ni CSS that makes the emojis fall below the users view. On the animation end I destroy the emojis.</p>
+<p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>emoji.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>/***
+* Function handles converting from pixels to VW
+* @param px
+* @returns {number}
+  */
+function convertPXToVW(px) {
+  return px * (100 / document.documentElement.clientWidth);
+}
+let i = 0
+
+let parentDiv
+let sheet
+
+/***
+* Function handles creating parent div and configuring DOM to start displaying emojis
+  */
+export function setupEmojiSpawn(){
+  let element = document.createElement(&#39;style&#39;);
+
+  // Append style element to head
+  document.head.appendChild(element);
+
+  // Reference to the stylesheet
+  sheet = element.sheet;
+  parentDiv = document.createElement(&#39;div&#39;);</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+The code above starts by creating a div. This div is the parent container to all the emojis that are created.</p>
+<p>
+<figure class="highlight javascript language-javascript">
+<figcaption>
+<span>index.js</span>
+</figcaption>
+<table>
+<tbody>
+<tr>
+<td class=gutter>
+<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br></pre>
+</td>
+<td class=code>
+<pre class="code-highlight language-javascript javascript"><code class=javascript>export function emojiSpawner(baseHand, emojiToSpawnSrc) {
+    let div = document.createElement(&#39;img&#39;);
+    div.setAttribute(&#34;src&#34;, emojiToSpawnSrc)
+    div.id = &#39;emoji&#39; &#43; i;
+    div.className = &#39;emojiparent&#39;;
+
+    styles &#43;= &#39;animation-duration: &#39; &#43; (getRandomInt(4, 7) &#43; 1) &#43; &#39;s;&#39;
+    styles &#43;= &#39;animation-timing-function: linear;&#39;
+    styles &#43;= &#39;animation-iteration-count: 1;&#39;
+    styles &#43;= &#39;animation-play-state: running;&#39;
+    styles &#43;= &#39;}&#39;;
+
+    sheet.insertRule(styles, i);
+    i&#43;&#43;
+
+    // Calculate Pixels to display emojis with a given View port width
+    let leftStart = baseHand.x*document.documentElement.clientWidth * 100 / 100
+    div.style.setProperty(&#39;--left-start&#39;,  leftStart &#43; &#39;px&#39;)
+    div.style.setProperty(&#39;--left-end&#39;, leftStart &#43; &#39;px&#39;)
+    document.getElementById(parentDiv.id).appendChild(div)
+
+    // Find animation, on end destroy div element
+    let currentAnimation = document.getElementById(div.id)
+    currentAnimation.addEventListener(&#39;animationend&#39;, () =&gt; {
+        currentAnimation.remove()
+    });</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+This code above is called every time a hand gesture is recognised. It handles creating the image and plaing it correctly relative to the users hand.</p>
+<div class="figure center">
+<a class=fancybox href=https://i.imgur.com/AdkVWNE.gif title="GIF showing emoji animation" data-fancybox=group:labs-emojigesture>
+<img class=fig-img src=https://i.imgur.com/AdkVWNE.gif style=width:70%;height:70% alt="GIF showing emoji animation">
+</a>
+<span class=caption>GIF showing emoji animation</span>
+</div>
+<div style=clear:both></div>
 <h1 id=showcase>Showcase:</h1>
+<p>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/2Jld8vxRT8c style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+<div class="figure center fig-50">
+<a class=fancybox href=https://i.imgur.com/QQKYdY8.png data-fancybox=group:labs-emojigesture>
+<img class=fig-img src=https://i.imgur.com/QQKYdY8.png>
+</a>
+</div>
+<div class="figure center fig-50">
+<a class=fancybox href=https://i.imgur.com/ISILTTn.png data-fancybox=group:labs-emojigesture>
+<img class=fig-img src=https://i.imgur.com/ISILTTn.png>
+</a>
+</div>
+<div style=clear:both></div>
+</p>
 <h1 id=extra-information>Extra Information</h1>
 <p>
 <div class="figure nocaption fig-25">
