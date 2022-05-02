@@ -1,229 +1,21 @@
-<!doctype html><html lang=en-us>
-<head>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Nanoleaf - Goal Reactive Lighting","image":"https://i.imgur.com/g2oZgdE.png","datePublished":"2021-07-11T00:00:00Z","dateModified":"2021-07-11T00:00:00Z","author":{"@type":"Person","name":"Tommy Webb","image":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/orakeshi.github.io\/post\/nanoleaf-goal-reactive-lighting\/"},"publisher":{"@type":"Organization","name":"Orakeshi","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"}},"description":"","keywords":[]}</script>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=generator content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
-<meta name=author content="Tommy Webb">
-<meta name=keywords content>
-<meta name=description content>
-<meta property="og:description" content>
-<meta property="og:type" content="article">
-<meta property="og:title" content="Nanoleaf - Goal Reactive Lighting">
-<meta name=twitter:title content="Nanoleaf - Goal Reactive Lighting">
-<meta property="og:url" content="https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/">
-<meta property="twitter:url" content="https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/">
-<meta property="og:site_name" content="Orakeshi">
-<meta property="og:description" content>
-<meta name=twitter:description content>
-<meta property="og:locale" content="en-us">
-<meta property="article:published_time" content="2021-07-11T00:00:00">
-<meta property="article:modified_time" content="2021-07-11T00:00:00">
-<meta property="article:section" content="projects">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="labs">
-<meta property="article:tag" content="solarflare-studio">
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@SirThomasWebb">
-<meta name=twitter:creator content="@SirThomasWebb">
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4">
-<meta property="twitter:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4">
-<meta property="og:image" content="https://i.imgur.com/g2oZgdE.png">
-<meta property="twitter:image" content="https://i.imgur.com/g2oZgdE.png">
-<meta property="og:image" content="https://i.imgur.com/veFiH5G.jpg">
-<meta property="twitter:image" content="https://i.imgur.com/veFiH5G.jpg">
-<title>Nanoleaf - Goal Reactive Lighting</title>
-<link rel=icon href=https://i.imgur.com/zHMvsMu.png>
-<link rel=canonical href=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous referrerpolicy=no-referrer>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin=anonymous referrerpolicy=no-referrer>
-<link rel=stylesheet href=https://orakeshi.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css>
-</head>
-<body>
-<div id=blog>
-<header id=header data-behavior=4>
-<i id=btn-open-sidebar class="fa fa-lg fa-bars"></i>
-<div class=header-title>
-<a class=header-title-link href=https://orakeshi.github.io/ aria-label="Go to homepage">Orakeshi</a>
-</div>
-<a class=header-right-picture href=https://orakeshi.github.io/#about aria-label="Open the link: /#about">
-<img class=header-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture">
-</a>
-</header>
-<nav id=sidebar data-behavior=4>
-<div class=sidebar-container>
-<div class=sidebar-profile>
-<a href=https://orakeshi.github.io/#about aria-label="Read more about the author">
-<img class=sidebar-profile-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture">
-</a>
-<h4 class=sidebar-profile-name>Tommy Webb</h4>
-<h5 class=sidebar-profile-bio>I ❤ coding and learning new technology</h5>
-</div>
-<ul class=sidebar-buttons>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://orakeshi.github.io/ title=Home>
-<i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden=true></i>
-<span class=sidebar-button-desc>Home</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://orakeshi.github.io/categories/projects title=Projects>
-<i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden=true></i>
-<span class=sidebar-button-desc>Projects</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://orakeshi.github.io/categories/blog title=Blog>
-<i class="sidebar-button-icon fas fa-lg fa-pen-square" aria-hidden=true></i>
-<span class=sidebar-button-desc>Blog</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://orakeshi.github.io/tags title=Tags>
-<i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden=true></i>
-<span class=sidebar-button-desc>Tags</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://orakeshi.github.io/#about title=About>
-<i class="sidebar-button-icon fas fa-lg fa-user" aria-hidden=true></i>
-<span class=sidebar-button-desc>About</span>
-</a>
-</li>
-</ul>
-<ul class=sidebar-buttons>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://github.com/Orakeshi target=_blank rel=noopener title=GitHub>
-<i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden=true></i>
-<span class=sidebar-button-desc>GitHub</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://www.linkedin.com/in/tommy-webb-8749231a0/ target=_blank rel=noopener title=Linkedin>
-<i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden=true></i>
-<span class=sidebar-button-desc>Linkedin</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=mailto:%20tommy@solarflarestudio.co.uk target=_blank rel=noopener title="Email Me">
-<i class="sidebar-button-icon fa fa-lg fa-envelope" aria-hidden=true></i>
-<span class=sidebar-button-desc>Email Me</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://www.youtube.com/channel/UC_FKPC8y4U2Ep7ubNBAQWjg target=_blank rel=noopener title=Youtube>
-<i class="sidebar-button-icon fab fa-lg fa-youtube" aria-hidden=true></i>
-<span class=sidebar-button-desc>Youtube</span>
-</a>
-</li>
-</ul>
-<ul class=sidebar-buttons>
-</ul>
-</div>
-</nav>
-<div class="post-header-cover
-text-center" style=background-image:url(https://i.imgur.com/g2oZgdE.png) data-behavior=4>
-<div class="post-header main-content-wrap text-center">
-<h1 class=post-title>
-Nanoleaf - Goal Reactive Lighting
-</h1>
-<div class="postShorten-meta post-meta">
-<time datetime=2021-07-11T00:00:00Z>
-July 11, 2021
-</time>
+<!doctype html><html lang=en-us><head><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Nanoleaf - Goal Reactive Lighting","image":"https://i.imgur.com/g2oZgdE.png","datePublished":"2021-07-11T00:00:00Z","dateModified":"2021-07-11T00:00:00Z","author":{"@type":"Person","name":"Tommy Webb","image":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/orakeshi.github.io\/post\/nanoleaf-goal-reactive-lighting\/"},"publisher":{"@type":"Organization","name":"Orakeshi","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"}},"description":"","keywords":[]}</script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Hugo 0.98.0 with theme Tranquilpeak 0.5.3-BETA"><meta name=author content="Tommy Webb"><meta name=keywords content><meta name=description content><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:title" content="Nanoleaf - Goal Reactive Lighting"><meta name=twitter:title content="Nanoleaf - Goal Reactive Lighting"><meta property="og:url" content="https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/"><meta property="twitter:url" content="https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/"><meta property="og:site_name" content="Orakeshi"><meta property="og:description" content><meta name=twitter:description content><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2021-07-11T00:00:00"><meta property="article:modified_time" content="2021-07-11T00:00:00"><meta property="article:section" content="projects"><meta property="article:tag" content="python"><meta property="article:tag" content="labs"><meta property="article:tag" content="solarflare-studio"><meta name=twitter:card content="summary"><meta name=twitter:site content="@SirThomasWebb"><meta name=twitter:creator content="@SirThomasWebb"><meta property="og:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4"><meta property="twitter:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4"><meta property="og:image" content="https://i.imgur.com/g2oZgdE.png"><meta property="twitter:image" content="https://i.imgur.com/g2oZgdE.png"><meta property="og:image" content="https://i.imgur.com/veFiH5G.jpg"><meta property="twitter:image" content="https://i.imgur.com/veFiH5G.jpg"><title>Nanoleaf - Goal Reactive Lighting</title><link rel=icon href=https://i.imgur.com/zHMvsMu.png><link rel=canonical href=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=https://orakeshi.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css></head><body><div id=blog><header id=header data-behavior=4><i id=btn-open-sidebar class="fa fa-lg fa-bars"></i><div class=header-title><a class=header-title-link href=https://orakeshi.github.io/ aria-label="Go to homepage">Orakeshi</a></div><a class=header-right-picture href=https://orakeshi.github.io/#about aria-label="Open the link: /#about"><img class=header-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture"></a></header><nav id=sidebar data-behavior=4><div class=sidebar-container><div class=sidebar-profile><a href=https://orakeshi.github.io/#about aria-label="Read more about the author"><img class=sidebar-profile-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture"></a><h4 class=sidebar-profile-name>Tommy Webb</h4><h5 class=sidebar-profile-bio>I ❤ coding and learning new technology</h5></div><ul class=sidebar-buttons><li class=sidebar-button><a class=sidebar-button-link href=https://orakeshi.github.io/ title=Home><i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden=true></i>
+<span class=sidebar-button-desc>Home</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://orakeshi.github.io/categories/projects title=Projects><i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden=true></i>
+<span class=sidebar-button-desc>Projects</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://orakeshi.github.io/categories/blog title=Blog><i class="sidebar-button-icon fas fa-lg fa-pen-square" aria-hidden=true></i>
+<span class=sidebar-button-desc>Blog</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://orakeshi.github.io/tags title=Tags><i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden=true></i>
+<span class=sidebar-button-desc>Tags</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://orakeshi.github.io/#about title=About><i class="sidebar-button-icon fas fa-lg fa-user" aria-hidden=true></i>
+<span class=sidebar-button-desc>About</span></a></li></ul><ul class=sidebar-buttons><li class=sidebar-button><a class=sidebar-button-link href=https://github.com/Orakeshi target=_blank rel=noopener title=GitHub><i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden=true></i>
+<span class=sidebar-button-desc>GitHub</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://www.linkedin.com/in/tommy-webb-8749231a0/ target=_blank rel=noopener title=Linkedin><i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden=true></i>
+<span class=sidebar-button-desc>Linkedin</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=mailto:%20tommy@solarflarestudio.co.uk target=_blank rel=noopener title="Email Me"><i class="sidebar-button-icon fa fa-lg fa-envelope" aria-hidden=true></i>
+<span class=sidebar-button-desc>Email Me</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://www.youtube.com/channel/UC_FKPC8y4U2Ep7ubNBAQWjg target=_blank rel=noopener title=Youtube><i class="sidebar-button-icon fab fa-lg fa-youtube" aria-hidden=true></i>
+<span class=sidebar-button-desc>Youtube</span></a></li></ul><ul class=sidebar-buttons></ul></div></nav><div class="post-header-cover
+text-center" style=background-image:url(https://i.imgur.com/g2oZgdE.png) data-behavior=4><div class="post-header main-content-wrap text-center"><h1 class=post-title>Nanoleaf - Goal Reactive Lighting</h1><div class="postShorten-meta post-meta"><time datetime=2021-07-11T00:00:00Z>July 11, 2021</time>
 <span>in</span>
-<a class=category-link href=https://orakeshi.github.io/categories/projects>projects</a>
-</div>
-</div>
-</div>
-<div id=main data-behavior=4 class="hasCover
-hasCoverMetaIn">
-<article class=post id=top>
-<div class="post-content markdown">
-<div class=main-content-wrap>
-<h1 id=table-of-contents>Table of Contents</h1>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#the-plan>The plan:</a></li>
-<li><a href=#design-process>Design Process:</a>
-<ul>
-<li><a href=#the-problem-with-the-nanoleaf-api>The Problem With The Nanoleaf API:</a></li>
-</ul>
-</li>
-<li><a href=#development>Development:</a>
-<ul>
-<li><a href=#packet-builder-algorithm>Packet Builder Algorithm</a>
-<ul>
-<li><a href=#getlayout>GetLayout()</a></li>
-<li><a href=#getid>GetId()</a></li>
-<li><a href=#packetbuilder>PacketBuilder()</a></li>
-</ul>
-</li>
-<li><a href=#getting-the-live-football-scores>Getting The Live Football Scores</a></li>
-</ul>
-</li>
-<li><a href=#showcase>Showcase</a></li>
-<li><a href=#extra-information>Extra Information</a></li>
-</ul>
-</nav>
-<h1 id=the-plan>The plan:</h1>
-<p>The plan was simple. I had nanoleaves lying around from a previous project (<a href=https://orakeshi.github.io/post/digital-wishing-tree/>Wishing Tree</a>) and wanted to do something with them. Before starting my software development apprenticeship, I used to enjoy watching football. I would put on several games regardless of the day they were played on. Now, due to myself working during the week and creating personal projects on the weekend, my time is limited, and thus I rarely ever get to watch the games.</p>
-<p>I thought, instead of taking the simple approach of keeping open a live tracker/listening to the radio, I would take a creative approach of lighting up the nanoleaves based on the team that scores. I wanted to produce an output quick. I didnt care about how the code war written nor how long it took for the leaves to light up. My goal was to have my nanoleaves light up when a team scores no matter what.</p>
-<div class="figure center">
-<a class=fancybox href=https://i.imgur.com/g2oZgdE.png title="Image of the spare nanoleaves from the wishing tree project" data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/g2oZgdE.png style=width:70%;height:70% alt="Image of the spare nanoleaves from the wishing tree project">
-</a>
-<span class=caption>Image of the spare nanoleaves from the wishing tree project</span>
-</div>
-<div style=clear:both></div>
-<h1 id=design-process>Design Process:</h1>
-<p>Immediately upon undertaking this project, I knew I needed the football team colours. I was fortunate enough that a website (<a href=https://teamcolorcodes.com/>teamcolorcodes</a>) already had all the teams in the premier league with their team colours RGB. This saved me a-lot of time. At this point I had to have a way of storing all the colours for the application to use. I went with a json file which contained the team name, along with the three colours that represent the team</p>
-<div class="figure center">
-<a class=fancybox href=https://i.imgur.com/ibaTgbj.png title="Image showing the teams and there 3 main RGB colours of their badge/kit" data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/ibaTgbj.png style=width:70%;height:70% alt="Image showing the teams and there 3 main RGB colours of their badge/kit">
-</a>
-<span class=caption>Image showing the teams and there 3 main RGB colours of their badge/kit</span>
-</div>
-<div style=clear:both></div>
-<p>After creating the JSON file with the team colours, I decided to draw a simple design sketch on figma showing the 3 frames/stages of the colours that the nanoleaves will look like upon a team scoring. (These colours will change dependent on team colours)</p>
-<div class="figure center">
-<a class=fancybox href=https://i.imgur.com/JnzFtRg.png title="Image showing the 3 frames of the lights changing colour when a team scores" data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/JnzFtRg.png style=width:70%;height:70% alt="Image showing the 3 frames of the lights changing colour when a team scores">
-</a>
-<span class=caption>Image showing the 3 frames of the lights changing colour when a team scores</span>
-</div>
-<div style=clear:both></div>
-<h2 id=the-problem-with-the-nanoleaf-api>The Problem With The Nanoleaf API:</h2>
-<p>The way that nanoleaves work is via sending requests to the API. The nanoleaf documentation is severely lacking and quite underwhelming in what the leaves are able to do. That being said, the main way to light up nanoleaves from code is to send a <span class="highlight-text red"> PUT</span> request to the leaves with RGB data. This request follows a format along the lines of the following:</p>
-<p>Leaf 1 -> PUT Request = ('{&ldquo;write&rdquo;: {&ldquo;animdata&rdquo;: &ldquo;<span class="highlight-text orange"> 1</span> <span class="highlight-text blue"> 1</span> <span class="highlight-text green"> 237 233 57</span>&rdquo;}')</p>
-<p>The request above follows a certain format as stated in the nanoleaf documentation. That is, to create a write command and send the following attributes. The first &ldquo;<span class="highlight-text orange"> 1</span>&rdquo; is the frame. I would want to send one colour so <span class="highlight-text orange"> 1</span> frame would be needed. The second &ldquo;<span class="highlight-text blue"> 1</span>&rdquo; is the ID of the leaf. This is used to target the specific leaf to send the request too. Finally, the last <span class="highlight-text green"> 3 numbers</span> are the RGB value to send to the leaf. This works if you want to light up the leaves however its incredibly inefficient, due to the amount of requests that are needed to light up all the leaves in a sequence. In addition, it&rsquo;s prone to many issues, including overloading pythons request library.</p>
-<h1 id=development>Development:</h1>
-<p>Starting development, I had a clear idea in mind of what I was meant to do, as-well as the challenges that would arise. Due to this project being a quick side project, I <span class="highlight-text red"> did not care</span> about following best practices and followed the approach of &ldquo;As long as the code works&rdquo;.</p>
-<div class="figure center">
-<a class=fancybox href=https://i.imgur.com/B1OEq3c.gif title="GIF showing a timelapse of me developing the application" data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/B1OEq3c.gif style=width:70%;height:70% alt="GIF showing a timelapse of me developing the application">
-</a>
-<span class=caption>GIF showing a timelapse of me developing the application</span>
-</div>
-<div style=clear:both></div>
-<h2 id=packet-builder-algorithm>Packet Builder Algorithm</h2>
-<p>To combat the issue of having to send three requests to each leaf every second to change their colours, I came up with a solution, that I called the packet builder. The solution is to have 1 request that is sent to the leaves. Inside this request will be the total frames, each leaf ID and all the RGB values the leaves will light up with.</p>
-<p>To the human reading the packet that is sent, it will seem like a large ball of mess containing mass amounts of integers, however to the API this request is massively more efficient than sending each request individually to each leaf 3 times per second.</p>
-<p>There are 3 main methods/functions that encompass this packet builder algorithm. Those are getting the layout of the nanoleaves and all the panels that are on the network. The second is getting the ID of each leaf from the panels recognised on the network. The final is the packet builder itself.</p>
-<h3 id=getlayout>GetLayout()</h3>
-<figure class="highlight python language-python">
-<figcaption>
-<span>main.py</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-python python"><code class=python># -*- coding: utf-8 -*-
+<a class=category-link href=https://orakeshi.github.io/categories/projects>projects</a></div></div></div><div id=main data-behavior=4 class="hasCover
+hasCoverMetaIn"><article class=post id=top><div class="post-content markdown"><div class=main-content-wrap><h1 id=table-of-contents>Table of Contents</h1><nav id=TableOfContents><ul><li><a href=#the-plan>The plan:</a></li><li><a href=#design-process>Design Process:</a><ul><li><a href=#the-problem-with-the-nanoleaf-api>The Problem With The Nanoleaf API:</a></li></ul></li><li><a href=#development>Development:</a><ul><li><a href=#packet-builder-algorithm>Packet Builder Algorithm</a><ul><li><a href=#getlayout>GetLayout()</a></li><li><a href=#getid>GetId()</a></li><li><a href=#packetbuilder>PacketBuilder()</a></li></ul></li><li><a href=#getting-the-live-football-scores>Getting The Live Football Scores</a></li></ul></li><li><a href=#showcase>Showcase</a></li><li><a href=#extra-information>Extra Information</a></li></ul></nav><h1 id=the-plan>The plan:</h1><p>The plan was simple. I had nanoleaves lying around from a previous project (<a href=https://orakeshi.github.io/post/digital-wishing-tree/>Wishing Tree</a>) and wanted to do something with them. Before starting my software development apprenticeship, I used to enjoy watching football. I would put on several games regardless of the day they were played on. Now, due to myself working during the week and creating personal projects on the weekend, my time is limited, and thus I rarely ever get to watch the games.</p><p>I thought, instead of taking the simple approach of keeping open a live tracker/listening to the radio, I would take a creative approach of lighting up the nanoleaves based on the team that scores. I wanted to produce an output quick. I didnt care about how the code war written nor how long it took for the leaves to light up. My goal was to have my nanoleaves light up when a team scores no matter what.</p><div class="figure center"><a class=fancybox href=https://i.imgur.com/g2oZgdE.png title="Image of the spare nanoleaves from the wishing tree project" data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/g2oZgdE.png style=width:70%;height:70% alt="Image of the spare nanoleaves from the wishing tree project"></a>
+<span class=caption>Image of the spare nanoleaves from the wishing tree project</span></div><div style=clear:both></div><h1 id=design-process>Design Process:</h1><p>Immediately upon undertaking this project, I knew I needed the football team colours. I was fortunate enough that a website (<a href=https://teamcolorcodes.com/>teamcolorcodes</a>) already had all the teams in the premier league with their team colours RGB. This saved me a-lot of time. At this point I had to have a way of storing all the colours for the application to use. I went with a json file which contained the team name, along with the three colours that represent the team</p><div class="figure center"><a class=fancybox href=https://i.imgur.com/ibaTgbj.png title="Image showing the teams and there 3 main RGB colours of their badge/kit" data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/ibaTgbj.png style=width:70%;height:70% alt="Image showing the teams and there 3 main RGB colours of their badge/kit"></a>
+<span class=caption>Image showing the teams and there 3 main RGB colours of their badge/kit</span></div><div style=clear:both></div><p>After creating the JSON file with the team colours, I decided to draw a simple design sketch on figma showing the 3 frames/stages of the colours that the nanoleaves will look like upon a team scoring. (These colours will change dependent on team colours)</p><div class="figure center"><a class=fancybox href=https://i.imgur.com/JnzFtRg.png title="Image showing the 3 frames of the lights changing colour when a team scores" data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/JnzFtRg.png style=width:70%;height:70% alt="Image showing the 3 frames of the lights changing colour when a team scores"></a>
+<span class=caption>Image showing the 3 frames of the lights changing colour when a team scores</span></div><div style=clear:both></div><h2 id=the-problem-with-the-nanoleaf-api>The Problem With The Nanoleaf API:</h2><p>The way that nanoleaves work is via sending requests to the API. The nanoleaf documentation is severely lacking and quite underwhelming in what the leaves are able to do. That being said, the main way to light up nanoleaves from code is to send a <span class="highlight-text red">PUT</span> request to the leaves with RGB data. This request follows a format along the lines of the following:</p><p>Leaf 1 -> PUT Request = (&rsquo;{&ldquo;write&rdquo;: {&ldquo;animdata&rdquo;: &ldquo;<span class="highlight-text orange"> 1</span> <span class="highlight-text blue">1</span> <span class="highlight-text green">237 233 57</span>&rdquo;}')</p><p>The request above follows a certain format as stated in the nanoleaf documentation. That is, to create a write command and send the following attributes. The first &ldquo;<span class="highlight-text orange"> 1</span>&rdquo; is the frame. I would want to send one colour so <span class="highlight-text orange">1</span> frame would be needed. The second &ldquo;<span class="highlight-text blue"> 1</span>&rdquo; is the ID of the leaf. This is used to target the specific leaf to send the request too. Finally, the last <span class="highlight-text green">3 numbers</span> are the RGB value to send to the leaf. This works if you want to light up the leaves however its incredibly inefficient, due to the amount of requests that are needed to light up all the leaves in a sequence. In addition, it&rsquo;s prone to many issues, including overloading pythons request library.</p><h1 id=development>Development:</h1><p>Starting development, I had a clear idea in mind of what I was meant to do, as-well as the challenges that would arise. Due to this project being a quick side project, I <span class="highlight-text red">did not care</span> about following best practices and followed the approach of &ldquo;As long as the code works&rdquo;.</p><div class="figure center"><a class=fancybox href=https://i.imgur.com/B1OEq3c.gif title="GIF showing a timelapse of me developing the application" data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/B1OEq3c.gif style=width:70%;height:70% alt="GIF showing a timelapse of me developing the application"></a>
+<span class=caption>GIF showing a timelapse of me developing the application</span></div><div style=clear:both></div><h2 id=packet-builder-algorithm>Packet Builder Algorithm</h2><p>To combat the issue of having to send three requests to each leaf every second to change their colours, I came up with a solution, that I called the packet builder. The solution is to have 1 request that is sent to the leaves. Inside this request will be the total frames, each leaf ID and all the RGB values the leaves will light up with.</p><p>To the human reading the packet that is sent, it will seem like a large ball of mess containing mass amounts of integers, however to the API this request is massively more efficient than sending each request individually to each leaf 3 times per second.</p><p>There are 3 main methods/functions that encompass this packet builder algorithm. Those are getting the layout of the nanoleaves and all the panels that are on the network. The second is getting the ID of each leaf from the panels recognised on the network. The final is the packet builder itself.</p><h3 id=getlayout>GetLayout()</h3><figure class="highlight python language-python"><figcaption><span>main.py</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br></pre></td><td class=code><pre class="code-highlight language-python python"><code class=python># -*- coding: utf-8 -*-
 &#34;&#34;&#34;
 This method is responsible for accessing the layout of the nanoleaves on the network
 &#34;&#34;&#34;
@@ -237,28 +29,8 @@ def GetLayout():
     outputFormat = output[output.index(&#39;[&#39;):]
     outputFormat = outputFormat.split(&#39;}&#39;)
     PacketBuilder()
-    return</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-<p>The <span class="highlight-text orange"> GetLayout()</span> method is very simple in nature. A <span class="highlight-text red"> GET</span> request is sent to the Nanoleaf API. The JSON string that is returned is passed into a variable called <span class="highlight-text blue"> outputFormat</span>. This string will be used later on when getting the ID of each leaf.</p>
-<h3 id=getid>GetId()</h3>
-<p>The <span class="highlight-text orange"> GetId()</span> method is the next part of the packet builder process. This method simply iterates through the layout JSON string, which contains all the leaves on the network that were detected, and searches for the string <span class="highlight-text blue"> panelId</span>. If this string is found in the layout request, the text will be formatted and split.
-From here, that stripped string (Leaf specific ID) will be added to an array named <span class="highlight-text blue"> leafId</span>. Once the whole string has been iterated over, the <span class="highlight-text blue"> leafId</span> array is returned. This is vital for the PacketBuilder script.</p>
-<figure class="highlight python language-python">
-<figcaption>
-<span>main.py</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-python python"><code class=python># -*- coding: utf-8 -*-
+    return</code></pre></td></tr></tbody></table></figure><p>The <span class="highlight-text orange">GetLayout()</span> method is very simple in nature. A <span class="highlight-text red">GET</span> request is sent to the Nanoleaf API. The JSON string that is returned is passed into a variable called <span class="highlight-text blue">outputFormat</span>. This string will be used later on when getting the ID of each leaf.</p><h3 id=getid>GetId()</h3><p>The <span class="highlight-text orange">GetId()</span> method is the next part of the packet builder process. This method simply iterates through the layout JSON string, which contains all the leaves on the network that were detected, and searches for the string <span class="highlight-text blue">panelId</span>. If this string is found in the layout request, the text will be formatted and split.
+From here, that stripped string (Leaf specific ID) will be added to an array named <span class="highlight-text blue">leafId</span>. Once the whole string has been iterated over, the <span class="highlight-text blue">leafId</span> array is returned. This is vital for the PacketBuilder script.</p><figure class="highlight python language-python"><figcaption><span>main.py</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br></pre></td><td class=code><pre class="code-highlight language-python python"><code class=python># -*- coding: utf-8 -*-
 &#34;&#34;&#34;
 Method is responsible for getting ID from the nanoleaves.
 The Ids are fetched by iterating through a list of leaves from the network
@@ -272,26 +44,7 @@ def GetId(layout):
             formatStripped = strippedData[1]
             temp = re.findall(r&#39;\d&#43;&#39;, formatStripped)
             leafId.append(temp)
-    return leafId</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-<h3 id=packetbuilder>PacketBuilder()</h3>
-<p>The <span class="highlight-text orange"> PacketBuilder()</span> method, the final part of the packet builder process, is shown below. This method is responsible for actually building the request that will be sent to the nanoleaf API.</p>
-<figure class="highlight python language-python">
-<figcaption>
-<span>main.py</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br><span class=line>28</span><br><span class=line>29</span><br><span class=line>30</span><br><span class=line>31</span><br><span class=line>32</span><br><span class=line>33</span><br><span class=line>34</span><br><span class=line>35</span><br><span class=line>36</span><br><span class=line>37</span><br><span class=line>38</span><br><span class=line>39</span><br><span class=line>40</span><br><span class=line>41</span><br><span class=line>42</span><br><span class=line>43</span><br><span class=line>44</span><br><span class=line>45</span><br><span class=line>46</span><br><span class=line>47</span><br><span class=line>48</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-python python"><code class=python># -*- coding: utf-8 -*-
+    return leafId</code></pre></td></tr></tbody></table></figure><h3 id=packetbuilder>PacketBuilder()</h3><p>The <span class="highlight-text orange">PacketBuilder()</span> method, the final part of the packet builder process, is shown below. This method is responsible for actually building the request that will be sent to the nanoleaf API.</p><figure class="highlight python language-python"><figcaption><span>main.py</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br><span class=line>28</span><br><span class=line>29</span><br><span class=line>30</span><br><span class=line>31</span><br><span class=line>32</span><br><span class=line>33</span><br><span class=line>34</span><br><span class=line>35</span><br><span class=line>36</span><br><span class=line>37</span><br><span class=line>38</span><br><span class=line>39</span><br><span class=line>40</span><br><span class=line>41</span><br><span class=line>42</span><br><span class=line>43</span><br><span class=line>44</span><br><span class=line>45</span><br><span class=line>46</span><br><span class=line>47</span><br><span class=line>48</span><br></pre></td><td class=code><pre class="code-highlight language-python python"><code class=python># -*- coding: utf-8 -*-
 &#34;&#34;&#34;
 This method handles building the data to send to the leaves.
 The leaf data is compiled into one efficient request and sent to the leaves once
@@ -338,26 +91,7 @@ def PacketBuilder():
     f.write(leafColour)
 
     checkScore()
-    return</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-<p>The script does a-lot of things. The first of which is iterating over the <span class="highlight-text blue"> leafId</span> array. For each iteration, a new string is built. The string contains the <span class="highlight-text blue"> leafId</span>, the time of the animation and the total frames. This string is then appended to an array.</p>
-<p>Once all leaf Ids have finished being processed, the array of strings has a for-loop iterate over its elements. This is where the request and format of the request is formed. A new string is created. It contains the previously made string as-well as the RBG colours from the texts.json made earlier in the design stage.</p>
-<figure class="highlight python language-python">
-<figcaption>
-<span>main.py</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br><span class=line>28</span><br><span class=line>29</span><br><span class=line>30</span><br><span class=line>31</span><br><span class=line>32</span><br><span class=line>33</span><br><span class=line>34</span><br><span class=line>35</span><br><span class=line>36</span><br><span class=line>37</span><br><span class=line>38</span><br><span class=line>39</span><br><span class=line>40</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-python python"><code class=python># -*- coding: utf-8 -*-
+    return</code></pre></td></tr></tbody></table></figure><p>The script does a-lot of things. The first of which is iterating over the <span class="highlight-text blue">leafId</span> array. For each iteration, a new string is built. The string contains the <span class="highlight-text blue">leafId</span>, the time of the animation and the total frames. This string is then appended to an array.</p><p>Once all leaf Ids have finished being processed, the array of strings has a for-loop iterate over its elements. This is where the request and format of the request is formed. A new string is created. It contains the previously made string as-well as the RBG colours from the texts.json made earlier in the design stage.</p><figure class="highlight python language-python"><figcaption><span>main.py</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br><span class=line>28</span><br><span class=line>29</span><br><span class=line>30</span><br><span class=line>31</span><br><span class=line>32</span><br><span class=line>33</span><br><span class=line>34</span><br><span class=line>35</span><br><span class=line>36</span><br><span class=line>37</span><br><span class=line>38</span><br><span class=line>39</span><br><span class=line>40</span><br></pre></td><td class=code><pre class="code-highlight language-python python"><code class=python># -*- coding: utf-8 -*-
 &#34;&#34;&#34;
 Method handles reading the teams RGB light data.
 The method opens and reads a JSON file with all the teams in the premier league
@@ -396,58 +130,12 @@ def ReadPixelsInFile():
         # Set Dictionary at first leaf ID index equal to the temp array created
         currentTeamColours[i] = jsonLeafColours
 
-    return currentTeamColours</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-<p>This method above is the function responsible for checking the currents teams the user has chosen to watch and stores their team colours in a dictionary called &ldquo;<span class="highlight-text blue"> currentTeamColours</span>&rdquo;. This dictionary has an array of the colours stored in it. The dictionary is returned once the function is finished running.</p>
-<figure class="highlight python language-python">
-<figcaption>
-<span>main.py</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-python python"><code class=python># Build custom animation command with packet data
+    return currentTeamColours</code></pre></td></tr></tbody></table></figure><p>This method above is the function responsible for checking the currents teams the user has chosen to watch and stores their team colours in a dictionary called &ldquo;<span class="highlight-text blue"> currentTeamColours</span>&rdquo;. This dictionary has an array of the colours stored in it. The dictionary is returned once the function is finished running.</p><figure class="highlight python language-python"><figcaption><span>main.py</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br></pre></td><td class=code><pre class="code-highlight language-python python"><code class=python># Build custom animation command with packet data
 leafColour = (&#39;{&#34;write&#34;: {&#34;animData&#34;: &#34;&#39; &#43; &#39;{0} {1}&#39;.format(numPanels, str1[:-1]) &#43; &#39;&#34;,&#34;loop&#34;: true,&#34;animType&#34;: &#34;custom&#34;,&#34;palette&#34;: [],&#34;version&#34;: &#34;2.0&#34;,&#34;command&#34;: &#34;display&#34;}}&#39;)
 
 # Send long string to nanoleaves with request
-newResponse = requests.put(&#34;http://&#34; &#43; str(UniversalIP.rstrip()) &#43; &#34;:&#34; &#43; defaultPort &#43; &#34;/api/v1/&#34; &#43; str(UniversalAuthCode.rstrip()) &#43; &#34;/effects&#34;, leafColour)</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-<p>The lines of code above are the last of the <span class="highlight-text orange"> PacketBuilder()</span>. They are responsible for creating a custom <span class="highlight-text blue"> animData</span> request to send to the nanoleaf API. The <span class="highlight-text blue"> leafColour</span> variable is sent to the nanoleaf API via a <span class="highlight-text red"> PUT</span> request. The above code doesn&rsquo;t show the actual request that is sent. The actual request is shown below:</p>
-<div class="figure center">
-<a class=fancybox href=https://i.imgur.com/TTtH9Gu.png title="GIF showing a timelapse of me developing the application" data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/TTtH9Gu.png style=width:70%;height:70% alt="GIF showing a timelapse of me developing the application">
-</a>
-<span class=caption>GIF showing a timelapse of me developing the application</span>
-</div>
-<div style=clear:both></div>
-<p>The above image is showing the request that is received by the nanoleaves. This is extremely more efficient and is a great solution to the issue described earlier. With this packet builder complete and working, the final part is using the <span class="highlight-text red"> beautiful soup</span> library to scrape live football data and change the leaves colours based on the team that scored.</p>
-<h2 id=getting-the-live-football-scores>Getting The Live Football Scores</h2>
-<p>For this part of the application I wanted to take the quickest route possible. To me, that meant listening for a change of goal on a live scoring webpage and changing the light colours based on the information from the webpage.</p>
-<p>Once I decided upon a website (<a href=https://www.sportinglife.com/>sportinglife</a>), I implemented the final aspects of the code.</p>
-<figure class="highlight python language-python">
-<figcaption>
-<span>main.py</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br><span class=line>28</span><br><span class=line>29</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-python python"><code class=python>def checkScore():
+newResponse = requests.put(&#34;http://&#34; &#43; str(UniversalIP.rstrip()) &#43; &#34;:&#34; &#43; defaultPort &#43; &#34;/api/v1/&#34; &#43; str(UniversalAuthCode.rstrip()) &#43; &#34;/effects&#34;, leafColour)</code></pre></td></tr></tbody></table></figure><p>The lines of code above are the last of the <span class="highlight-text orange">PacketBuilder()</span>. They are responsible for creating a custom <span class="highlight-text blue">animData</span> request to send to the nanoleaf API. The <span class="highlight-text blue">leafColour</span> variable is sent to the nanoleaf API via a <span class="highlight-text red">PUT</span> request. The above code doesn&rsquo;t show the actual request that is sent. The actual request is shown below:</p><div class="figure center"><a class=fancybox href=https://i.imgur.com/TTtH9Gu.png title="GIF showing a timelapse of me developing the application" data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/TTtH9Gu.png style=width:70%;height:70% alt="GIF showing a timelapse of me developing the application"></a>
+<span class=caption>GIF showing a timelapse of me developing the application</span></div><div style=clear:both></div><p>The above image is showing the request that is received by the nanoleaves. This is extremely more efficient and is a great solution to the issue described earlier. With this packet builder complete and working, the final part is using the <span class="highlight-text red">beautiful soup</span> library to scrape live football data and change the leaves colours based on the team that scored.</p><h2 id=getting-the-live-football-scores>Getting The Live Football Scores</h2><p>For this part of the application I wanted to take the quickest route possible. To me, that meant listening for a change of goal on a live scoring webpage and changing the light colours based on the information from the webpage.</p><p>Once I decided upon a website (<a href=https://www.sportinglife.com/>sportinglife</a>), I implemented the final aspects of the code.</p><figure class="highlight python language-python"><figcaption><span>main.py</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br><span class=line>27</span><br><span class=line>28</span><br><span class=line>29</span><br></pre></td><td class=code><pre class="code-highlight language-python python"><code class=python>def checkScore():
     global teamOneScore, url
     global teamTwoScore
     global inputUrl
@@ -475,25 +163,7 @@ newResponse = requests.put(&#34;http://&#34; &#43; str(UniversalIP.rstrip()) &#4
 
     # Get Score &amp; Teams from HTML
     score_containers = html_soup.find_all(&#39;span&#39;, class_=&#39;MatchScore__StyledScore-wxe8oz-2 dvrzWw&#39;)
-    teamsPlaying = html_soup.find_all(&#39;h2&#39;, class_=&#39;TeamName__StyledTeamName-sc-1275yii-0 fagppE&#39;)</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-<p>Above is showing the input part of the code. This is where I will enter the URL to the football game. This is then passed to the <span class="highlight-text red"> BeautifulSoup</span> library. From there I am finding the two classes, in the HTML source code, responsible for displaying the score and the team names. I store both of these elements into variables.</p>
-<figure class="highlight python language-python">
-<figcaption>
-<span>main.py</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-python python"><code class=python># If Team two has scored -&gt; Get nanoleaf layout
+    teamsPlaying = html_soup.find_all(&#39;h2&#39;, class_=&#39;TeamName__StyledTeamName-sc-1275yii-0 fagppE&#39;)</code></pre></td></tr></tbody></table></figure><p>Above is showing the input part of the code. This is where I will enter the URL to the football game. This is then passed to the <span class="highlight-text red">BeautifulSoup</span> library. From there I am finding the two classes, in the HTML source code, responsible for displaying the score and the team names. I store both of these elements into variables.</p><figure class="highlight python language-python"><figcaption><span>main.py</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br></pre></td><td class=code><pre class="code-highlight language-python python"><code class=python># If Team two has scored -&gt; Get nanoleaf layout
 elif (int(teamTwo) == teamTwoScore):
     checkScore.teamScored = teamsPlaying[1].text
     teamTwoScore &#43;= 1
@@ -504,245 +174,14 @@ elif (int(teamTwo) == teamTwoScore):
     else:
         time.sleep(1)
         checkScore()
-        return</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-<p>The code above is the final aspect of the application. It simply checks the function every 1 second waiting for the score for either team to increase. If a team scores than the <span class="highlight-text orange"> GetLayout()</span> method is called and the application runs, builds the packet/request and the leaves light up. If no team has scored, the method runs itself every second until a team does score. This function will run for the length of the game</p>
-<h1 id=showcase>Showcase</h1>
-<div class="figure center">
-<a class=fancybox href=https://i.imgur.com/kxelHQi.png title="GIF showing a timelapse of me developing the application" data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/kxelHQi.png style=width:70%;height:70% alt="GIF showing a timelapse of me developing the application">
-</a>
-<span class=caption>GIF showing a timelapse of me developing the application</span>
-</div>
-<div style=clear:both></div>
-<p>
-<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
-<iframe src=https://www.youtube.com/embed/Z9_qjpeSMbk style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
-</div>
-<a href="https://www.youtube.com/watch?v=Z9_qjpeSMbk">Goal Reactive Lighting ManUtdGoal</a></p>
-<p>
-<div class="figure nocaption fig-33">
-<a class=fancybox href=https://i.imgur.com/oNpiolv.png data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/oNpiolv.png>
-</a>
-</div>
-<div class="figure nocaption fig-33">
-<a class=fancybox href=https://i.imgur.com/apyg8AY.png data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/apyg8AY.png>
-</a>
-</div>
-<div class="figure nocaption fig-33">
-<a class=fancybox href=https://i.imgur.com/RlJ06gb.png data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/RlJ06gb.png>
-</a>
-</div>
-<div class="figure nocaption">
-<a class=fancybox href=https://i.imgur.com/i06eyDk.gif title="GIF showing a timelapse of me developing the application" data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/i06eyDk.gif style=width:100% alt="GIF showing a timelapse of me developing the application">
-</a>
-</div>
-<div style=clear:both></div>
-</p>
-<h1 id=extra-information>Extra Information</h1>
-<p>
-<div class="figure nocaption fig-25">
-<a class=fancybox href=https://i.imgur.com/apl8UH2t.png data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/apl8UH2t.png>
-</a>
-</div>
-<div class="figure nocaption fig-25">
-<a class=fancybox href=https://i.imgur.com/jBfEt6S.gif data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/jBfEt6S.gif>
-</a>
-</div>
-<div style=clear:both></div>
-<a href=https://solarflarestudio.co.uk/>Solarflare Studio</a></p>
-</div>
-</div>
-<div id=post-footer class="post-footer main-content-wrap">
-<div class=post-footer-tags>
-<span class="text-color-light text-small">TAGGED IN</span><br>
-<a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/python/>python</a>
+        return</code></pre></td></tr></tbody></table></figure><p>The code above is the final aspect of the application. It simply checks the function every 1 second waiting for the score for either team to increase. If a team scores than the <span class="highlight-text orange">GetLayout()</span> method is called and the application runs, builds the packet/request and the leaves light up. If no team has scored, the method runs itself every second until a team does score. This function will run for the length of the game</p><h1 id=showcase>Showcase</h1><div class="figure center"><a class=fancybox href=https://i.imgur.com/kxelHQi.png title="GIF showing a timelapse of me developing the application" data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/kxelHQi.png style=width:70%;height:70% alt="GIF showing a timelapse of me developing the application"></a>
+<span class=caption>GIF showing a timelapse of me developing the application</span></div><div style=clear:both></div><p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe src=https://www.youtube.com/embed/Z9_qjpeSMbk style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe></div><a href="https://www.youtube.com/watch?v=Z9_qjpeSMbk">Goal Reactive Lighting ManUtdGoal</a></p><p><div class="figure nocaption fig-33"><a class=fancybox href=https://i.imgur.com/oNpiolv.png data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/oNpiolv.png></a></div><div class="figure nocaption fig-33"><a class=fancybox href=https://i.imgur.com/apyg8AY.png data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/apyg8AY.png></a></div><div class="figure nocaption fig-33"><a class=fancybox href=https://i.imgur.com/RlJ06gb.png data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/RlJ06gb.png></a></div><div class="figure nocaption"><a class=fancybox href=https://i.imgur.com/i06eyDk.gif title="GIF showing a timelapse of me developing the application" data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/i06eyDk.gif style=width:100% alt="GIF showing a timelapse of me developing the application"></a></div><div style=clear:both></div></p><h1 id=extra-information>Extra Information</h1><p><div class="figure nocaption fig-25"><a class=fancybox href=https://i.imgur.com/apl8UH2t.png data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/apl8UH2t.png></a></div><div class="figure nocaption fig-25"><a class=fancybox href=https://i.imgur.com/jBfEt6S.gif data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/jBfEt6S.gif></a></div><div style=clear:both></div><a href=https://solarflarestudio.co.uk/>Solarflare Studio</a></p></div></div><div id=post-footer class="post-footer main-content-wrap"><div class=post-footer-tags><span class="text-color-light text-small">TAGGED IN</span><br><a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/python/>python</a>
 <a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/labs/>labs</a>
-<a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/solarflare-studio/>solarflare-studio</a>
-</div>
-<div class=post-actions-wrap>
-<nav>
-<ul class="post-actions post-action-nav">
-<li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/ar-masked-ball/ data-tooltip="AR Masked Ball" aria-label="NEXT: AR Masked Ball">
-<i class="fa fa-angle-left"></i>
-<span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/digital-wishing-tree/ data-tooltip="Digital Wishing Tree" aria-label="PREVIOUS: Digital Wishing Tree">
-<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-<i class="fa fa-angle-right"></i>
-</a>
-</li>
-</ul>
-</nav>
-<ul class="post-actions post-action-share">
-<li class="post-action hide-lg hide-md hide-sm">
-<a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post">
-<i class="fa fa-share-alt" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Twitter" aria-label="Share on Twitter">
-<i class="fab fa-twitter" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://wa.me/?text=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Whatsapp" aria-label="Share on Whatsapp">
-<i class="fab fa-whatsapp" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Linkedin" aria-label="Share on Linkedin">
-<i class="fab fa-linkedin" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://www.reddit.com/submit?url=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Reddit" aria-label="Share on Reddit">
-<i class="fab fa-reddit" aria-hidden=true></i>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default" href=#disqus_thread aria-label="Leave a comment">
-<i class="far fa-comment"></i>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default" href=#top aria-label="Back to top">
-<i class="fa fa-arrow-up" aria-hidden=true></i>
-</a>
-</li>
-</ul>
-</div>
-<div id=disqus_thread>
-<noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-</div>
-<script type=text/javascript>var disqus_config=function(){this.page.url='https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/',this.page.identifier='/post/nanoleaf-goal-reactive-lighting/'};(function(){var a,b;if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}a=document.createElement('script'),a.type='text/javascript',a.async=!0,b='hugo-tranquilpeak-theme',a.src='//'+b+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)})()</script>
-</div>
-</article>
-<footer id=footer class=main-content-wrap>
-<span class=copyrights>
-&copy; 2022 Tommy Webb. All Rights Reserved
-</span>
-</footer>
-</div>
-<div id=bottom-bar class=post-bottom-bar data-behavior=4>
-<div class=post-actions-wrap>
-<nav>
-<ul class="post-actions post-action-nav">
-<li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/ar-masked-ball/ data-tooltip="AR Masked Ball" aria-label="NEXT: AR Masked Ball">
-<i class="fa fa-angle-left"></i>
-<span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/digital-wishing-tree/ data-tooltip="Digital Wishing Tree" aria-label="PREVIOUS: Digital Wishing Tree">
-<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-<i class="fa fa-angle-right"></i>
-</a>
-</li>
-</ul>
-</nav>
-<ul class="post-actions post-action-share">
-<li class="post-action hide-lg hide-md hide-sm">
-<a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post">
-<i class="fa fa-share-alt" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Twitter" aria-label="Share on Twitter">
-<i class="fab fa-twitter" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://wa.me/?text=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Whatsapp" aria-label="Share on Whatsapp">
-<i class="fab fa-whatsapp" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Linkedin" aria-label="Share on Linkedin">
-<i class="fab fa-linkedin" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://www.reddit.com/submit?url=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Reddit" aria-label="Share on Reddit">
-<i class="fab fa-reddit" aria-hidden=true></i>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default" href=#disqus_thread aria-label="Leave a comment">
-<i class="far fa-comment"></i>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default" href=#top aria-label="Back to top">
-<i class="fa fa-arrow-up" aria-hidden=true></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-<div id=share-options-bar class=share-options-bar data-behavior=4>
-<i id=btn-close-shareoptions class="fa fa-times"></i>
-<ul class=share-options>
-<li class=share-option>
-<a class=share-option-btn target=new href="https://twitter.com/intent/tweet?text=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fnanoleaf-goal-reactive-lighting%2F" aria-label="Share on Twitter">
-<i class="fab fa-twitter" aria-hidden=true></i><span>Share on Twitter</span>
-</a>
-</li>
-<li class=share-option>
-<a class=share-option-btn target=new href="https://wa.me/?text=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fnanoleaf-goal-reactive-lighting%2F" aria-label="Share on Whatsapp">
-<i class="fab fa-whatsapp" aria-hidden=true></i><span>Share on Whatsapp</span>
-</a>
-</li>
-<li class=share-option>
-<a class=share-option-btn target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fnanoleaf-goal-reactive-lighting%2F" aria-label="Share on Linkedin">
-<i class="fab fa-linkedin" aria-hidden=true></i><span>Share on Linkedin</span>
-</a>
-</li>
-<li class=share-option>
-<a class=share-option-btn target=new href="https://www.reddit.com/submit?url=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fnanoleaf-goal-reactive-lighting%2F" aria-label="Share on Reddit">
-<i class="fab fa-reddit" aria-hidden=true></i><span>Share on Reddit</span>
-</a>
-</li>
-</ul>
-</div>
-<div id=share-options-mask class=share-options-mask></div>
-</div>
-<div id=about>
-<div id=about-card>
-<div id=about-btn-close>
-<i class="fa fa-times"></i>
-</div>
-<img id=about-card-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture">
-<h4 id=about-card-name>Tommy Webb</h4>
-<div id=about-card-bio>I ❤ coding and learning new technology</div>
-<div id=about-card-job>
-<i class="fa fa-briefcase"></i>
-<br>
-Software Developer
-</div>
-<div id=about-card-location>
-<i class="fa fa-map-marker-alt"></i>
-<br>
-United Kingdom
-</div>
-</div>
-</div>
-<div id=cover style=background-image:url(https://i.imgur.com/uQegQYL.png)></div>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/solarflare-studio/>solarflare-studio</a></div><div class=post-actions-wrap><nav><ul class="post-actions post-action-nav"><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/ar-masked-ball/ data-tooltip="AR Masked Ball" aria-label="NEXT: AR Masked Ball"><i class="fa fa-angle-left"></i>
+<span class="hide-xs hide-sm text-small icon-ml">NEXT</span></a></li><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/digital-wishing-tree/ data-tooltip="Digital Wishing Tree" aria-label="PREVIOUS: Digital Wishing Tree"><span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+<i class="fa fa-angle-right"></i></a></li></ul></nav><ul class="post-actions post-action-share"><li class="post-action hide-lg hide-md hide-sm"><a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post"><i class="fa fa-share-alt" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Twitter" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://wa.me/?text=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Whatsapp" aria-label="Share on Whatsapp"><i class="fab fa-whatsapp" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Linkedin" aria-label="Share on Linkedin"><i class="fab fa-linkedin" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://www.reddit.com/submit?url=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Reddit" aria-label="Share on Reddit"><i class="fab fa-reddit" aria-hidden=true></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#disqus_thread aria-label="Leave a comment"><i class="far fa-comment"></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#top aria-label="Back to top"><i class="fa fa-arrow-up" aria-hidden=true></i></a></li></ul></div><div id=disqus_thread><noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript></div><script type=text/javascript>var disqus_config=function(){this.page.url="https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/",this.page.identifier="/post/nanoleaf-goal-reactive-lighting/"};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="hugo-tranquilpeak-theme",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script></div></article><footer id=footer class=main-content-wrap><span class=copyrights>&copy; 2022 Tommy Webb. All Rights Reserved</span></footer></div><div id=bottom-bar class=post-bottom-bar data-behavior=4><div class=post-actions-wrap><nav><ul class="post-actions post-action-nav"><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/ar-masked-ball/ data-tooltip="AR Masked Ball" aria-label="NEXT: AR Masked Ball"><i class="fa fa-angle-left"></i>
+<span class="hide-xs hide-sm text-small icon-ml">NEXT</span></a></li><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/digital-wishing-tree/ data-tooltip="Digital Wishing Tree" aria-label="PREVIOUS: Digital Wishing Tree"><span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+<i class="fa fa-angle-right"></i></a></li></ul></nav><ul class="post-actions post-action-share"><li class="post-action hide-lg hide-md hide-sm"><a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post"><i class="fa fa-share-alt" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Twitter" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://wa.me/?text=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Whatsapp" aria-label="Share on Whatsapp"><i class="fab fa-whatsapp" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Linkedin" aria-label="Share on Linkedin"><i class="fab fa-linkedin" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://www.reddit.com/submit?url=https://orakeshi.github.io/post/nanoleaf-goal-reactive-lighting/" title="Share on Reddit" aria-label="Share on Reddit"><i class="fab fa-reddit" aria-hidden=true></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#disqus_thread aria-label="Leave a comment"><i class="far fa-comment"></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#top aria-label="Back to top"><i class="fa fa-arrow-up" aria-hidden=true></i></a></li></ul></div></div><div id=share-options-bar class=share-options-bar data-behavior=4><i id=btn-close-shareoptions class="fa fa-times"></i><ul class=share-options><li class=share-option><a class=share-option-btn target=new href="https://twitter.com/intent/tweet?text=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fnanoleaf-goal-reactive-lighting%2F" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden=true></i><span>Share on Twitter</span></a></li><li class=share-option><a class=share-option-btn target=new href="https://wa.me/?text=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fnanoleaf-goal-reactive-lighting%2F" aria-label="Share on Whatsapp"><i class="fab fa-whatsapp" aria-hidden=true></i><span>Share on Whatsapp</span></a></li><li class=share-option><a class=share-option-btn target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fnanoleaf-goal-reactive-lighting%2F" aria-label="Share on Linkedin"><i class="fab fa-linkedin" aria-hidden=true></i><span>Share on Linkedin</span></a></li><li class=share-option><a class=share-option-btn target=new href="https://www.reddit.com/submit?url=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fnanoleaf-goal-reactive-lighting%2F" aria-label="Share on Reddit"><i class="fab fa-reddit" aria-hidden=true></i><span>Share on Reddit</span></a></li></ul></div><div id=share-options-mask class=share-options-mask></div></div><div id=about><div id=about-card><div id=about-btn-close><i class="fa fa-times"></i></div><img id=about-card-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture"><h4 id=about-card-name>Tommy Webb</h4><div id=about-card-bio>I ❤ coding and learning new technology</div><div id=about-card-job><i class="fa fa-briefcase"></i><br>Software Developer</div><div id=about-card-location><i class="fa fa-map-marker-alt"></i><br>United Kingdom</div></div></div><div id=cover style=background-image:url(https://i.imgur.com/uQegQYL.png)></div><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin=anonymous referrerpolicy=no-referrer></script>
 <script src=https://orakeshi.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js></script>
@@ -756,6 +195,4 @@ United Kingdom
 <script async crossorigin=anonymous defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js></script>
 <script async crossorigin=anonymous defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js></script>
 <script async crossorigin=anonymous defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js></script>
-<script>$(document).ready(function(){hljs.configure({classPrefix:'',useBR:!1}),$('pre.code-highlight > code, pre > code').each(function(b,a){$(this).hasClass('codeblock')||$(this).addClass('codeblock'),hljs.highlightBlock(a)})})</script>
-</body>
-</html>
+<script>$(document).ready(function(){hljs.configure({classPrefix:'',useBR:!1}),$("pre.code-highlight > code, pre > code").each(function(t,e){$(this).hasClass("codeblock")||$(this).addClass("codeblock"),hljs.highlightBlock(e)})})</script></body></html>

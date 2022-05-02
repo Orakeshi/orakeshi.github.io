@@ -1,195 +1,18 @@
-<!doctype html><html lang=en-us>
-<head>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"MediaPipe - Emoji Gestures","image":"https://i.imgur.com/IeCo5mZ.png","datePublished":"2022-01-22T00:00:00Z","dateModified":"2022-01-22T00:00:00Z","author":{"@type":"Person","name":"Tommy Webb","image":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/orakeshi.github.io\/post\/mediapipe-emoji-gestures\/"},"publisher":{"@type":"Organization","name":"Orakeshi","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"}},"description":"","keywords":[]}</script>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=generator content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
-<meta name=author content="Tommy Webb">
-<meta name=keywords content>
-<meta name=description content>
-<meta property="og:description" content>
-<meta property="og:type" content="article">
-<meta property="og:title" content="MediaPipe - Emoji Gestures">
-<meta name=twitter:title content="MediaPipe - Emoji Gestures">
-<meta property="og:url" content="https://orakeshi.github.io/post/mediapipe-emoji-gestures/">
-<meta property="twitter:url" content="https://orakeshi.github.io/post/mediapipe-emoji-gestures/">
-<meta property="og:site_name" content="Orakeshi">
-<meta property="og:description" content>
-<meta name=twitter:description content>
-<meta property="og:locale" content="en-us">
-<meta property="article:published_time" content="2022-01-22T00:00:00">
-<meta property="article:modified_time" content="2022-01-22T00:00:00">
-<meta property="article:section" content="projects">
-<meta property="article:tag" content="c-sharp">
-<meta property="article:tag" content="unity">
-<meta property="article:tag" content="magicleap">
-<meta property="article:tag" content="ar">
-<meta property="article:tag" content="labs">
-<meta property="article:tag" content="solarflare-studio">
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@SirThomasWebb">
-<meta name=twitter:creator content="@SirThomasWebb">
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4">
-<meta property="twitter:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4">
-<meta property="og:image" content="https://i.imgur.com/IeCo5mZ.png">
-<meta property="twitter:image" content="https://i.imgur.com/IeCo5mZ.png">
-<meta property="og:image" content="https://i.imgur.com/SQawQqZ.jpg">
-<meta property="twitter:image" content="https://i.imgur.com/SQawQqZ.jpg">
-<title>MediaPipe - Emoji Gestures</title>
-<link rel=icon href=https://i.imgur.com/zHMvsMu.png>
-<link rel=canonical href=https://orakeshi.github.io/post/mediapipe-emoji-gestures/>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous referrerpolicy=no-referrer>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin=anonymous referrerpolicy=no-referrer>
-<link rel=stylesheet href=https://orakeshi.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css>
-</head>
-<body>
-<div id=blog>
-<header id=header data-behavior=4>
-<i id=btn-open-sidebar class="fa fa-lg fa-bars"></i>
-<div class=header-title>
-<a class=header-title-link href=https://orakeshi.github.io/ aria-label="Go to homepage">Orakeshi</a>
-</div>
-<a class=header-right-picture href=https://orakeshi.github.io/#about aria-label="Open the link: /#about">
-<img class=header-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture">
-</a>
-</header>
-<nav id=sidebar data-behavior=4>
-<div class=sidebar-container>
-<div class=sidebar-profile>
-<a href=https://orakeshi.github.io/#about aria-label="Read more about the author">
-<img class=sidebar-profile-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture">
-</a>
-<h4 class=sidebar-profile-name>Tommy Webb</h4>
-<h5 class=sidebar-profile-bio>I ❤ coding and learning new technology</h5>
-</div>
-<ul class=sidebar-buttons>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://orakeshi.github.io/ title=Home>
-<i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden=true></i>
-<span class=sidebar-button-desc>Home</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://orakeshi.github.io/categories/projects title=Projects>
-<i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden=true></i>
-<span class=sidebar-button-desc>Projects</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://orakeshi.github.io/categories/blog title=Blog>
-<i class="sidebar-button-icon fas fa-lg fa-pen-square" aria-hidden=true></i>
-<span class=sidebar-button-desc>Blog</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://orakeshi.github.io/tags title=Tags>
-<i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden=true></i>
-<span class=sidebar-button-desc>Tags</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://orakeshi.github.io/#about title=About>
-<i class="sidebar-button-icon fas fa-lg fa-user" aria-hidden=true></i>
-<span class=sidebar-button-desc>About</span>
-</a>
-</li>
-</ul>
-<ul class=sidebar-buttons>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://github.com/Orakeshi target=_blank rel=noopener title=GitHub>
-<i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden=true></i>
-<span class=sidebar-button-desc>GitHub</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://www.linkedin.com/in/tommy-webb-8749231a0/ target=_blank rel=noopener title=Linkedin>
-<i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden=true></i>
-<span class=sidebar-button-desc>Linkedin</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=mailto:%20tommy@solarflarestudio.co.uk target=_blank rel=noopener title="Email Me">
-<i class="sidebar-button-icon fa fa-lg fa-envelope" aria-hidden=true></i>
-<span class=sidebar-button-desc>Email Me</span>
-</a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://www.youtube.com/channel/UC_FKPC8y4U2Ep7ubNBAQWjg target=_blank rel=noopener title=Youtube>
-<i class="sidebar-button-icon fab fa-lg fa-youtube" aria-hidden=true></i>
-<span class=sidebar-button-desc>Youtube</span>
-</a>
-</li>
-</ul>
-<ul class=sidebar-buttons>
-</ul>
-</div>
-</nav>
-<div class="post-header-cover
-text-center" style=background-image:url(https://i.imgur.com/IeCo5mZ.png) data-behavior=4>
-<div class="post-header main-content-wrap text-center">
-<h1 class=post-title>
-MediaPipe - Emoji Gestures
-</h1>
-<div class="postShorten-meta post-meta">
-<time datetime=2022-01-22T00:00:00Z>
-January 22, 2022
-</time>
+<!doctype html><html lang=en-us><head><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"MediaPipe - Emoji Gestures","image":"https://i.imgur.com/IeCo5mZ.png","datePublished":"2022-01-22T00:00:00Z","dateModified":"2022-01-22T00:00:00Z","author":{"@type":"Person","name":"Tommy Webb","image":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/orakeshi.github.io\/post\/mediapipe-emoji-gestures\/"},"publisher":{"@type":"Organization","name":"Orakeshi","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/73914490?s=400\u0026u=af2892fd416e637cc45f2021caa30951b3a194f3\u0026v=4"}},"description":"","keywords":[]}</script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Hugo 0.98.0 with theme Tranquilpeak 0.5.3-BETA"><meta name=author content="Tommy Webb"><meta name=keywords content><meta name=description content><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:title" content="MediaPipe - Emoji Gestures"><meta name=twitter:title content="MediaPipe - Emoji Gestures"><meta property="og:url" content="https://orakeshi.github.io/post/mediapipe-emoji-gestures/"><meta property="twitter:url" content="https://orakeshi.github.io/post/mediapipe-emoji-gestures/"><meta property="og:site_name" content="Orakeshi"><meta property="og:description" content><meta name=twitter:description content><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2022-01-22T00:00:00"><meta property="article:modified_time" content="2022-01-22T00:00:00"><meta property="article:section" content="projects"><meta property="article:tag" content="c-sharp"><meta property="article:tag" content="unity"><meta property="article:tag" content="magicleap"><meta property="article:tag" content="ar"><meta property="article:tag" content="labs"><meta property="article:tag" content="solarflare-studio"><meta name=twitter:card content="summary"><meta name=twitter:site content="@SirThomasWebb"><meta name=twitter:creator content="@SirThomasWebb"><meta property="og:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4"><meta property="twitter:image" content="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4"><meta property="og:image" content="https://i.imgur.com/IeCo5mZ.png"><meta property="twitter:image" content="https://i.imgur.com/IeCo5mZ.png"><meta property="og:image" content="https://i.imgur.com/SQawQqZ.jpg"><meta property="twitter:image" content="https://i.imgur.com/SQawQqZ.jpg"><title>MediaPipe - Emoji Gestures</title><link rel=icon href=https://i.imgur.com/zHMvsMu.png><link rel=canonical href=https://orakeshi.github.io/post/mediapipe-emoji-gestures/><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=https://orakeshi.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css></head><body><div id=blog><header id=header data-behavior=4><i id=btn-open-sidebar class="fa fa-lg fa-bars"></i><div class=header-title><a class=header-title-link href=https://orakeshi.github.io/ aria-label="Go to homepage">Orakeshi</a></div><a class=header-right-picture href=https://orakeshi.github.io/#about aria-label="Open the link: /#about"><img class=header-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture"></a></header><nav id=sidebar data-behavior=4><div class=sidebar-container><div class=sidebar-profile><a href=https://orakeshi.github.io/#about aria-label="Read more about the author"><img class=sidebar-profile-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture"></a><h4 class=sidebar-profile-name>Tommy Webb</h4><h5 class=sidebar-profile-bio>I ❤ coding and learning new technology</h5></div><ul class=sidebar-buttons><li class=sidebar-button><a class=sidebar-button-link href=https://orakeshi.github.io/ title=Home><i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden=true></i>
+<span class=sidebar-button-desc>Home</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://orakeshi.github.io/categories/projects title=Projects><i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden=true></i>
+<span class=sidebar-button-desc>Projects</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://orakeshi.github.io/categories/blog title=Blog><i class="sidebar-button-icon fas fa-lg fa-pen-square" aria-hidden=true></i>
+<span class=sidebar-button-desc>Blog</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://orakeshi.github.io/tags title=Tags><i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden=true></i>
+<span class=sidebar-button-desc>Tags</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://orakeshi.github.io/#about title=About><i class="sidebar-button-icon fas fa-lg fa-user" aria-hidden=true></i>
+<span class=sidebar-button-desc>About</span></a></li></ul><ul class=sidebar-buttons><li class=sidebar-button><a class=sidebar-button-link href=https://github.com/Orakeshi target=_blank rel=noopener title=GitHub><i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden=true></i>
+<span class=sidebar-button-desc>GitHub</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://www.linkedin.com/in/tommy-webb-8749231a0/ target=_blank rel=noopener title=Linkedin><i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden=true></i>
+<span class=sidebar-button-desc>Linkedin</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=mailto:%20tommy@solarflarestudio.co.uk target=_blank rel=noopener title="Email Me"><i class="sidebar-button-icon fa fa-lg fa-envelope" aria-hidden=true></i>
+<span class=sidebar-button-desc>Email Me</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://www.youtube.com/channel/UC_FKPC8y4U2Ep7ubNBAQWjg target=_blank rel=noopener title=Youtube><i class="sidebar-button-icon fab fa-lg fa-youtube" aria-hidden=true></i>
+<span class=sidebar-button-desc>Youtube</span></a></li></ul><ul class=sidebar-buttons></ul></div></nav><div class="post-header-cover
+text-center" style=background-image:url(https://i.imgur.com/IeCo5mZ.png) data-behavior=4><div class="post-header main-content-wrap text-center"><h1 class=post-title>MediaPipe - Emoji Gestures</h1><div class="postShorten-meta post-meta"><time datetime=2022-01-22T00:00:00Z>January 22, 2022</time>
 <span>in</span>
-<a class=category-link href=https://orakeshi.github.io/categories/projects>projects</a>
-</div>
-</div>
-</div>
-<div id=main data-behavior=4 class="hasCover
-hasCoverMetaIn">
-<article class=post id=top>
-<div class="post-content markdown">
-<div class=main-content-wrap>
-<h1 id=table-of-contents>Table of Contents</h1>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#project-information>Project Information</a></li>
-<li><a href=#development>Development:</a>
-<ul>
-<li><a href=#setup-mediapipe>Setup MediaPipe</a></li>
-<li><a href=#emoji-gestures>Emoji Gestures</a></li>
-<li><a href=#emoji-animation>Emoji Animation</a></li>
-</ul>
-</li>
-<li><a href=#showcase>Showcase:</a></li>
-<li><a href=#extra-information>Extra Information</a></li>
-</ul>
-</nav>
-<h1 id=project-information>Project Information</h1>
-<p>This labs project, much like the nanoleaf football project, was to be a fast project with a quick delivery. Due to this, I had to sacrifice code quality for quick output.</p>
-<p>The project was to use Googles AI (MediaPipe) to use hand tracking and produce an exciting output. In the end we developed a hand gesture recognition that displayed te emoji the use ris signing to their webcam.</p>
-<div class="figure center">
-<a class=fancybox href=https://i.imgur.com/rjogsWb.gif title="GIF showing complete emoji experience" data-fancybox=group:labs-emojigesture>
-<img class=fig-img src=https://i.imgur.com/rjogsWb.gif style=width:70%;height:70% alt="GIF showing complete emoji experience">
-</a>
-<span class=caption>GIF showing complete emoji experience</span>
-</div>
-<div style=clear:both></div>
-<p>The gif above showcases the complete emoji experience.</p>
-<h1 id=development>Development:</h1>
-<p>The project went through several creative changes. At one point we were planning to develop a system with the webcam to translate 3d rendered objects on the canvas. that being said the emoji idea was more entertaining and liked among the team.</p>
-<p>This project was pretty much solo developed by myself, with the help of the integrated designer to create the emoji assets. This labs project had a very quick delivery.</p>
-<p>The end plan was to produce a video showcasing the emoji system being used by multiple members of the team. We then want to comp the footage onto a video call to make it appear as if this is a featuer of gogle meet. This video will then be shared on social platforms as a thought-provoking piece for people to discuss and take inspiration from.</p>
-<h2 id=setup-mediapipe>Setup MediaPipe</h2>
-<p>Using MediaPipes documentation I can easily set up MediaPipe hand detection in JavaScript. To start with I implemented the sample code from the docs. From their I experimented and gradually expanded the code to fit hte needs of what we want to develop for the labs project.</p>
-<p>
-<figure class="highlight javascript language-javascript">
-<figcaption>
-<span>index.js</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-javascript javascript"><code class=javascript>const hands = new Hands({locateFile: (file) =&gt; {
+<a class=category-link href=https://orakeshi.github.io/categories/projects>projects</a></div></div></div><div id=main data-behavior=4 class="hasCover
+hasCoverMetaIn"><article class=post id=top><div class="post-content markdown"><div class=main-content-wrap><h1 id=table-of-contents>Table of Contents</h1><nav id=TableOfContents><ul><li><a href=#project-information>Project Information</a></li><li><a href=#development>Development:</a><ul><li><a href=#setup-mediapipe>Setup MediaPipe</a></li><li><a href=#emoji-gestures>Emoji Gestures</a></li><li><a href=#emoji-animation>Emoji Animation</a></li></ul></li><li><a href=#showcase>Showcase:</a></li><li><a href=#extra-information>Extra Information</a></li></ul></nav><h1 id=project-information>Project Information</h1><p>This labs project, much like the nanoleaf football project, was to be a fast project with a quick delivery. Due to this, I had to sacrifice code quality for quick output.</p><p>The project was to use Googles AI (MediaPipe) to use hand tracking and produce an exciting output. In the end we developed a hand gesture recognition that displayed te emoji the use ris signing to their webcam.</p><div class="figure center"><a class=fancybox href=https://i.imgur.com/rjogsWb.gif title="GIF showing complete emoji experience" data-fancybox=group:labs-emojigesture><img class=fig-img src=https://i.imgur.com/rjogsWb.gif style=width:70%;height:70% alt="GIF showing complete emoji experience"></a>
+<span class=caption>GIF showing complete emoji experience</span></div><div style=clear:both></div><p>The gif above showcases the complete emoji experience.</p><h1 id=development>Development:</h1><p>The project went through several creative changes. At one point we were planning to develop a system with the webcam to translate 3d rendered objects on the canvas. that being said the emoji idea was more entertaining and liked among the team.</p><p>This project was pretty much solo developed by myself, with the help of the integrated designer to create the emoji assets. This labs project had a very quick delivery.</p><p>The end plan was to produce a video showcasing the emoji system being used by multiple members of the team. We then want to comp the footage onto a video call to make it appear as if this is a featuer of gogle meet. This video will then be shared on social platforms as a thought-provoking piece for people to discuss and take inspiration from.</p><h2 id=setup-mediapipe>Setup MediaPipe</h2><p>Using MediaPipes documentation I can easily set up MediaPipe hand detection in JavaScript. To start with I implemented the sample code from the docs. From their I experimented and gradually expanded the code to fit hte needs of what we want to develop for the labs project.</p><p><figure class="highlight javascript language-javascript"><figcaption><span>index.js</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br></pre></td><td class=code><pre class="code-highlight language-javascript javascript"><code class=javascript>const hands = new Hands({locateFile: (file) =&gt; {
     return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
 }});
 
@@ -210,25 +33,7 @@ const camera = new Camera(videoElement, {
     width: 1280,
     height: 720
 });
-camera.start();</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-This code above is responsible for setting the hand landmarkers on the video container.</p>
-<figure class="highlight javascript language-javascript">
-<figcaption>
-<span>index.js</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-javascript javascript"><code class=javascript>/***
+camera.start();</code></pre></td></tr></tbody></table></figure>This code above is responsible for setting the hand landmarkers on the video container.</p><figure class="highlight javascript language-javascript"><figcaption><span>index.js</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br></pre></td><td class=code><pre class="code-highlight language-javascript javascript"><code class=javascript>/***
 * Received the hand landmarks
 * @param results
   */
@@ -251,29 +56,7 @@ This code above is responsible for setting the hand landmarkers on the video con
 
        drawLandmarks(canvasCtx, landmarks, {color: &#39;#FF0000&#39;, lineWidth: 1, radius: 2});
        // Gets the index and thumb points
-       calcLandmarks = landmarks</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-<p>The code above handles drawing the landmarkers to the canvas. Additionally, they are drawn every frame(second) so they follow the users hand exactly as its moved around the window.</p>
-<p>With this implemented the base code for hand tracking from MediaPipe is complete and integrated.</p>
-<h2 id=emoji-gestures>Emoji Gestures</h2>
-<p>When it comes to recognising gestures I took the simplest approach I could think of. This was to measure the distance between multiple given landmarks on the hand. I could then have conditionals in place to judge when certain fingers are closing etc and working out the hand gesture from that.</p>
-<p>An example is seen below:
-<figure class="highlight javascript language-javascript">
-<figcaption>
-<span>index.js</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-javascript javascript"><code class=javascript>/***
+       calcLandmarks = landmarks</code></pre></td></tr></tbody></table></figure><p>The code above handles drawing the landmarkers to the canvas. Additionally, they are drawn every frame(second) so they follow the users hand exactly as its moved around the window.</p><p>With this implemented the base code for hand tracking from MediaPipe is complete and integrated.</p><h2 id=emoji-gestures>Emoji Gestures</h2><p>When it comes to recognising gestures I took the simplest approach I could think of. This was to measure the distance between multiple given landmarks on the hand. I could then have conditionals in place to judge when certain fingers are closing etc and working out the hand gesture from that.</p><p>An example is seen below:<figure class="highlight javascript language-javascript"><figcaption><span>index.js</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br></pre></td><td class=code><pre class="code-highlight language-javascript javascript"><code class=javascript>/***
 * Function responsible for -
 * Defining various hand points
 * Returning string value of the hand emoji user is showing
@@ -294,38 +77,8 @@ function detectHandGesture(landmarks){
   if (middleFingerToPalm &lt;=200 &amp;&amp; ringFingerToPalm &lt;= 200 &amp;&amp; pinkyFingerToPalm &gt;= 200 &amp;&amp; indexFingerToPalm &gt;=200){
   return &#34;Rock&#34;
   }
-}</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-</p>
-<p>the code above is working out the distance from each finger to the palm of the hand. When the distance is less than or greater than 200 i can detect if the fingers are closed or open. From here I can tell when the user puts their hand in a rock n roll type gesture.</p>
-<p>I then return the emoji being signed. This return statement is fed to a relative path to fetch and display the current emoji.</p>
-<div class="figure center">
-<a class=fancybox href=https://i.imgur.com/LTiWnXk.png title="Image showing hand gesture being recognised" data-fancybox=group:labs-emojigesture>
-<img class=fig-img src=https://i.imgur.com/LTiWnXk.png style=width:70%;height:70% alt="Image showing hand gesture being recognised">
-</a>
-<span class=caption>Image showing hand gesture being recognised</span>
-</div>
-<div style=clear:both></div>
-<h2 id=emoji-animation>Emoji Animation</h2>
-<p>In regard to the emoji animation, this was fairly simple. I am using an external script that instantiates and places the emoji off-screen relative to the users hand location.</p>
-<p>This means that as the user moves their hand the emojis instantiate in that updates location. I then play an animation I created ni CSS that makes the emojis fall below the users view. On the animation end I destroy the emojis.</p>
-<p>
-<figure class="highlight javascript language-javascript">
-<figcaption>
-<span>emoji.js</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-javascript javascript"><code class=javascript>/***
+}</code></pre></td></tr></tbody></table></figure></p><p>the code above is working out the distance from each finger to the palm of the hand. When the distance is less than or greater than 200 i can detect if the fingers are closed or open. From here I can tell when the user puts their hand in a rock n roll type gesture.</p><p>I then return the emoji being signed. This return statement is fed to a relative path to fetch and display the current emoji.</p><div class="figure center"><a class=fancybox href=https://i.imgur.com/LTiWnXk.png title="Image showing hand gesture being recognised" data-fancybox=group:labs-emojigesture><img class=fig-img src=https://i.imgur.com/LTiWnXk.png style=width:70%;height:70% alt="Image showing hand gesture being recognised"></a>
+<span class=caption>Image showing hand gesture being recognised</span></div><div style=clear:both></div><h2 id=emoji-animation>Emoji Animation</h2><p>In regard to the emoji animation, this was fairly simple. I am using an external script that instantiates and places the emoji off-screen relative to the users hand location.</p><p>This means that as the user moves their hand the emojis instantiate in that updates location. I then play an animation I created ni CSS that makes the emojis fall below the users view. On the animation end I destroy the emojis.</p><p><figure class="highlight javascript language-javascript"><figcaption><span>emoji.js</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br></pre></td><td class=code><pre class="code-highlight language-javascript javascript"><code class=javascript>/***
 * Function handles converting from pixels to VW
 * @param px
 * @returns {number}
@@ -349,26 +102,7 @@ export function setupEmojiSpawn(){
 
   // Reference to the stylesheet
   sheet = element.sheet;
-  parentDiv = document.createElement(&#39;div&#39;);</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-The code above starts by creating a div. This div is the parent container to all the emojis that are created.</p>
-<p>
-<figure class="highlight javascript language-javascript">
-<figcaption>
-<span>index.js</span>
-</figcaption>
-<table>
-<tbody>
-<tr>
-<td class=gutter>
-<pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br></pre>
-</td>
-<td class=code>
-<pre class="code-highlight language-javascript javascript"><code class=javascript>export function emojiSpawner(baseHand, emojiToSpawnSrc) {
+  parentDiv = document.createElement(&#39;div&#39;);</code></pre></td></tr></tbody></table></figure>The code above starts by creating a div. This div is the parent container to all the emojis that are created.</p><p><figure class="highlight javascript language-javascript"><figcaption><span>index.js</span></figcaption><table><tbody><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br><span class=line>5</span><br><span class=line>6</span><br><span class=line>7</span><br><span class=line>8</span><br><span class=line>9</span><br><span class=line>10</span><br><span class=line>11</span><br><span class=line>12</span><br><span class=line>13</span><br><span class=line>14</span><br><span class=line>15</span><br><span class=line>16</span><br><span class=line>17</span><br><span class=line>18</span><br><span class=line>19</span><br><span class=line>20</span><br><span class=line>21</span><br><span class=line>22</span><br><span class=line>23</span><br><span class=line>24</span><br><span class=line>25</span><br><span class=line>26</span><br></pre></td><td class=code><pre class="code-highlight language-javascript javascript"><code class=javascript>export function emojiSpawner(baseHand, emojiToSpawnSrc) {
     let div = document.createElement(&#39;img&#39;);
     div.setAttribute(&#34;src&#34;, emojiToSpawnSrc)
     div.id = &#39;emoji&#39; &#43; i;
@@ -393,236 +127,17 @@ The code above starts by creating a div. This div is the parent container to all
     let currentAnimation = document.getElementById(div.id)
     currentAnimation.addEventListener(&#39;animationend&#39;, () =&gt; {
         currentAnimation.remove()
-    });</code></pre>
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-This code above is called every time a hand gesture is recognised. It handles creating the image and plaing it correctly relative to the users hand.</p>
-<div class="figure center">
-<a class=fancybox href=https://i.imgur.com/AdkVWNE.gif title="GIF showing emoji animation" data-fancybox=group:labs-emojigesture>
-<img class=fig-img src=https://i.imgur.com/AdkVWNE.gif style=width:70%;height:70% alt="GIF showing emoji animation">
-</a>
-<span class=caption>GIF showing emoji animation</span>
-</div>
-<div style=clear:both></div>
-<h1 id=showcase>Showcase:</h1>
-<p>
-<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
-<iframe src=https://www.youtube.com/embed/2Jld8vxRT8c style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
-</div>
-<div class="figure center fig-50">
-<a class=fancybox href=https://i.imgur.com/QQKYdY8.png data-fancybox=group:labs-emojigesture>
-<img class=fig-img src=https://i.imgur.com/QQKYdY8.png>
-</a>
-</div>
-<div class="figure center fig-50">
-<a class=fancybox href=https://i.imgur.com/ISILTTn.png data-fancybox=group:labs-emojigesture>
-<img class=fig-img src=https://i.imgur.com/ISILTTn.png>
-</a>
-</div>
-<div style=clear:both></div>
-</p>
-<h1 id=extra-information>Extra Information</h1>
-<p>
-<div class="figure nocaption fig-25">
-<a class=fancybox href=https://i.imgur.com/apl8UH2t.png data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/apl8UH2t.png>
-</a>
-</div>
-<div class="figure nocaption fig-25">
-<a class=fancybox href=https://i.imgur.com/jBfEt6S.gif data-fancybox=group:labs-nanoleaf-football>
-<img class=fig-img src=https://i.imgur.com/jBfEt6S.gif>
-</a>
-</div>
-<div style=clear:both></div>
-<a href=https://solarflarestudio.co.uk/>Solarflare Studio</a></p>
-</div>
-</div>
-<div id=post-footer class="post-footer main-content-wrap">
-<div class=post-footer-tags>
-<span class="text-color-light text-small">TAGGED IN</span><br>
-<a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/c-sharp/>c-sharp</a>
+    });</code></pre></td></tr></tbody></table></figure>This code above is called every time a hand gesture is recognised. It handles creating the image and plaing it correctly relative to the users hand.</p><div class="figure center"><a class=fancybox href=https://i.imgur.com/AdkVWNE.gif title="GIF showing emoji animation" data-fancybox=group:labs-emojigesture><img class=fig-img src=https://i.imgur.com/AdkVWNE.gif style=width:70%;height:70% alt="GIF showing emoji animation"></a>
+<span class=caption>GIF showing emoji animation</span></div><div style=clear:both></div><h1 id=showcase>Showcase:</h1><p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe src=https://www.youtube.com/embed/2Jld8vxRT8c style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe></div><div class="figure center fig-50"><a class=fancybox href=https://i.imgur.com/QQKYdY8.png data-fancybox=group:labs-emojigesture><img class=fig-img src=https://i.imgur.com/QQKYdY8.png></a></div><div class="figure center fig-50"><a class=fancybox href=https://i.imgur.com/ISILTTn.png data-fancybox=group:labs-emojigesture><img class=fig-img src=https://i.imgur.com/ISILTTn.png></a></div><div style=clear:both></div></p><h1 id=extra-information>Extra Information</h1><p><div class="figure nocaption fig-25"><a class=fancybox href=https://i.imgur.com/apl8UH2t.png data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/apl8UH2t.png></a></div><div class="figure nocaption fig-25"><a class=fancybox href=https://i.imgur.com/jBfEt6S.gif data-fancybox=group:labs-nanoleaf-football><img class=fig-img src=https://i.imgur.com/jBfEt6S.gif></a></div><div style=clear:both></div><a href=https://solarflarestudio.co.uk/>Solarflare Studio</a></p></div></div><div id=post-footer class="post-footer main-content-wrap"><div class=post-footer-tags><span class="text-color-light text-small">TAGGED IN</span><br><a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/c-sharp/>c-sharp</a>
 <a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/unity/>unity</a>
 <a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/magicleap/>magicleap</a>
 <a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/ar/>ar</a>
 <a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/labs/>labs</a>
-<a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/solarflare-studio/>solarflare-studio</a>
-</div>
-<div class=post-actions-wrap>
-<nav>
-<ul class="post-actions post-action-nav">
-<li class=post-action>
-<a class="post-action-btn btn btn--disabled">
-<i class="fa fa-angle-left"></i>
-<span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/research-matrices/ data-tooltip="Research - Matrices" aria-label="PREVIOUS: Research - Matrices">
-<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-<i class="fa fa-angle-right"></i>
-</a>
-</li>
-</ul>
-</nav>
-<ul class="post-actions post-action-share">
-<li class="post-action hide-lg hide-md hide-sm">
-<a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post">
-<i class="fa fa-share-alt" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Twitter" aria-label="Share on Twitter">
-<i class="fab fa-twitter" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://wa.me/?text=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Whatsapp" aria-label="Share on Whatsapp">
-<i class="fab fa-whatsapp" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Linkedin" aria-label="Share on Linkedin">
-<i class="fab fa-linkedin" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://www.reddit.com/submit?url=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Reddit" aria-label="Share on Reddit">
-<i class="fab fa-reddit" aria-hidden=true></i>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default" href=#disqus_thread aria-label="Leave a comment">
-<i class="far fa-comment"></i>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default" href=#top aria-label="Back to top">
-<i class="fa fa-arrow-up" aria-hidden=true></i>
-</a>
-</li>
-</ul>
-</div>
-<div id=disqus_thread>
-<noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-</div>
-<script type=text/javascript>var disqus_config=function(){this.page.url='https://orakeshi.github.io/post/mediapipe-emoji-gestures/',this.page.identifier='/post/mediapipe-emoji-gestures/'};(function(){var a,b;if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}a=document.createElement('script'),a.type='text/javascript',a.async=!0,b='hugo-tranquilpeak-theme',a.src='//'+b+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)})()</script>
-</div>
-</article>
-<footer id=footer class=main-content-wrap>
-<span class=copyrights>
-&copy; 2022 Tommy Webb. All Rights Reserved
-</span>
-</footer>
-</div>
-<div id=bottom-bar class=post-bottom-bar data-behavior=4>
-<div class=post-actions-wrap>
-<nav>
-<ul class="post-actions post-action-nav">
-<li class=post-action>
-<a class="post-action-btn btn btn--disabled">
-<i class="fa fa-angle-left"></i>
-<span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/research-matrices/ data-tooltip="Research - Matrices" aria-label="PREVIOUS: Research - Matrices">
-<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-<i class="fa fa-angle-right"></i>
-</a>
-</li>
-</ul>
-</nav>
-<ul class="post-actions post-action-share">
-<li class="post-action hide-lg hide-md hide-sm">
-<a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post">
-<i class="fa fa-share-alt" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Twitter" aria-label="Share on Twitter">
-<i class="fab fa-twitter" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://wa.me/?text=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Whatsapp" aria-label="Share on Whatsapp">
-<i class="fab fa-whatsapp" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Linkedin" aria-label="Share on Linkedin">
-<i class="fab fa-linkedin" aria-hidden=true></i>
-</a>
-</li>
-<li class="post-action hide-xs">
-<a class="post-action-btn btn btn--default" target=new href="https://www.reddit.com/submit?url=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Reddit" aria-label="Share on Reddit">
-<i class="fab fa-reddit" aria-hidden=true></i>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default" href=#disqus_thread aria-label="Leave a comment">
-<i class="far fa-comment"></i>
-</a>
-</li>
-<li class=post-action>
-<a class="post-action-btn btn btn--default" href=#top aria-label="Back to top">
-<i class="fa fa-arrow-up" aria-hidden=true></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-<div id=share-options-bar class=share-options-bar data-behavior=4>
-<i id=btn-close-shareoptions class="fa fa-times"></i>
-<ul class=share-options>
-<li class=share-option>
-<a class=share-option-btn target=new href="https://twitter.com/intent/tweet?text=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fmediapipe-emoji-gestures%2F" aria-label="Share on Twitter">
-<i class="fab fa-twitter" aria-hidden=true></i><span>Share on Twitter</span>
-</a>
-</li>
-<li class=share-option>
-<a class=share-option-btn target=new href="https://wa.me/?text=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fmediapipe-emoji-gestures%2F" aria-label="Share on Whatsapp">
-<i class="fab fa-whatsapp" aria-hidden=true></i><span>Share on Whatsapp</span>
-</a>
-</li>
-<li class=share-option>
-<a class=share-option-btn target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fmediapipe-emoji-gestures%2F" aria-label="Share on Linkedin">
-<i class="fab fa-linkedin" aria-hidden=true></i><span>Share on Linkedin</span>
-</a>
-</li>
-<li class=share-option>
-<a class=share-option-btn target=new href="https://www.reddit.com/submit?url=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fmediapipe-emoji-gestures%2F" aria-label="Share on Reddit">
-<i class="fab fa-reddit" aria-hidden=true></i><span>Share on Reddit</span>
-</a>
-</li>
-</ul>
-</div>
-<div id=share-options-mask class=share-options-mask></div>
-</div>
-<div id=about>
-<div id=about-card>
-<div id=about-btn-close>
-<i class="fa fa-times"></i>
-</div>
-<img id=about-card-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture">
-<h4 id=about-card-name>Tommy Webb</h4>
-<div id=about-card-bio>I ❤ coding and learning new technology</div>
-<div id=about-card-job>
-<i class="fa fa-briefcase"></i>
-<br>
-Software Developer
-</div>
-<div id=about-card-location>
-<i class="fa fa-map-marker-alt"></i>
-<br>
-United Kingdom
-</div>
-</div>
-</div>
-<div id=cover style=background-image:url(https://i.imgur.com/uQegQYL.png)></div>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<a class="tag tag--primary tag--small" href=https://orakeshi.github.io/tags/solarflare-studio/>solarflare-studio</a></div><div class=post-actions-wrap><nav><ul class="post-actions post-action-nav"><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/importance-of-clean-code/ data-tooltip="Importance Of Clean Code" aria-label="NEXT: Importance Of Clean Code"><i class="fa fa-angle-left"></i>
+<span class="hide-xs hide-sm text-small icon-ml">NEXT</span></a></li><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/research-matrices/ data-tooltip="Research - Matrices" aria-label="PREVIOUS: Research - Matrices"><span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+<i class="fa fa-angle-right"></i></a></li></ul></nav><ul class="post-actions post-action-share"><li class="post-action hide-lg hide-md hide-sm"><a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post"><i class="fa fa-share-alt" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Twitter" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://wa.me/?text=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Whatsapp" aria-label="Share on Whatsapp"><i class="fab fa-whatsapp" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Linkedin" aria-label="Share on Linkedin"><i class="fab fa-linkedin" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://www.reddit.com/submit?url=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Reddit" aria-label="Share on Reddit"><i class="fab fa-reddit" aria-hidden=true></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#disqus_thread aria-label="Leave a comment"><i class="far fa-comment"></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#top aria-label="Back to top"><i class="fa fa-arrow-up" aria-hidden=true></i></a></li></ul></div><div id=disqus_thread><noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript></div><script type=text/javascript>var disqus_config=function(){this.page.url="https://orakeshi.github.io/post/mediapipe-emoji-gestures/",this.page.identifier="/post/mediapipe-emoji-gestures/"};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="hugo-tranquilpeak-theme",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script></div></article><footer id=footer class=main-content-wrap><span class=copyrights>&copy; 2022 Tommy Webb. All Rights Reserved</span></footer></div><div id=bottom-bar class=post-bottom-bar data-behavior=4><div class=post-actions-wrap><nav><ul class="post-actions post-action-nav"><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/importance-of-clean-code/ data-tooltip="Importance Of Clean Code" aria-label="NEXT: Importance Of Clean Code"><i class="fa fa-angle-left"></i>
+<span class="hide-xs hide-sm text-small icon-ml">NEXT</span></a></li><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://orakeshi.github.io/post/research-matrices/ data-tooltip="Research - Matrices" aria-label="PREVIOUS: Research - Matrices"><span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+<i class="fa fa-angle-right"></i></a></li></ul></nav><ul class="post-actions post-action-share"><li class="post-action hide-lg hide-md hide-sm"><a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post"><i class="fa fa-share-alt" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Twitter" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://wa.me/?text=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Whatsapp" aria-label="Share on Whatsapp"><i class="fab fa-whatsapp" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Linkedin" aria-label="Share on Linkedin"><i class="fab fa-linkedin" aria-hidden=true></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://www.reddit.com/submit?url=https://orakeshi.github.io/post/mediapipe-emoji-gestures/" title="Share on Reddit" aria-label="Share on Reddit"><i class="fab fa-reddit" aria-hidden=true></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#disqus_thread aria-label="Leave a comment"><i class="far fa-comment"></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#top aria-label="Back to top"><i class="fa fa-arrow-up" aria-hidden=true></i></a></li></ul></div></div><div id=share-options-bar class=share-options-bar data-behavior=4><i id=btn-close-shareoptions class="fa fa-times"></i><ul class=share-options><li class=share-option><a class=share-option-btn target=new href="https://twitter.com/intent/tweet?text=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fmediapipe-emoji-gestures%2F" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden=true></i><span>Share on Twitter</span></a></li><li class=share-option><a class=share-option-btn target=new href="https://wa.me/?text=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fmediapipe-emoji-gestures%2F" aria-label="Share on Whatsapp"><i class="fab fa-whatsapp" aria-hidden=true></i><span>Share on Whatsapp</span></a></li><li class=share-option><a class=share-option-btn target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fmediapipe-emoji-gestures%2F" aria-label="Share on Linkedin"><i class="fab fa-linkedin" aria-hidden=true></i><span>Share on Linkedin</span></a></li><li class=share-option><a class=share-option-btn target=new href="https://www.reddit.com/submit?url=https%3A%2F%2Forakeshi.github.io%2Fpost%2Fmediapipe-emoji-gestures%2F" aria-label="Share on Reddit"><i class="fab fa-reddit" aria-hidden=true></i><span>Share on Reddit</span></a></li></ul></div><div id=share-options-mask class=share-options-mask></div></div><div id=about><div id=about-card><div id=about-btn-close><i class="fa fa-times"></i></div><img id=about-card-picture src="https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4" alt="Author's picture"><h4 id=about-card-name>Tommy Webb</h4><div id=about-card-bio>I ❤ coding and learning new technology</div><div id=about-card-job><i class="fa fa-briefcase"></i><br>Software Developer</div><div id=about-card-location><i class="fa fa-map-marker-alt"></i><br>United Kingdom</div></div></div><div id=cover style=background-image:url(https://i.imgur.com/uQegQYL.png)></div><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin=anonymous referrerpolicy=no-referrer></script>
 <script src=https://orakeshi.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js></script>
@@ -636,6 +151,4 @@ United Kingdom
 <script async crossorigin=anonymous defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js></script>
 <script async crossorigin=anonymous defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js></script>
 <script async crossorigin=anonymous defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js></script>
-<script>$(document).ready(function(){hljs.configure({classPrefix:'',useBR:!1}),$('pre.code-highlight > code, pre > code').each(function(b,a){$(this).hasClass('codeblock')||$(this).addClass('codeblock'),hljs.highlightBlock(a)})})</script>
-</body>
-</html>
+<script>$(document).ready(function(){hljs.configure({classPrefix:'',useBR:!1}),$("pre.code-highlight > code, pre > code").each(function(t,e){$(this).hasClass("codeblock")||$(this).addClass("codeblock"),hljs.highlightBlock(e)})})</script></body></html>
