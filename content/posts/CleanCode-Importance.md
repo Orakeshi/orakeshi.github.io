@@ -14,13 +14,13 @@ tags:
   - fundamentals
 autoThumbnailImage: false 
 thumbnailImagePosition: left
-thumbnailImage: https://i.imgur.com/lgYxYnU.png
+thumbnailImage: https://i.imgur.com/oATBMC9.png
 metaAlignment: center
 ---
   
-This blog is about the importance of writing clean and friendly code. The reasoning for this blog post originates from the fact that I have recently completed 2 projects. These projects differ significantly in terms of the way the code was written. As a result, I had a COMPLETELY different experience expanding the codebase for each one.
+This blog is about the importance of writing clean and friendly code. The reasoning for this blog post originates from the fact that I have recently completed two projects. These projects differ significantly in terms of the way the code was written. As a result, I had a COMPLETELY different experience expanding the codebase for each one.
 
-{{< image classes="fancybox center clear" src="https://i.imgur.com/psQany9.png" thumbnail="https://i.imgur.com/psQany9.png" group="group:personal-matrices-research" thumbnail-width="70%" thumbnail-height="70%" title="Image of matrix transformations on a 3d axis" >}}
+{{< image classes="fancybox center clear" src="https://i.imgur.com/QZjMXiQ.png" thumbnail="https://i.imgur.com/QZjMXiQ.png" group="group:clean-code-importance" thumbnail-width="70%" thumbnail-height="70%" title="Image of refactored unity code I wrote" >}}
 
 <!--more-->
 {{< toc >}}
