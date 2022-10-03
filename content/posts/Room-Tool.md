@@ -1,6 +1,6 @@
 ---
-title: "Importance Of Clean Code"
-date: "01 May 2022"
+title: "Room Visualisation"
+date: "24 Jul 2022"
 showDate: true
 comments: true
 showSocial: true
@@ -8,10 +8,8 @@ showMeta: true
 categories:
   - blog
 tags:
-  - oop
-  - cleancode 
-  - code
-  - fundamentals
+  - unity
+  - visualisation
 autoThumbnailImage: false 
 thumbnailImagePosition: left
 thumbnailImage: https://i.imgur.com/oATBMC9.png
