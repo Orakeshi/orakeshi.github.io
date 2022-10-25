@@ -11,7 +11,7 @@ tags:
   - oop
   - cleancode 
   - code
-  - fundamentals
+  - package
 autoThumbnailImage: false 
 thumbnailImagePosition: left
 thumbnailImage: https://i.imgur.com/oATBMC9.png

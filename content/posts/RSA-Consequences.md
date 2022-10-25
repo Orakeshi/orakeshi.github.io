@@ -24,33 +24,21 @@ syntaxHighlighter: highlight.js
 {{< toc >}}
 
 # Project Information
-This project, titled {{< hl-text red >}} "The Digital Wishing Tree"{{< /hl-text >}} was the first project I worked on in my software development career. This saw the in house team at solarflare create an interactive digital wishing tree using a combination of technologies.
 
-Solarflare Studio (Company I work for) have a labs of sorts. This is where the internal team will get together and discuss ideas of projects they can create with in house resources. These projects are often fun, crazy and show off the technology available to solarflare.
+{{< hl-text yellow >}} Development Notes: {{< /hl-text >}}
 
-In this project I completed the majority of development (code). I worked closely with the integrated designer, lead creative and CTO. The outcome of this project was that I had gained masses of knowledge in both Unity3D and coding with C#. This project was extremely beneficial to my learning as a software developer.
+- This was a solo developed project, handled by myself.
 
-Projection Mapping, Nanoleaves & more were used to achieve the final result.
-{{< image classes="fancybox center clear" src="https://i.imgur.com/UNjM0s4.gif" thumbnail="https://i.imgur.com/UNjM0s4.gif" group="group:wishingtree" thumbnail-width="50%" thumbnail-height="50%" title="GIF showing people using the tree" >}}
+The following project, was the first in my career that saw me expand, refactor and rewrite a pre existing project, with new change requests and requirements.
 
-Above is a brief showcase of the complete wishing tree. This is the finished product that we delivered at the end of the SDLC.
+The task at hand for this project, was to redeploy an existing application, that was originally developed for an Oculus GO headset, for the quest 2 device. The existing application was developed in unity MANY YEARS ago to which mass scripts etc were deprecated this making this redeployment challenging.
 
-=> The project works via the following:
-- Open webpage & Submit wish with a swipe action
-- Watch the real life wishing tree installation
-  - Nanoleavs will light when wish lands on tree
-  - Existing wish will flow onto a static leaf and be written
-  - Lights will start reacting and lighting on the tree & nanoleaves
-# Design:
-The wishing tree went through many design iterations. As I was the main developer on the project, I was not heavily involved in regard to the design process. That being said I still had an interest as I was to develop the tree based on the designs provided.
+{{< image classes="fancybox center clear" src="https://i.imgur.com/Xxv0Qzz.gif" thumbnail="https://i.imgur.com/Xxv0Qzz.gif" group="group:rsaconsequencesport" thumbnail-width="90%" thumbnail-height="90%" title="GIF showing the working vr application" >}}
 
-{{< image classes="fancybox center clear" src="https://i.imgur.com/XwPuqij.png" thumbnail="https://i.imgur.com/XwPuqij.png" group="group:wishingtree" thumbnail-width="70%" thumbnail-height="70%" title="Image showing multitude of designs the tree went through" >}}
+Above is a brief showcase of the working vr application that was delivered to the end client.
 
-As seen from the image above the tree went through many iterations. Working closely with the integrated designer and creative lead we kept experimenting with the output of the tree. In the end we agreed on the design below.
+# Problems With Original App:
 
-{{< image classes="fancybox center clear" src="https://i.imgur.com/JL019sM.png" thumbnail="https://i.imgur.com/JL019sM.png" group="group:wishingtree" thumbnail-width="70%" thumbnail-height="70%" title="Image showing the design of the wishing tree" >}}
-
-Above, is the final design we decided upon. We planned to integrate more colours, but the tree shape and size was the conclusion.
 
 # Development:
 Development of this project saw a multitude of languages, tools, tech etc used. I had to learn how to {{< hl-text blue >}} solder{{< /hl-text >}} to connect the nanoleaves together using custom-made extensions cables. In addition to this, I had to pickup {{< hl-text blue >}} web technologies{{< /hl-text >}} such as basic HTML, CSS, JS and PHP. These were needed in order to set up a local MySQL database to store the wishes.
