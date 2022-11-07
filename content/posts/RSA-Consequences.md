@@ -15,8 +15,8 @@ tags:
   - solarflare-studio
 autoThumbnailImage: false 
 thumbnailImagePosition: "top"
-thumbnailImage: https://i.imgur.com/hj0wjWd.jpg
-coverImage: https://i.imgur.com/NCDPyGf.jpg
+thumbnailImage: https://i.imgur.com/WefC9lC.jpg
+coverImage: https://i.imgur.com/6FSdsRX.png
 metaAlignment: center 
 syntaxHighlighter: highlight.js
 ---
@@ -29,16 +29,18 @@ syntaxHighlighter: highlight.js
 
 - This was a solo developed project, handled by myself.
 
-The following project, was the first in my career that saw me expand, refactor and rewrite a pre existing project, with new change requests and requirements.
+The following project, was the first in my career in which I was tasked with expanding, refactoring and rewriting a pre existing project, with new change requests and requirements.
 
-The task at hand for this project, was to redeploy an existing application, that was originally developed for an Oculus GO headset, for the quest 2 device. The existing application was developed in unity MANY YEARS ago to which mass scripts etc were deprecated this making this redeployment challenging.
+The task at hand, for this project, was to redeploy an existing application. The application was originally developed for an Oculus GO headset. My responsibility was to redevelop the app for the quest 2 device. The existing application was developed in unity MANY YEARS ago. As a result, mass amounts of the scripts, codebase, assets and more were deprecated, thus making this redeployment challenging.
 
 {{< image classes="fancybox center clear" src="https://i.imgur.com/Xxv0Qzz.gif" thumbnail="https://i.imgur.com/Xxv0Qzz.gif" group="group:rsaconsequencesport" thumbnail-width="90%" thumbnail-height="90%" title="GIF showing the working vr application" >}}
 
-Above is a brief showcase of the working vr application that was delivered to the end client.
+Above is a brief showcase of the working VR application that was delivered to the end client.
 
-# Problems With Original App:
+# Problems Development:
+One of the main issues with development, as mentioned above, is that the project code was wrriten many years ago. Due to this the 360 audio engine used was deprecated, android features & oculus features were deprecated/replaced.
 
+Another big issue is that the previous codebase was developed and deployed from someone who left the code in not only a mess, but also didnt provide any documentation & comments. This made the development signficantly more challenging than it needed to be.
 
 # Development:
 Development of this project saw a multitude of languages, tools, tech etc used. I had to learn how to {{< hl-text blue >}} solder{{< /hl-text >}} to connect the nanoleaves together using custom-made extensions cables. In addition to this, I had to pickup {{< hl-text blue >}} web technologies{{< /hl-text >}} such as basic HTML, CSS, JS and PHP. These were needed in order to set up a local MySQL database to store the wishes.
