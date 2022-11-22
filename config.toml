@@ -56,7 +56,7 @@ canonifyurls = true
   #gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://avatars.githubusercontent.com/u/73914490?s=400&u=af2892fd416e637cc45f2021caa30951b3a194f3&v=4"
+  picture = "https://i.imgur.com/I01fZzZ.png"
   # Your Twitter username without the @. E.g : thibaudlepretre
   twitter = "SirThomasWebb"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
@@ -112,7 +112,7 @@ canonifyurls = true
   identifier = "email"
   name = "Email Me"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-envelope\" aria-hidden=\"true\"></i>"
-  url = "mailto: tommy@solarflarestudio.co.uk"
+  url = "mailto: tommygeorgewebb@googlemail.com"
 [[menu.links]]
   weight = 9
   identifier = "youtube"
