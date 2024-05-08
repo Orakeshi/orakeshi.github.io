@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* Responsive design - adjust layout for smaller screens */
+.page-title {
+  text-align: center;
+}
+
+.page-subtitle {
+  text-align: center;
+}
+
+.navbar {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.navbar-logo {
+  float: right;
+  margin-top: 1em;
+  margin-right: 0.4em;
+  width: auto;
+  height: 49px;
+  padding: 0;
+  display: block;
+  margin-left: auto;
+}
+
+.navbar-list {
+  font-family: "Noto Sans", "Noto Sans CJK JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック", "游ゴシック体", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ ゴシック", "MS Gothic", HiraKakuProN-W3, "TakaoExゴシック", TakaoExGothic, "MotoyaLCedar", "Droid Sans Japanese", sans-serif;
+}
+
+.navbar-list-item {
+  text-align: center;
+  line-height: 2em;
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.navbar-link-eng {
+  cursor: context-menu;
+  font-weight: 100;
+  font-size: 0.66em;
+}
+
+.navbar-link-jp {
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+
+.container {
+  max-width: 44em;
+  margin: 20px auto;
+  padding: 0 1.5rem;
+  letter-spacing: 0.04em;
+  line-height: 1.8em;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 10px; /* Reduce padding on smaller screens */
+  }
+}
+@media only screen and (min-width: 601px) {
+  .navbar-list {
+    padding-inline-start: 40px;
+  }
+}

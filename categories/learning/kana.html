@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Kana</title><head> <link rel="stylesheet" href="../../css/kana.c1eabd10.css"><link rel="stylesheet" href="../../css/elements.0ab40dbb.css"><link rel="stylesheet" href="../../css/common.1caa31ff.css"><link rel="stylesheet" href="../../css/toggle.936513d3.css"><link rel="stylesheet" href="../../css/page.37dd6cfd.css"><link rel="icon" href="../../img/orakeshi-icon.05c1a654.png"></head><body><nav class="navbar"><img class="navbar-logo" src="../../img/orakeshi-icon.05c1a654.png"><ul class="navbar-list"><li class="navbar-list-item"><a class="navbar-link-eng">Home</a><br><a class="navbar-link-jp" href="/index">ホーム</a></li><li class="navbar-list-item"><a class="navbar-link-eng">Blog</a><br><a class="navbar-link-jp" href="/categories/learning/kana">ブログ</a></li><li class="navbar-list-item"><a class="navbar-link-eng">Projects</a><br><a class="navbar-link-jp" href="">計画</a></li><li class="navbar-list-item"><a class="navbar-link-eng">Learning</a><br><a class="navbar-link-jp" href="">学</a></li><li class="navbar-list-item"><a class="navbar-link-eng">About</a><br><a class="navbar-link-jp" href="">凡そ</a></li></ul></nav></body></head></html><body><main class="container"><div class="toggle-container"><div class="toggle-parent"><p class="toggle-text">Hiragana</p><label class="switch"><input type="checkbox" id="hiragana-box" checked="true"><span class="slider round"></span></label></div><script>document.addEventListener('DOMContentLoaded', function() {
+    var toggleElement = document.getElementById('hiragana-box');
+    var elementToHide = document.getElementById('hiragana-chart');
+
+    toggleElement.addEventListener('change', function() {
+        // Check if the checkbox is checked
+        if (this.checked) {
+            console.log('Checkbox is checked');
+            elementToHide.style.display = 'block';
+            
+        } else {
+            console.log('Checkbox is not checked');
+            elementToHide.style.display = 'none';
+        }
+    });
+});</script><div class="toggle-parent"><p class="toggle-text">Katakana</p><label class="switch"><input type="checkbox" id="katakana-box" checked="true"><span class="slider round"></span></label></div><script>document.addEventListener('DOMContentLoaded', function() {
+    var toggleElement = document.getElementById('katakana-box');
+    var elementToHide = document.getElementById('katakana-chart');
+
+    toggleElement.addEventListener('change', function() {
+        // Check if the checkbox is checked
+        if (this.checked) {
+            console.log('Checkbox is checked');
+            elementToHide.style.display = 'block';
+            
+        } else {
+            console.log('Checkbox is not checked');
+            elementToHide.style.display = 'none';
+        }
+    });
+});</script></div><div id="hiragana-chart"><div id="hiragana-container"><h1 class="page-title">Hiragana(<ruby class="japanese-text">平<rt class="furigana">ひら</rt></ruby><ruby class="japanese-text">仮<rt class="furigana">が</rt></ruby><ruby class="japanese-text">名<rt class="furigana">な</rt></ruby>)</h1><p> Exmaple text in here. This is a very long test paragraph. I am not entirely sure what I am writing in here as of now. But I just keep typing.
+平仮名 【ひら・が・な</p><div id="hiragana-extra-container"><h2 class="page-subtitle">Dakuten(<ruby class="japanese-text">濁<rt class="furigana">だく</rt></ruby><ruby class="japanese-text">点<rt class="furigana">てん</rt></ruby>) & Handakuten(<ruby class="japanese-text">半<rt class="furigana">はん</rt></ruby><ruby class="japanese-text">濁<rt class="furigana">だく</rt></ruby><ruby class="japanese-text">点<rt class="furigana">てん</rt></ruby>)</h2><p> Exmaple text in here. This is a very long test paragraph. I am not entirely sure what I am writing in here as of now. But I just keep typing.
+平仮名 【ひら・が・な</p></div></div></div><div id="katakana-chart"><div id="katakana-container"><h1 class="page-title">Katakana(<ruby class="japanese-text">片<rt class="furigana">かた</rt></ruby><ruby class="japanese-text">仮<rt class="furigana">か</rt></ruby><ruby class="japanese-text">名<rt class="furigana">な</rt></ruby>)</h1><p> Exmaple text in here. This is a very long test paragraph. I am not entirely sure what I am writing in here as of now. But I just keep typing.
+平仮名 【ひら・が・な</p><div id="katakana-extra-container"><h2 class="page-subtitle">Dakuten(<ruby class="japanese-text">濁<rt class="furigana">だく</rt></ruby><ruby class="japanese-text">点<rt class="furigana">てん</rt></ruby>) & Handakuten(<ruby class="japanese-text">半<rt class="furigana">はん</rt></ruby><ruby class="japanese-text">濁<rt class="furigana">だく</rt></ruby><ruby class="japanese-text">点<rt class="furigana">てん</rt></ruby>)</h2><p> Exmaple text in here. This is a very long test paragraph. I am not entirely sure what I am writing in here as of now. But I just keep typing.
+平仮名 【ひら・が・な</p></div></div></div></main></body>
