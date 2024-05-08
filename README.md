@@ -1,2 +1,2 @@
-# orakeshi.github.io
-My Personal Website
+# JapaneseBlog
+Japanese Journal/Blog
