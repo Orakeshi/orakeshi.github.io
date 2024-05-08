@@ -7,13 +7,10 @@ html(lang="en")
         
         include ../../components/toggle.pug
         include ../../components/japanese.pug
-        include ../../components/hiraganachart.pug
-        include ../../components/katakanachart.pug
 
 
 body
     main.container
-        include ../../components/output.pug
         div.toggle-container
             +toggle('Hiragana','hiragana-box', 'hiragana-chart')
             +toggle('Katakana','katakana-box', 'katakana-chart')
@@ -25,8 +22,6 @@ body
                 p 
                     | Exmaple text in here. This is a very long test paragraph. I am not entirely sure what I am writing in here as of now. But I just keep typing.
                     | 平仮名 【ひら・が・な
-
-                +hiragana
                 
                 div#hiragana-extra-container
                     h2.page-subtitle
@@ -38,8 +33,6 @@ body
                         | Exmaple text in here. This is a very long test paragraph. I am not entirely sure what I am writing in here as of now. But I just keep typing.
                         | 平仮名 【ひら・が・な
 
-                +hiraganaDakuten
-
         div#katakana-chart
             div#katakana-container
                 h1.page-title
@@ -47,8 +40,6 @@ body
                 p 
                     | Exmaple text in here. This is a very long test paragraph. I am not entirely sure what I am writing in here as of now. But I just keep typing.
                     | 平仮名 【ひら・が・な
-
-                +katakana
                 
                 div#katakana-extra-container
                     h2.page-subtitle
@@ -59,6 +50,3 @@ body
                     p 
                         | Exmaple text in here. This is a very long test paragraph. I am not entirely sure what I am writing in here as of now. But I just keep typing.
                         | 平仮名 【ひら・が・な
-
-                +katakanaDakuten
-
